@@ -59,7 +59,7 @@ object CategoryBatteryLimitView {
             override fun onStopTrackingTouch(p0: SeekBar?) = Unit
 
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                binding.minLevelCharging = p1 * 10
+                binding.minLevelCharging = p1
 
                 updateButtonVisibility()
             }
@@ -70,14 +70,14 @@ object CategoryBatteryLimitView {
             override fun onStopTrackingTouch(p0: SeekBar?) = Unit
 
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                binding.minLevelMobile = p1 * 10
+                binding.minLevelMobile = p1
 
                 updateButtonVisibility()
             }
         })
 
         category.map {
-            it?.run { it.minBatteryLevelMobile / 10 to it.minBatteryLevelWhileCharging / 10 }
+            it?.run { it.minBatteryLevelMobile to it.minBatteryLevelWhileCharging }
         }.ignoreUnchanged().observe(lifecycleOwner, Observer {
             if (it != null) {
                 val (mobile, charging) = it
@@ -94,8 +94,8 @@ object CategoryBatteryLimitView {
                     auth.tryDispatchParentAction(
                             UpdateCategoryBatteryLimit(
                                     categoryId = categoryId,
-                                    mobileLimit = binding.seekbarMobile.progress * 10,
-                                    chargingLimit = binding.seekbarCharging.progress * 10
+                                    mobileLimit = binding.seekbarMobile.progress,
+                                    chargingLimit = binding.seekbarCharging.progress
                             )
                     )
             ) {

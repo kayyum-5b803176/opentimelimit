@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content" />
 
             <SeekBar
-                android:max="10"
+                android:max="100"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekbar_charging" />
@@ -71,7 +71,7 @@
 
             <SeekBar
                 android:nextFocusDown="@id/confirm_btn"
-                android:max="10"
+                android:max="100"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekbar_mobile" />
