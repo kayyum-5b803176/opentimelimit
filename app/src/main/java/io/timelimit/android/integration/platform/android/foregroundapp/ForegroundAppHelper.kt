@@ -32,13 +32,17 @@ abstract class ForegroundAppHelper {
             if (instance == null) {
                 synchronized(lock) {
                     if (instance == null) {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                            instance = QForegroundAppHelper(context.applicationContext)
+                        val usageStatsBased = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                            QForegroundAppHelper(context.applicationContext)
                         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            instance = LollipopForegroundAppHelper(context.applicationContext)
+                            LollipopForegroundAppHelper(context.applicationContext)
                         } else {
-                            instance = CompatForegroundAppHelper(context.applicationContext)
+                            CompatForegroundAppHelper(context.applicationContext)
                         }
+
+                        // prefer the event-driven accessibility path everywhere it's
+                        // available; only touch UsageStatsManager when it's not
+                        instance = HybridForegroundAppHelper(context.applicationContext, usageStatsBased)
                     }
                 }
             }

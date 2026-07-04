@@ -97,6 +97,11 @@
             android:name=".ui.manipulation.AnnoyActivity" />
 
         <activity
+            android:exported="false"
+            android:name=".ui.lowbattery.LowBatteryBlockerSettingsActivity"
+            android:label="Low battery app blocker" />
+
+        <activity
             android:exported="true"
             tools:ignore="UnusedAttribute"
             android:enabled="false"
@@ -137,6 +142,8 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <receiver android:name=".integration.platform.android.receiver.AccessibilityHealthCheckReceiver" android:exported="false" />
 
         <receiver android:name=".integration.platform.android.receiver.UpdateReceiver"  android:exported="false">
             <intent-filter>

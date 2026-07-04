@@ -17,21 +17,37 @@ package io.timelimit.android.integration.platform.android
 
 import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.AccessibilityServiceInfo
-import android.os.Build
 import android.view.accessibility.AccessibilityEvent
+import java.util.concurrent.CopyOnWriteArrayList
 
 class AccessibilityService: AccessibilityService() {
     companion object {
         var instance: io.timelimit.android.integration.platform.android.AccessibilityService? = null
+
+        // Event-driven foreground-app-change hook.
+        // Anyone interested in "which app is now in front" subscribes here instead of
+        // polling UsageStatsManager. Multiple independent consumers (the core foreground-
+        // app detector, the low battery blocker, ...) can subscribe at once - this is a
+        // list, not a single overwritable var, specifically so one consumer registering
+        // doesn't clobber another's subscription.
+        private val foregroundPackageListeners = CopyOnWriteArrayList<(packageName: String, className: String?) -> Unit>()
+
+        fun addForegroundPackageListener(listener: (packageName: String, className: String?) -> Unit) {
+            foregroundPackageListeners.add(listener)
+        }
+
+        fun removeForegroundPackageListener(listener: (packageName: String, className: String?) -> Unit) {
+            foregroundPackageListeners.remove(listener)
+        }
     }
 
     override fun onServiceConnected() {
         super.onServiceConnected()
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            this.serviceInfo = AccessibilityServiceInfo().apply {
-                feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC
-            }
+        this.serviceInfo = AccessibilityServiceInfo().apply {
+            eventTypes = AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED
+            feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC
+            notificationTimeout = 100
         }
 
         instance = this
@@ -44,7 +60,14 @@ class AccessibilityService: AccessibilityService() {
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
-        // ignore
+        if (event == null) return
+        if (event.eventType != AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) return
+
+        val packageName = event.packageName?.toString() ?: return
+        val className = event.className?.toString()
+
+        // this only fires when the foreground app actually changes - never on a timer
+        foregroundPackageListeners.forEach { it(packageName, className) }
     }
 
     override fun onInterrupt() {

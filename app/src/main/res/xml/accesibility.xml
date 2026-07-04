@@ -16,5 +16,6 @@
 <accessibility-service
     android:description="@string/manage_device_permission_accessibility_text"
     android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityEventTypes="typeWindowStateChanged"
     android:notificationTimeout="100"
     xmlns:android="http://schemas.android.com/apk/res/android" />

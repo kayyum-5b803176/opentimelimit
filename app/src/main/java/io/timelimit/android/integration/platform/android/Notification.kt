@@ -30,6 +30,7 @@ object NotificationIds {
     const val TIME_WARNING = 4
     const val EXTRA_TIME_STARTED = 5
     const val OPEN_MAIN_APP_WITH_ERROR = 6
+    const val ACCESSIBILITY_SERVICE_HEALTH_CHECK = 7
 }
 
 object NotificationChannels {
@@ -38,6 +39,7 @@ object NotificationChannels {
     const val TIME_WARNING = "time warning"
     const val TEMP_ALLOWED_APP = "temporarily allowed App"
     const val EXTRA_TIME_STARTED = "extra time started"
+    const val ACCESSIBILITY_SERVICE_HEALTH_CHECK = "accessibility service health check"
 
     private fun createAppStatusChannel(notificationManager: NotificationManager, context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -119,12 +121,27 @@ object NotificationChannels {
         }
     }
 
+    private fun createAccessibilityHealthCheckChannel(notificationManager: NotificationManager, context: Context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationManager.createNotificationChannel(
+                NotificationChannel(
+                    ACCESSIBILITY_SERVICE_HEALTH_CHECK,
+                    "Low battery blocker status",
+                    NotificationManager.IMPORTANCE_HIGH
+                ).apply {
+                    description = "Warns when the accessibility service needed for the low battery app blocker has stopped running"
+                }
+            )
+        }
+    }
+
     fun createNotificationChannels(notificationManager: NotificationManager, context: Context) {
         createAppStatusChannel(notificationManager, context)
         createBlockedNotificationChannel(notificationManager, context)
         createTimeWarningsNotificationChannel(notificationManager, context)
         createTempAllowedAppChannel(notificationManager, context)
         createExtraTimeStartedNotificationChannel(notificationManager, context)
+        createAccessibilityHealthCheckChannel(notificationManager, context)
     }
 }
 
@@ -135,6 +152,8 @@ object PendingIntentIds {
     const val U2F_NFC_DISCOVERY = 4
     const val U2F_USB_RESPONSE = 5
     const val OPEN_MAIN_APP_WITH_ERROR = 6
+    const val ACCESSIBILITY_SERVICE_HEALTH_CHECK_ALARM = 7
+    const val ACCESSIBILITY_SERVICE_HEALTH_CHECK_NOTIFICATION = 8
 
     val PENDING_INTENT_FLAGS = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE

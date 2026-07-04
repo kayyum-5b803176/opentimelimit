@@ -92,6 +92,8 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
     private val deviceAdmin = ComponentName(context.applicationContext, AdminReceiver::class.java)
     private val overlay = OverlayUtil(context as Application)
     private val battery = BatteryStatusUtil(context)
+    private val lowBatteryBlockerSettings = LowBatteryBlockerSettings.with(context)
+    private val lowBatteryAppBlocker = LowBatteryAppBlocker(context, battery, lowBatteryBlockerSettings, overlay)
     private val connectedNetwork = ConnectedNetworkUtil(context)
     private val muteAudioMutex = Mutex()
 

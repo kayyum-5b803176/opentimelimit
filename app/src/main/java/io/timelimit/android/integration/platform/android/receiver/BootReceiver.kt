@@ -18,6 +18,7 @@ package io.timelimit.android.integration.platform.android.receiver
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import io.timelimit.android.integration.platform.android.LowBatteryBlockerSettings
 import io.timelimit.android.logic.DefaultAppLogic
 
 class BootReceiver : BroadcastReceiver() {
@@ -25,6 +26,12 @@ class BootReceiver : BroadcastReceiver() {
         if (intent?.action == Intent.ACTION_BOOT_COMPLETED) {
             // this starts the logic (if not yet done)
             DefaultAppLogic.with(context).backgroundTaskLogic.reportDeviceReboot()
+
+            // setInexactRepeating() alarms don't survive a reboot, so re-arm this
+            // one if the feature was left on
+            if (LowBatteryBlockerSettings.with(context).enabled.value == true) {
+                AccessibilityHealthCheckScheduler.schedule(context)
+            }
         }
     }
 }
