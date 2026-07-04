@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="defaultUserTitle"
+            type="String" />
+
+        <variable
+            name="hasDefaultUser"
+            type="boolean" />
+
+        <variable
+            name="isCurrentDevice"
+            type="boolean" />
+
+        <variable
+            name="isAlreadyUsingDefaultUser"
+            type="boolean" />
+
+        <variable
+            name="defaultUserSwitchText"
+            type="String" />
+
+        <variable
+            name="isAutomaticallySwitchingToDefaultUserEnabled"
+            type="boolean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:id="@+id/title_view"
+                android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                android:background="?selectableItemBackground"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:text="@string/manage_device_default_user_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{hasDefaultUser ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:text="@string/manage_device_default_user_status"
+                android:text="@{@string/manage_device_default_user_status(defaultUserTitle)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="?materialButtonOutlinedStyle"
+                android:id="@+id/set_default_user_button"
+                tools:text="@string/manage_device_default_user_set_btn_set"
+                android:text="@{hasDefaultUser ? @string/manage_device_default_user_set_btn_change : @string/manage_device_default_user_set_btn_set}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/switch_to_default_user_button"
+                android:enabled="@{hasDefaultUser &amp;&amp; isCurrentDevice &amp;&amp; (!isAlreadyUsingDefaultUser)}"
+                android:text="@string/manage_device_default_user_switch_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{hasDefaultUser ? View.GONE : View.VISIBLE}"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:text="@string/manage_device_default_user_switch_reason_unset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{isCurrentDevice ? View.GONE : View.VISIBLE}"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:text="@string/manage_device_default_user_switch_reason_remote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{isAlreadyUsingDefaultUser ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:text="@string/manage_device_default_user_switch_reason_already_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{hasDefaultUser ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@{defaultUserSwitchText}"
+                tools:text="@string/manage_device_default_user_timeout_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="?materialButtonOutlinedStyle"
+                android:visibility="@{hasDefaultUser ? View.VISIBLE : View.GONE}"
+                android:id="@+id/configure_auto_logout_button"
+                android:text="@{isAutomaticallySwitchingToDefaultUserEnabled ? @string/manage_device_default_user_timeout_btn_change : @string/manage_device_default_user_timeout_btn_enable}"
+                tools:text="@string/manage_device_default_user_timeout_btn_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2024 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="maxTimeString"
+            type="String" />
+
+        <variable
+            name="usageProgressInPercent"
+            type="Integer" />
+
+        <variable
+            name="usageAsText"
+            type="String" />
+
+        <variable
+            name="daysString"
+            type="String" />
+
+        <variable
+            name="timeAreaString"
+            type="String" />
+
+        <variable
+            name="sessionLimitString"
+            type="String" />
+
+        <variable
+            name="expiresAtString"
+            type="String" />
+
+        <variable
+            name="appliesToExtraTime"
+            type="Boolean" />
+
+        <variable
+            name="ignoredOnExtraTime"
+            type="Boolean" />
+
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.manage.category.timelimit_rules.TimeLimitRulesHandlers" />
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        app:cardUseCompatPadding="true"
+        android:foreground="?selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@{maxTimeString}"
+                tools:text="höchstens 5 Minuten"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@{daysString}"
+                tools:text="Montag und Dienstag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@{timeAreaString}"
+                tools:text="von 12:00 bis 18:00"
+                android:visibility="@{TextUtils.isEmpty(timeAreaString) ? View.GONE : View.VISIBLE}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@{sessionLimitString}"
+                tools:text="10 Minuten Pause nach 5 Minuten Nutzung"
+                android:visibility="@{TextUtils.isEmpty(sessionLimitString) ? View.GONE : View.VISIBLE}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@{expiresAtString}"
+                tools:text="@string/category_time_limit_rules_expires_at_short"
+                android:visibility="@{TextUtils.isEmpty(expiresAtString) ? View.GONE : View.VISIBLE}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{safeUnbox(appliesToExtraTime) ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:text="@string/category_time_limit_rules_applied_to_extra_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{ignoredOnExtraTime ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:text="@string/category_time_limit_rules_ignore_on_extra_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:visibility="@{usageProgressInPercent == null ? View.GONE : View.VISIBLE}"
+                android:progress="@{safeUnbox(usageProgressInPercent)}"
+                tools:progress="50"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{TextUtils.isEmpty(usageAsText) ? View.GONE : View.VISIBLE}"
+                android:text="@{usageAsText}"
+                android:textAppearance="?android:textAppearanceSmall"
+                tools:text="2 Minuten verbraucht"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

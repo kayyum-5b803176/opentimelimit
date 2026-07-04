@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2022 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.lock.LockActionFragment">
+
+    <data>
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.lock.Handlers" />
+
+        <variable
+            name="appTitle"
+            type="String" />
+
+        <variable
+            name="appCategoryTitle"
+            type="String" />
+
+        <variable
+            name="reason"
+            type="io.timelimit.android.logic.BlockingReason" />
+
+        <variable
+            name="currentTime"
+            type="String" />
+
+        <variable
+            name="blockedKindLabel"
+            type="String" />
+
+        <variable
+            name="missingNetworkIdPermission"
+            type="boolean" />
+
+        <import type="android.view.View" />
+        <import type="io.timelimit.android.logic.BlockingReason" />
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:visibility="@{reason == BlockingReason.NotPartOfAnCategory ? View.VISIBLE : View.GONE}"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{() -> handlers.allowTemporarily()}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/lock_allow_temporarily_header"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        tools:text="@string/lock_allow_temporarily_text"
+                        android:text="@{@string/lock_allow_temporarily_text(appTitle)}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="@{reason == BlockingReason.NotPartOfAnCategory ? View.VISIBLE : View.GONE}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/lock_add_to_category_title"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/lock_add_to_category_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/add_to_category_options"
+                        app:flexWrap="wrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- This is filled at runtime -->
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="@{reason == BlockingReason.TimeOver ? View.VISIBLE : View.GONE}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        tools:ignore="UnusedAttribute"
+                        android:drawableTint="?colorOnSurface"
+                        android:background="?selectableItemBackground"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:id="@+id/extra_time_title"
+                        android:text="@string/lock_extratime_title"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <io.timelimit.android.ui.view.SelectTimeSpanView
+                        android:id="@+id/extra_time_selection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Switch
+                        android:id="@+id/switch_limit_extra_time_to_today"
+                        android:text="@string/category_settings_extra_time_switch_limit_to_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="end"
+                        android:id="@+id/extra_time_btn_ok"
+                        android:text="@string/generic_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="@{reason == BlockingReason.TemporarilyBlocked ? View.VISIBLE : View.GONE}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/lock_disable_temporarily_lock_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            style="?materialButtonOutlinedStyle"
+                            android:layout_marginEnd="4dp"
+                            android:onClick="@{() -> handlers.disableTemporarilyLockForCurrentCategory()}"
+                            tools:text="Erlaubte Spiele"
+                            android:text="@{appCategoryTitle}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <Button
+                            android:layout_marginStart="4dp"
+                            style="?materialButtonOutlinedStyle"
+                            android:onClick="@{() -> handlers.disableTemporarilyLockForAllCategories()}"
+                            android:text="@string/lock_disable_temporarily_all_categories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="@{reason == BlockingReason.BlockedAtThisTime || reason == BlockingReason.TimeOver || reason == BlockingReason.TimeOverExtraTimeCanBeUsedLater || reason == BlockingReason.SessionDurationLimit || reason == BlockingReason.MissingRequiredNetwork ? View.VISIBLE : View.GONE}"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{() -> handlers.disableLimitsTemporarily()}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        tools:text="@string/manage_child_special_mode_wizard_disable_limits_title"
+                        android:text="@{@string/manage_child_special_mode_wizard_disable_limits_title(appCategoryTitle)}"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/lock_disable_limits_temporarily_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="@{(reason == BlockingReason.MissingRequiredNetwork || reason == BlockingReason.MissingNetworkCheckPermission) &amp;&amp; missingNetworkIdPermission ? View.VISIBLE : View.GONE}"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{() -> handlers.requestLocationPermission()}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/lock_grant_permission_title"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/lock_grant_permission_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{() -> handlers.openMainApp()}"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/lock_goto_main_title"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="@string/lock_goto_main_text"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

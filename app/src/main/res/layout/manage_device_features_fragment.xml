@@ -1,0 +1,62 @@
+<!--
+  TimeLimit Copyright <C> 2019 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.timelimit.android.ui.manage.device.manage.feature.ManageDeviceFeaturesFragment">
+
+    <data>
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.manage.device.manage.feature.ManageDeviceFeaturesFragmentHandlers" />
+
+        <import type="android.view.View" />
+        <import type="io.timelimit.android.BuildConfig" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include android:id="@+id/device_reboot_manipulation"
+                    layout="@layout/manage_device_reboot_manipulation_view" />
+
+                <include android:id="@+id/activity_level_blocking"
+                    layout="@layout/manage_device_activity_level_blocking" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:onClick="@{() -> handlers.showAuthenticationScreen()}"
+            android:id="@+id/fab"
+            app:fabSize="normal"
+            android:src="@drawable/ic_lock_open_white_24dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="end|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

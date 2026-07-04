@@ -1,0 +1,35 @@
+Diese Anwendung (Open TimeLimit) entspricht weitestgehend TimeLimit, aber ohne die Funktionen zur Vernetzung,
+
+Flexibel
+
+Apps werden in Kategorien zusammengefasst, wobei eine Kategorie auch nur eine App enthalten kann.
+
+Für jede Kategorie kann dann gewählt werden, an welchen Uhrzeiten diese Apps erlaubt sein sollen. Dadurch kann verhindert werden, dass zu spät noch gespielt wird.
+
+Zusätzlich können Zeitbegrenzungsregeln eingestellt werden. Damit kann die Gesamtnutzungsdauer an einem Tag oder über mehrere Tage hinweg (z.B. das Wochenende) begrenzt werden. Das lässt sich sogar kombinieren, sodass z.B. am Wochenende höchstens 3 Stunden gespielt werden darf, aber an jedem Wochenendtag jeweils höchstens 2 Stunden.
+
+Außerdem gibt es die Möglichkeit, eine Extrazeit zu erteilen. Das ermöglicht eine einmalige längere Nutzung als sonst. Das kann z.B. als Belohnung verwendet werden. Es gibt auch die Möglichkeit, die Zeitbegrenzungen vorübergehend (z.B. für eine Stunde oder den Rest eines Tages) abzuschalten.
+
+Mehrbenutzerfähig
+
+Es gibt den Fall, dass ein Gerät nur von einem Benutzer verwendet wird. Insbesondere bei Tablets ist das aber oft nicht der Fall. Daher könne in TimeLimit mehrere Benutzerprofile erstellt werden, für die es jeweils andere Einstellungen und Zeitkonten gibt. Dabei gibt es zwei Arten von Benutzern: Kinder und Elternteile. Wenn ein Elternteil als Benutzer eingestellt wurde, gibt es keine Einschränkungen. Eltern können jeden beliebigen Benutzer als aktuellen Benutzer einstellen. 
+
+Hinweise
+
+Ein Blick auf <a href="https://timelimit.io/de/konfigurationsansaetze/">https://timelimit.io/de/konfigurationsansaetze/</a> kann hilfreich sein, wenn man TimeLimit nicht für den Standardfall einsetzt.
+
+Bei einigen Smartphone-Marken, insbesondere Huawei und Wiko, funktioniert TimeLimit nicht gut. Je nach Modell kann es mit den passenden Einstellungen besser funktionieren. Besser bedeutet aber nicht gut.
+
+Falls die App "nicht funktioniert" kann das an Energiesparfunktionen liegen. Wie Sie diese abschalten können, wird unter https://dontkillmyapp.com/ beschrieben. Wenden Sie sich an den Support, wenn das nicht hilft.
+
+Je nach Android-Version verwendet TimeLimit die Berechtigung zum Nutzungsdatenzugriff oder die "GET_TASKS"-Berechtigung. Diese werden ausschließlich zur Erkennung der momentan genutzten App verwendet. Auf der Basis der momentan genutzten App erfolgt eine Sperrung, eine Freigabe oder eine Berechnung und Anpassung der verbleibenden Nutzungsdauer.
+
+Die Geräte-Administrator-Berechtigung wird genutzt, um ein Deinstallieren von TimeLimit zu erkennen.
+
+TimeLimit verwendet den Benachrichtigungszugriff, um auch die Benachrichtigungen von gesperrten Apps zu sperren und zum Erfassen und Sperren von Hintergrundmusikwiedergaben. Es erfolgt keine Speicherung von Benachrichtigungen.
+
+TimeLimit verwendet die Bedienhilfe-Berechtigung, um den Home-Button vor dem Aufruf des Sperrbildschirms zu drücken, um das Sperren in einigen Fällen zu verbessern. Außerdem ist das eine Möglichkeit, um es TimeLimit unter neueren Android-Versionen zu ermöglichen, den Sperrbildschirm zu öffnen.
+
+TimeLimit verwendet die Berechtigung "Über anderen Apps anzeigen", um bei neueren Android-Versionen den Sperrbildschirm aufrufen zu können und um gesperrte Apps zu überlagern, bis der Sperrbildschirm gestartet wurde.
+
+TimeLimit verwendet den Standortzugriff, um das verwendete Netzwerk zu erkennen und auf der Basis Anwendungen abhängig von den Einstellungen zu erlauben oder zu sperren. Der Standortzugriff wird darüber hinaus nicht verwendet.

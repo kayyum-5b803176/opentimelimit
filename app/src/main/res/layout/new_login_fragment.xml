@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <io.timelimit.android.ui.view.SafeViewFlipper
+        android:measureAllChildren="false"
+        android:id="@+id/switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include android:id="@+id/user_list"
+            layout="@layout/new_login_fragment_user_list" />
+
+        <include android:id="@+id/enter_password"
+            layout="@layout/new_login_fragment_password" />
+
+        <include android:id="@+id/child_without_password"
+            layout="@layout/new_login_fragment_child_without_password" />
+
+        <include android:id="@+id/child_already_logged_in"
+            layout="@layout/new_login_fragment_child_already_current_user" />
+
+        <include android:id="@+id/child_password"
+            layout="@layout/new_login_fragment_child_password" />
+
+        <include layout="@layout/new_login_fragment_parent_login_blocked"
+            android:id="@+id/parent_login_blocked" />
+
+    </io.timelimit.android.ui.view.SafeViewFlipper>
+</layout>

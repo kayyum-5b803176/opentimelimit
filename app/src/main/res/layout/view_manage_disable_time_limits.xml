@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="disabledUntilString"
+            type="String" />
+
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.view.ManageDisableTimelimitsViewHandlers" />
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:id="@+id/title_view"
+                android:background="?selectableItemBackground"
+                android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                android:text="@string/manage_disable_time_limits_title"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:visibility="@{TextUtils.isEmpty(disabledUntilString) ? View.GONE : View.VISIBLE}"
+                android:text="@{disabledUntilString}"
+                tools:text="@string/manage_disable_time_limits_info_enabled"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                style="?materialButtonOutlinedStyle"
+                android:onClick="@{() -> handlers.enableTimeLimits()}"
+                android:visibility="@{TextUtils.isEmpty(disabledUntilString) ? View.GONE : View.VISIBLE}"
+                android:text="@string/manage_disable_time_limits_btn_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:visibility="@{TextUtils.isEmpty(disabledUntilString) ? View.VISIBLE : View.GONE}"
+                app:flexWrap="wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsForDuration(1000 * 60 * 10)}"
+                    android:text="@string/manage_disable_time_limits_btn_10_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsForDuration(1000 * 60 * 30)}"
+                    android:text="@string/manage_disable_time_limits_btn_30_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsForDuration(1000 * 60 * 60)}"
+                    android:text="@string/manage_disable_time_limits_btn_1_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsForDuration(1000 * 60 * 60 * 2)}"
+                    android:text="@string/manage_disable_time_limits_btn_2_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsForDuration(1000 * 60 * 60 * 4)}"
+                    android:text="@string/manage_disable_time_limits_btn_4_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsForToday()}"
+                    android:text="@string/manage_disable_time_limits_btn_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsUntilSelectedTimeOfToday()}"
+                    android:text="@string/manage_disable_time_limits_btn_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    app:layout_flexGrow="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.disableTimeLimitsUntilSelectedDate()}"
+                    android:text="@string/manage_disable_time_limits_btn_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

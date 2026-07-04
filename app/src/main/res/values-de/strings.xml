@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2024 Jonas Lochmann
+    Copyright <C> 2020 Marcel Voigt
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="generic_ok">OK</string>
+    <string name="generic_cancel">Abbrechen</string>
+    <string name="generic_help">Hilfe</string>
+    <string name="generic_undo">Rückgängig</string>
+    <string name="generic_save">Speichern</string>
+    <string name="generic_create">Erstellen</string>
+    <string name="generic_delete">Löschen</string>
+    <string name="generic_go">Los</string>
+    <string name="generic_manage_card">Verwaltung</string>
+    <string name="generic_enable">Aktivieren</string>
+    <string name="generic_show_more">Mehr anzeigen</string>
+    <string name="generic_no">Nein</string>
+    <string name="generic_yes">Ja</string>
+    <string name="generic_skip">Überspringen</string>
+    <string name="generic_login">Anmelden</string>
+    <string name="generic_logout">Abmelden</string>
+
+    <string name="generic_swipe_to_dismiss">Sie können diesen Hinweis entfernen, indem Sie ihn zur Seite wischen</string>
+
+    <string name="generic_runtime_permission_rejected">Berechtigung abgelehnt; Sie können die Berechtigungen in den Systemeinstellungen verwalten</string>
+
+    <string name="about_version">Version %s</string>
+
+    <string name="about_contact_title">Links</string>
+    <string name="about_contact_mail">
+        https://timelimit.io/de/#support
+        \nhttps://timelimit.io/de/dokumentation/
+        \nhttps://timelimit.io/de/konfigurationsansaetze/
+    </string>
+
+    <string name="about_source_title">Quelltext</string>
+
+    <string name="about_contained_software_title">enthaltene Software</string>
+
+    <string name="about_diagnose_title">Fehlerdiagnose</string>
+    <string name="about_diagnose_text">Tippen Sie hier, um Details anzuzeigen, die bei einer Fehlerdiagnose helfen können</string>
+
+    <string name="about_developer_key_title">Fingerabdruck des PGP-Schlüssels des Entwicklers</string>
+
+    <string name="add_used_time_title">benutzte Zeit eintragen</string>
+    <string name="add_used_time_title_with_category_title">Benutzte Zeit für %s eintragen</string>
+    <!-- Teleschirm bezieht sich auf auf https://de.wikipedia.org/wiki/1984_(Roman) -->
+    <string name="add_used_time_description">Hiermit kann benutzte Zeit eingetragen/ hinzugefügt werden,
+        wenn diese außerhalb von TimeLimit verwendet wurde, z.B. um eine Teleschirm-Nutzung als Nutzungszeit
+        einzutragen
+    </string>
+    <string name="add_used_time_confirmation_toast">%1$s Nutzungszeit für %2$s hinzugefügt</string>
+
+    <string name="add_user_title">Benutzer hinzufügen</string>
+    <string name="add_user_hint_name">Name des Benutzers</string>
+    <string name="add_user_type_parent">Elternteil</string>
+    <string name="add_user_type_child">Kind</string>
+    <string name="add_user_confirmation_done">Benutzer wurde erstellt</string>
+    <string name="add_user_child_password_info">Wenn Sie ein Passwort für das Kind wählen,
+        dann kann sich das Kind mit seinem Passwort selbst als aktueller Benutzer des Gerätes festlegen.
+        Das ist nur relevant wenn es mehrere verschiedene Benutzer gibt.
+        Wenn der Passwortschutz deaktiviert wird ist das nicht möglich.
+    </string>
+
+    <string name="add_user_authentication_required_text">
+        Zum Hinzufügen von Benutzern muss sich ein Elternteil anmelden
+    </string>
+
+    <string name="add_user_authentication_required_btn">Anmelden</string>
+
+    <string name="annoy_info">
+        TimeLimit wurde manipuliert. Deshalb wurde das Gerät gesperrt.
+    </string>
+    <string name="annoy_timer">
+        Das Gerät kann in %s entsperrt werden.
+    </string>
+    <string name="annoy_unlock_temp_button">kurz entsperren</string>
+    <string name="annoy_unlock_parent_button">länger entsperren</string>
+    <string name="annoy_reason">
+        Folgendes wurde manipuliert: %s
+    </string>
+    <string name="annoy_unlock_dialog_text">Nach dem Entsperren sollte die Ursache
+        für das Sperren behoben werden. Ansonsten wird das Gerät bald wieder gesperrt.
+    </string>
+    <string name="annoy_unlock_dialog_action">Entsperren</string>
+
+    <string name="authentication_required_overlay_title">Melden Sie sich an, um Einstellungen zu ändern</string>
+    <string name="authentication_required_overlay_text">Die Einstellungen werden wieder gesperrt, wenn Sie TimeLimit verlassen</string>
+
+    <string name="backdoor_start_btn">TimeLimit ohne Passwort mit Hilfe des Supports entfernen</string>
+    <string name="backdoor_intro_text">Diese Funktion ist für den Fall, dass ein bestätigter Fehler in TimeLimit Sie aussperrt.
+        Sie eignet sich nicht für vergessene oder falsch notierte Passwörter. Richtige Passwörter, die nicht akzeptiert werden,
+        sind nur dann ein Fall für diese Funktion, wenn ein derartiger Fehler bestätigt/nachgewiesen wurde.
+    </string>
+    <string name="backdoor_intro_confirm">verstanden</string>
+    <string name="backdoor_instruction_1">Senden Sie folgende Nonce (mit dem Grund für das Entsperren) an den Support, um einen Entsperrcode zu bekommen:</string>
+    <string name="backdoor_instruction_2">Geben Sie den empfangenen Code ein:</string>
+    <string name="backdoor_toast_invalid_code">Dieser Code ist ungültig</string>
+
+    <string name="background_logic_whitelisted">in der internen Whitelist</string>
+    <string name="background_logic_temporarily_allowed">vorübergehend erlaubt</string>
+    <string name="background_logic_limits_disabled">Zeitbegrenzungen deaktiviert</string>
+    <string name="background_logic_no_timelimit">keine Zeitbegrenzung</string>
+    <string name="background_logic_idle_title">Leerlauf</string>
+    <string name="background_logic_idle_text">Keine aktive App erkannt</string>
+    <string name="background_logic_error">Fehler</string>
+    <string name="background_logic_error_permission">fehlende Berechtigung</string>
+    <string name="background_logic_error_internal">internes Problem</string>
+    <string name="background_logic_using_extra_time">Extrazeit (%s)</string>
+    <string name="background_logic_opening_lockscreen">Sperrbildschirm wird geöffnet</string>
+    <string name="background_logic_permission_sanction_title">Berechtigung fehlt</string>
+    <string name="background_logic_permission_sanction_text">nehme an, dass alles verwendet wird</string>
+    <string name="background_logic_errpr_detailed_instanceid_sorting">Es gibt ein Problem mit der
+        Nutzungsstatisitkdatenbank Ihres Gerätes.
+        Deshalb kann TimeLimit nicht zuverlässig erkennen, welche App verwendet wird.
+        Dieses Problem kann nur behoben werden durch vier Tagen Geduld oder das Zurücksetzen des Gerätes.
+        Eine Neuinstallation von TimeLimit hilft NICHT.
+    </string>
+
+    <string name="background_logic_temporarily_allowed_title">Apps wurden vorübergehend erlaubt</string>
+    <string name="background_logic_temporarily_allowed_text">Zum Rückgängig machen hier tippen oder Bildschirm ausschalten</string>
+
+    <string name="background_logic_timeout_title">automatische Abmeldung aktiviert</string>
+    <string name="background_logic_timeout_text">TimeLimit läuft noch, um das zu ermöglichen</string>
+
+    <string name="background_logic_paused_title">Vorübergehend deaktiviert</string>
+    <string name="background_logic_paused_text">Keine Einschränkungen</string>
+
+    <string name="background_logic_toast_sync_apps">TimeLimit: Fehler beim Aktualisieren der App-Liste</string>
+    <string name="background_logic_toast_block_audio">TimeLimit: Musikwiedergabe beendet (Benachrichtigungsfilter): %s</string>
+    <string name="background_logic_toast_block_audio_failed">TimeLimit: Anhalten der Musikwiedergabe fehlgeschlagen</string>
+
+    <string name="blocked_time_areas">
+        Sperrzeiten
+    </string>
+
+    <string name="blocked_time_areas_help_about">
+        Hier können Sie Sperrzeiten festlegen.
+        Während einer Sperrzeit können keine Apps einer bestimmten Kategorie genutzt werden.
+        Dabei können Sie die Sperrzeit einer Kategorie minutengenau festlegen.
+    </string>
+
+    <string name="blocked_time_areas_help_colors">
+        In dieser Ansicht gibt es zwei Farben: Grün bedeutet freigegeben, rot bedeutet gesperrt.
+    </string>
+
+    <string name="blocked_time_areas_help_structure">
+        Die Tage und Stunden werden hier als Überschriften angezeigt, die Minuten als Kacheln.
+        Sie können mit dem Tages-Dropdown zu einem bestimmten Tag springen.
+    </string>
+
+    <string name="blocked_time_areas_help_modify">
+        Zum Ändern eines Bereiches tippen Sie auf die Startzeit, diese erscheint dann blau.
+        Wählen Sie danach die Endzeit.
+        Nun wird der Bereich invertiert auf der Basis des Wertes, der davor in diesem Bereich überwiegend vorhanden war.
+    </string>
+
+    <string name="blocked_time_areas_snackbar_modified">
+        Die Sperrzeiten wurden geändert
+    </string>
+
+    <string name="blocked_time_areas_snackbar_child_hint">Ohne Anmeldung als Elternteil können nur Sperrzeiten hinzugefügt werden</string>
+
+    <string name="blocked_time_areas_checkbox_detailed">detailliertere Einstellungen anzeigen</string>
+
+    <string name="blocked_time_areas_copy_to_other_days">Einstellungen von einem Tag zu den anderen Tagen kopieren</string>
+    <string name="blocked_time_areas_copy_from">Kopiere von</string>
+    <string name="blocked_time_areas_copy_to">Kopiere von %s nach</string>
+
+    <string name="category_apps_title">zugeordnete Apps</string>
+
+    <string name="category_apps_add_dialog_btn_positive">Apps hinzufügen</string>
+    <string name="category_apps_add_dialog_filter_hint">Nach Apps suchen</string>
+    <string name="category_apps_add_dialog_show_sys_apps">Systemapps anzeigen</string>
+    <string name="category_apps_add_dialog_select_all">Alle auswählen</string>
+    <string name="category_apps_add_dialog_show_assigned_to_other_category">Zu anderen Kategorien zugeordnete Apps anzeigen</string>
+    <plurals name="category_apps_add_dialog_hidden_entries">
+        <item quantity="one">%d ausgeblendeten Eintrag ausgewählt</item>
+        <item quantity="other">%s ausgeblendete Einträge ausgewählt</item>
+    </plurals>
+    <string name="category_apps_add_dialog_cannot_add_activities_already_sth_selected">
+        Sie können nur Activities hinzufügen, wenn Sie noch keine Apps zum Hinufügen ausgewählt haben
+    </string>
+    <string name="category_apps_add_activity_dialog_search_hint">Activities suchen</string>
+    <string name="category_apps_add_activity_btn_positive">Activities hinzufügen</string>
+    <string name="category_apps_add_activity_empty_filtered">
+        Zu diesem Suchbegriff wurden keine Activities gefunden
+    </string>
+    <string name="category_apps_add_activity_empty_shown">
+        Es wurden keine Activities gefunden, die zugeordnet werden können.
+    </string>
+    <string name="category_apps_add_activity_empty_unfiltered">
+        Es wurden keine Activities gefunden.
+        Stellen Sie sicher, dass das Sperren auf Activity-Ebene aktiviert wurde.
+    </string>
+
+
+    <string name="category_apps_item_removed_toast">%s wurde entfernt</string>
+
+    <string name="category_apps_add_dialog_already_assigned_to">Bereits zugeordnet zu %s</string>
+
+    <string name="category_apps_add_empty_no_known_apps">TimeLimit hat (noch) keine installierten Apps erfasst</string>
+    <string name="category_apps_add_empty_due_to_filter">Es gibt keine Apps, die zur aktuellen Filterung der Liste passen</string>
+
+    <string name="category_notification_filter_title">Benachrichtigungsfilter</string>
+    <string name="category_notification_filter_text">
+        Wenn der Benachrichtigungszugriff in den Geräte-Einträgen aktiviert wurde,
+        dann werden Benachrichtigungen bei Sperrzeiten und wenn die Zeit abgelaufen ist blockiert.
+        Hiermit können die Benachrichtigungen von Apps einer Kategorie immer blockiert werden.
+        Damit werden auch (Hintergrund)musikwiedergaben blockiert.
+        Diese Funktion setzt voraus, dass der Benachrichtigungszugriff aktiviert wurde. Ansonsten funktioniert
+        diese Funktion nicht.
+    </string>
+    <string name="category_notifications_filter_checkbox">Alle Benachrichtigungen blockieren</string>
+    <string name="category_notification_filter_missing_permission">TimeLimit fehlt der Benachrichtigunszugriff.</string>
+    <string name="category_notification_filter_delay_intro">Das Sperren von Benachrichtigungen kann verzögert werden.
+        Wenn die Kategorie und nicht nur die Benachrichtigungen blockiert wurden, dann wird die Verzögerung ignoriert
+        und die Benachrichtigungen werden sofort blockiert.
+    </string>
+    <string name="category_notification_filter_delay_switch">Blockierung verzögern</string>
+    <string name="category_notification_filter_delay_prefix">Verzögere Sperrung um</string>
+    <string name="category_notification_filter_delay_suffix">Sekunden</string>
+    <string name="category_notification_filter_save_toast">Die Änderungen wurden gespeichert</string>
+    <string name="category_notification_filter_summary_disabled">Benachrichtigungen werden nicht blockiert</string>
+    <string name="category_notification_filter_summary_has_permission">Benachrichtigungen werden blockiert wenn die Kategorie blockiert wird</string>
+    <string name="category_notification_filter_summary_enabled_no_delay">Benachrichtigungen werden immer blockiert</string>
+    <string name="category_notification_filter_summary_enabled_with_delay">Benachrichtigungen werden mit %s Verzägerung immer blockiert</string>
+
+    <string name="category_settings">erweiterte Einstellungen</string>
+    <string name="category_settings_rename">Kategorie umbenennen</string>
+    <string name="category_settings_rename_empty">Der neue Name darf nicht leer sein</string>
+    <string name="category_settings_delete">Kategorie löschen</string>
+    <string name="category_settings_extra_time_title">Extrazeit</string>
+    <string name="category_settings_extra_time_info">
+        Die Extrazeit ermöglicht (sofern nicht durch entsprechende Regeln eingschränkt) die Nutzung über die normale Nutzungsdauer hinaus. Sie wird erst nach dem Verbrauch der regulären Zeit verbraucht und verfällt sonst nicht.
+    </string>
+    <string name="category_settings_extra_time_change">Extrazeit ändern</string>
+    <string name="category_settings_extra_time_change_toast">Die neue Extrazeit wurde gespeichert</string>
+    <string name="category_settings_extra_time_switch_limit_to_day">Extrazeit nach Ablauf des aktuellen Tages zurücksetzen</string>
+
+    <string name="category_settings_delete_dialog">Möchten Sie die Kategorie %s löschen?</string>
+
+    <string name="category_settings_parent_category_title">Ober-Kategorie</string>
+    <string name="category_settings_parent_category_intro">Wenn die Oberkategorie einer Kategorie blockiert ist (z.B. weil die Zeit verbraucht wurde), dann wird auch die Unterkategorie blockiert.  Wenn die Unterkategorie verwendet wird, dann wird die Nutzungsdauer auch zur Ober-Kategorie hinzugefügt.</string>
+    <string name="category_settings_parent_category_assigned_to">Diese Kategorie ist eine Unterkategorie von %s.</string>
+    <string name="category_settings_parent_category_button">Oberkategorie wählen</string>
+    <string name="category_settings_parent_category_none">keine Oberkategorie</string>
+
+    <string name="category_settings_battery_limit_title">Akkulimit</string>
+    <string name="category_settings_battery_limit_description">Hiermit kann ein Mindestakkustand festgelegt werden,
+    der erreicht sein muss, damit diese Kategorie genutzt werden kann.</string>
+    <string name="category_settings_battery_limit_charging">Beim Aufladen muss der Akku mindestens zu %d\%% voll sein</string>
+    <string name="category_settings_battery_limit_mobile">Beim Entladen müssen mindestens %d\%% des Akkus verbleiben</string>
+    <string name="category_settings_battery_limit_confirm_toast">Das Akkulimit wurde gespeichert</string>
+
+    <string name="category_time_limit_rules">Zeitbegrenzungen</string>
+    <string name="category_time_limit_rules_about">
+        Hier können Sie Zeitbegrenzungsregeln einstellen.
+        Jede Regel entspricht einem Grenzwert.
+        Zeiträume, für die es keine Regeln gibt, werden nicht eingeschränkt.
+    </string>
+    <string name="category_time_limit_rules_applied_to_extra_time">gilt auch für ggf. vorhandene Extra-Zeit</string>
+    <string name="category_time_limit_rules_ignore_on_extra_time">gilt nicht bei ggf. vorhandener Extra-Zeit</string>
+    <string name="category_time_limit_rules_time_area">nur von %s bis %s gültig</string>
+    <string name="category_time_limit_rules_session_limit">%s Pause nach %s Nutzung</string>
+    <string name="category_time_limit_rule_dialog_new">Regel erstellen</string>
+    <string name="category_time_limit_rule_dialog_edit">Regel bearbeiten</string>
+    <string name="category_time_limit_rules_apply_to_extra_time">Auch auf die Extra-Zeit anwenden</string>
+    <string name="category_time_limit_rules_apply_to_whole_day">Für den ganzen Tag anwenden</string>
+    <string name="category_time_limit_rules_apply_to_part_day_1">Von</string>
+    <string name="category_time_limit_rules_apply_to_part_day_2">bis</string>
+    <string name="category_time_limit_rules_apply_to_part_day_3">anwenden</string>
+    <string name="category_time_limit_rules_invalid_range">Die Anfangszeit muss vor der Endzeit liegen</string>
+    <string name="category_time_limit_rules_enable_session_limit">Sitzungsdauer beschränken</string>
+    <string name="category_time_limit_rules_session_limit_duration">maximale Nutzungsdauer</string>
+    <string name="category_time_limit_rules_session_limit_pause">Pausendauer</string>
+    <string name="category_time_limit_rules_per_day">täglich</string>
+    <string name="category_time_limit_rules_per_week">wöchentlich</string>
+    <string name="category_time_limit_rules_enable_expires">Regel ablaufen lassen</string>
+    <string name="category_time_limit_rules_expires_at">Wird ungültig am</string>
+    <string name="category_time_limit_rules_expires_at_short">Läuft ab am %s</string>
+
+    <string name="category_time_limit_rules_snackbar_created">Regel wurde erstellt</string>
+    <string name="category_time_limit_rules_snackbar_updated">Regel wurde geändert</string>
+    <string name="category_time_limit_rules_snackbar_deleted">Regel wurde gelöscht</string>
+
+    <string name="category_time_limit_rules_warning_day_part">Diese Regel begrenzt nur
+        die Nutzung im angegebenen Intervall. Ohne Regeln für andere Intervalle
+        oder Sperrzeiten wird es keine Begrenzung außerhalb dieses Intervalls
+        geben.
+    </string>
+    <string name="category_time_limit_rules_warning_zero_day_part">Sie haben keine Tage gewählt.
+        Diese Regel würde Nichts begrenzen.
+    </string>
+    <string name="category_time_limit_rules_error_self_limit_only_more_strict">Ohne Anmeldung
+        als Elternteil können Zeitbeschränkungsregeln nur strenger werden.
+    </string>
+
+    <string name="time_warning_title">Zeitwarnung</string>
+    <string name="time_warning_desc">Wenn weniger Zeit als ausgewählt übrig ist, dann wird eine Benachrichtigung angezeigt</string>
+    <string name="time_warning_custom_add">Zeitwarnung hinzufügen</string>
+
+    <string name="time_warning_not_title">Zeitwarnung für %s</string>
+    <string name="time_warning_not_title_session">Sitzungsdauerwarnung für %s</string>
+    <string name="time_warning_not_title_blocked_time_area">Sperrzeitwarnung für %s</string>
+
+    <string name="child_apps_title">Apps</string>
+    <string name="child_apps_sort_by_category">Nach Kategorie sortieren</string>
+    <string name="child_apps_sort_by_title">Nach Namen sortieren</string>
+    <string name="child_apps_unassigned">ohne Kategorie</string>
+    <string name="child_apps_empty_category">Diese Kategorie ist leer</string>
+
+    <string name="child_self_limit_add_title">Selbsteinschränkungshinzufügung</string>
+    <string name="child_self_limit_add_switch">Erlaube es diesem Benutzer, Einschränkungen für sich selbst hinzuzufügen</string>
+    <string name="child_self_limit_add_help">Das ist bei der Selbstbeschränkung hilfreich.
+        Damit kann der Benutzer ohne sich als Elternteil anzumelden einige Beschränkungen hinzufügen:
+        \n- Hinzufügen von Zeitbegrenzungsregeln
+        \n- Erweiterung der Sperrzeiten
+        \n- verwendete Nutzungsdauern eintragen
+        \n- Kategorien erstellen
+        \n- Benachrichtigungsfilter für eine Kategorie aktivieren
+        \n- eine Oberkategorie wählen, sofern die Kategorie dabei weiter nach unten in der Hierarchie verschoben wird
+        \n- Apps zu einer Kategorie hinzufügen, sofern diese in einer Unterkategorie ihrer aktuellen Kategorie verschoben werden;
+        Apps ohne Kategorie können zu einer Unterkategorie der Kategorie für Apps ohne Kategorie hinzugefügt werden
+        \n- Kategorien vorübergehend Sperren/ vorübergehende Sperrung von Kategorien verlängern
+        \n- vorübergehende Deaktivierung der Begrenzungen einer Kategorie vorzeitig deaktivieren
+    </string>
+    <string name="child_self_limit_add_caused_missing_options_hint">
+        Einige Optionen sind nicht verfügbar, weil kein Elternteil angemeldet ist
+    </string>
+
+    <string name="contacts_snackbar_added">Kontakt wurde hinzugefügt</string>
+    <string name="contacts_title_long">Erlaubte Kontakte</string>
+    <string name="contacts_description">Das ist eine Liste von Telefonnummern.
+        Eltern können Einträge von der Systemkontaktliste hinzufügen.
+        Jeder Nutzer diese Gerätes kann über diese Ansicht einen Anruf zu diesen Nummern starten,
+        auch wenn die Telefon-App gesperrt ist.
+        Die Telefonnummern werden nur auf diesem Gerät gespeichert.
+    </string>
+    <string name="contacts_add">Kontakt hinzufügen</string>
+    <string name="contacts_snackbar_remove_auth">Sie müssen sich anmelden um Kontakte zu entfernen</string>
+    <string name="contacts_snackbar_removed">%s wurde entfernt</string>
+    <string name="contacts_snackbar_call_failed">Anruf fehlgeschlagen</string>
+    <string name="contacts_snackbar_call_started">Anruf gestartet; Kann per Benachrichtigungsbereich beendet werden</string>
+
+    <string name="create_category_title">Kategorie erstellen</string>
+    <string name="create_category_hint">Name der neuen Kategorie</string>
+
+    <string name="day_of_week_monday">Montag</string>
+    <string name="day_of_week_tuesday">Dienstag</string>
+    <string name="day_of_week_wednesday">Mittwoch</string>
+    <string name="day_of_week_thursday">Donnerstag</string>
+    <string name="day_of_week_friday">Freitag</string>
+    <string name="day_of_week_saturday">Samstag</string>
+    <string name="day_of_week_sunday">Sonntag</string>
+
+    <string name="day_of_week_monday_short">Mo</string>
+    <string name="day_of_week_tuesday_short">Di</string>
+    <string name="day_of_week_wednesday_short">Mi</string>
+    <string name="day_of_week_thursday_short">Do</string>
+    <string name="day_of_week_friday_short">Fr</string>
+    <string name="day_of_week_saturday_short">Sa</string>
+    <string name="day_of_week_sunday_short">So</string>
+
+    <string name="delete_child_title">Benutzer löschen</string>
+    <string name="delete_child_text">Sind Sie sich sicher, dass Sie den Kind-Benutzer %s löschen möchten?</string>
+
+    <string name="diagnose_clock_title">Systemuhr</string>
+
+    <string name="diagnose_clock_epoch_seconds">Epochalsekunden: %d</string>
+    <string name="diagnose_clock_timezone">Zeitzone: %s</string>
+    <string name="diagnose_clock_time_of_day">Zeit des Tages: %s</string>
+    <string name="diagnose_clock_date">Datum: %s</string>
+    <string name="diagnose_clock_day_of_week">Wochentag (0 = Montag, ...): %d</string>
+    <string name="diagnose_clock_day_of_epoch">Epochaltag: %d</string>
+    <string name="diagnose_clock_minute_of_week">Minute der Woche: %d</string>
+
+    <string name="diagnose_connection_title">Verbindungsstatus</string>
+    <string name="diagnose_connection_network_id">Netzwerk-ID</string>
+
+    <string name="diagnose_fga_title">Erkennung der aktiven App</string>
+    <string name="diagnose_fga_query_range">Abfragezeitraum</string>
+    <string name="diagnose_fga_query_range_min">Minimal (Standard)</string>
+    <string name="diagnose_fga_txt_export_btn">Nutzungsstatistik vom System als Text exportieren</string>
+    <string name="diagnose_fga_export_toast_done">Export abgeschlossen</string>
+
+    <string name="diagnose_exf_title">Experimentelle Parameter</string>
+    <string name="diagnose_exf_slb">Apps auf Systemebene sperren</string>
+    <string name="diagnose_exf_chs">TimeLimit als Startbildschirm</string>
+    <string name="diagnose_exf_chd">Startbildschirmweiterleitung verzögern</string>
+    <string name="diagnose_exf_nas">Netzwerkzeitnutzung auf Systemebene erzwingen</string>
+    <string name="diagnose_exf_mld">Hauptschleifenintervall erhöhen</string>
+    <string name="diagnose_exf_mad">Versuche, mehrere aktive Apps zu erkennen (Splitscreen-Untersützung)</string>
+    <string name="diagnose_exf_hmw">Manipulationswarnung in der Kategorienliste ausblenden</string>
+    <string name="diagnose_exf_esb">Overlay und Home-Button nicht zum Sperren verwenden</string>
+    <string name="diagnose_exf_soc">strengere Prüfung der Überlagerungs-Berechtigung aktivieren</string>
+
+    <string name="diagnose_bat_title">Akku</string>
+    <string name="diagnose_bat_status">Status: %s</string>
+    <string name="diagnose_bat_status_charging">Aufladen/ voll</string>
+    <string name="diagnose_bat_status_mobile">Entladen</string>
+    <string name="diagnose_bat_level">Akkustand: %d\%%</string>
+
+    <string name="diagnose_don_title">Gerätebesitzerorganisationsname</string>
+    <string name="diagnose_don_no_owner_toast">TimeLimit ist KEIN Geräte-Besitzer</string>
+    <string name="diagnose_don_not_supported_toast">Ihr System ermöglicht es nicht, einen Organisationsnamen zu hinterlegen</string>
+
+    <string name="diagnose_bg_task_loop_ex">Hintergrundaufgabenschleifenfehler</string>
+
+    <string name="diagnose_copy_to_clipboard">In die Zwischenablage kopieren</string>
+    <string name="diagnose_copied_to_clipboard">In die Zwischenablage kopiert</string>
+
+    <string name="diagnose_er_title">Gründe für die Beendung</string>
+    <string name="diagnose_er_empty">es liegen keine Daten vor; diese Daten sind nur bei Android 11 und neuer verfügbar</string>
+
+    <string name="error_general">Der Vorgang ist fehlgeschlagen</string>
+
+    <string name="homescreen_selection_title">Startbildschirmauswahl</string>
+    <string name="homescreen_selection_intro">TimeLimit ist kein vollständiger Startbildschirm, aber Sie können auswählen, was angezeigt werden soll</string>
+    <string name="homescreen_selection_change_info">Dieses Menü kann jederzeit wieder aufgerufen werden durch das wiederholte Tippen auf den Home-Button</string>
+
+    <string name="homescreen_delay_config_dialog_title">Startbildschirmweiterleitungverzögerung</string>
+    <string name="homescreen_delay_config_dialog_text">Hier können Sie die Verzögerung für die Startbildschirmweiterleitung in Sekunden einstellen</string>
+
+    <string name="inform_about_device_owner_title">Geräte-Besitzer-Berechtigung wird empfohlen</string>
+    <string name="inform_about_device_owner_text">
+        Ab Android 5 wird eine Manipulation mit dem Geräteadministrator nur erkannt.
+        Es wird stattdessen empfohlen, per adb die Geräte-Besitzer-Berechtigung zu erteilen.
+    </string>
+    <string name="inform_about_device_owner_continue">Nur Geräte-Administrator aktivieren</string>
+
+    <string name="limit_user_viewing_title">Nutzersichtbarkeit einschränken</string>
+    <string name="limit_user_viewing_checkbox">Nur dem Benutzer selbst und den Eltern erlauben, die Benutzerdetails anzuzeigen</string>
+    <string name="limit_user_viewing_help">Damit kann verhindert werden, dass andere Kinder der Familie
+        die Einstellungen und Nutzungsdauern dieses Kindes sehen können
+    </string>
+
+    <string name="lock_tab_reason">Grund</string>
+    <string name="lock_tab_action">Aktionen</string>
+    <string name="lock_tab_task">Aufgaben</string>
+    <string name="lock_header_blocked">Gesperrt!</string>
+
+    <string name="lock_header_what">Was wurde gesperrt?</string>
+    <string name="lock_header_why">Warum wurde es gesperrt?</string>
+
+    <string name="lock_allow_temporarily_header">Vorübergehend erlauben</string>
+    <string name="lock_allow_temporarily_text">
+        Die Nutzung von %1$s erlauben. %1$s wird wieder gesperrt, sobald die entsprechende
+        Option im Benachrichtigungsbereich gewählt oder der Bildschirm ausgeschaltet wird.
+    </string>
+
+    <string name="lock_add_to_category_title">Zu einer Kategorie hinzufügen</string>
+    <string name="lock_add_to_category_text">Verwenden Sie diese Option, wenn Sie die App kennen und Sie diese freigeben möchten</string>
+
+    <string name="lock_goto_main_title">TimeLimit öffnen</string>
+    <string name="lock_goto_main_text">TimeLimit öffnen, um die Einstellungen einzusehen und/ oder zu ändern</string>
+
+    <string name="lock_extratime_title">Extrazeit hinzufügen</string>
+
+    <string name="lock_disable_temporarily_lock_title">Vorübergehende Sperrung abschalten</string>
+    <string name="lock_disable_temporarily_all_categories">Alle Kategorien</string>
+
+    <string name="lock_grant_permission_title">Berechtigung erteilen</string>
+    <string name="lock_grant_permission_text">TimeLimit ermöglichen, das verbundene Netzwerk zu erkennen</string>
+
+    <string name="lock_disable_limits_temporarily_text">Begrenzungen für die Kategorie vorübergehnd deaktivieren, um diese Anwendung freizugeben</string>
+
+    <string name="lock_reason_no_category">
+        Die App wurde zu keiner Kategorie zugeordnet. Das bedeutet, dass es keine Einschränkungs-Einstellungen gibt. Und da ist es die einfachste Lösung, die App zu sperren.
+    </string>
+    <string name="lock_reason_temporarily_blocked">
+        Diese %s ist in einer Kategorie, die vorübergehend gesperrt wurde.
+    </string>
+    <string name="lock_reason_blocked_time">
+        Diese %s ist in einer Kategorie, für die festgelegt wurde, dass Sie zu dieser Uhrzeit gesperrt ist.
+    </string>
+    <string name="lock_reason_time_over">
+        Diese %s ist in einer Kategorie, deren maximale Nutzungszeit erreicht wurde.
+    </string>
+    <string name="lock_reason_time_over_etra_time_can_be_used_later">
+        Diese %s ist in einer Kategorie, deren maximale Nutzungszeit erreicht wurde.
+        Es gab noch Extra-Zeit, aber die maximale Nutzung der Extra-Zeit wurde erreicht.
+    </string>
+    <string name="lock_reason_battery_limit">
+        Diese %s ist in einer Kategorie, für die ein Akkulimit eingerichtet wurde
+        und dieses Akkulimit wurde erreicht.
+        Zum Wiederfreigeben muss der Akku aufgeladen werden.
+    </string>
+    <string name="lock_reason_session_duration">
+        Für diese %s gibt es eine Sitzungsdauerbegrenzung.
+        Nach dem Ablauf der Pausenzeit wird die Sperre aufgehoben.
+    </string>
+    <string name="lock_reason_missing_required_network">
+        Diese %s darf nur in bestimmten Netzwerken verwendet werden,
+        aber es wurde keine Verbindung zu einem entsprechenden Netzwerk gefunden.
+    </string>
+    <string name="lock_reason_missing_network_check_permission">
+        Diese %s darf in bestimmten Netzwerken nicht verwendet werden,
+        aber die Berechtigung zum Prüfen vom Netzwerk fehlt.
+    </string>
+    <string name="lock_reason_forbidden_network">
+        Diese %s darf im aktuellen Netzwerk nicht verwendet werden.
+    </string>
+
+    <string name="lock_reason_short_no_category">keine Kategorie</string>
+    <string name="lock_reason_short_temporarily_blocked">vorübergehend gesperrt</string>
+    <string name="lock_reason_short_time_over">Zeit verbraucht</string>
+    <string name="lock_reason_short_blocked_time_area">Sperrzeit</string>
+    <string name="lock_reason_short_notification_blocking">alle Benachrichtigungen werden blockiert</string>
+    <string name="lock_reason_short_battery_limit">Akkulimit unterschritten</string>
+    <string name="lock_reason_short_session_duration">Sitzungsdauergrenze erreicht</string>
+    <string name="lock_reason_short_missing_required_network">kein erlaubtes Netzwerk</string>
+    <string name="lock_reason_short_missing_network_check_permission">Netzwerkprüfberechtigung fehlt</string>
+    <string name="lock_reason_short_forbidden_network">verbotenes Netzwerk</string>
+
+    <string name="lock_overlay_warning">
+        Öffnen des Sperrbildschirms fehlgeschlagen.
+        Versuche es, den Home- oder Anwendungslisten-Button zu verwenden, um diesen Bildschirm zu verlassen.
+    </string>
+    <string name="lock_overlay_text">Sperre %s</string>
+
+    <string name="lock_task_introduction">Aufgaben ermöglichen eine Zeitverlängerung.
+        Dafür muss ein Elternteil Aufgaben für die entsprechende Kategorie hinterlegen.
+        Ein Kind kann angeben, eine Aufgabe erledigt zu haben und nach der Bestätigung eines
+        Elternteils wird eine entsprechende Extrazeit vergeben.
+    </string>
+    <string name="lock_task_confirm_dialog">Hast Du diese Aufgabe erledigt? Die Zeit gibt es
+        sowieso erst, wenn ein Elternteil das bestätigt hat.</string>
+    <string name="lock_task_confirm_dialog_from_manage_screen">Zum Verändern der Aufgabe muss sich erst ein Elternteil anmelden.</string>
+    <string name="lock_task_review_pending_dialog">Die Erledigung der Aufgabe wurde markiert.
+        Jetzt muss nur noch ein Elternteil das auf der Startseite von TimeLimit besätigen.
+    </string>
+    <string name="lock_task_review_pending_hint">warte auf Bestätigung</string>
+
+    <string name="login_user_selection_text">Wählen Sie einen Benutzer, um sich anzumelden</string>
+    <string name="login_password_hint">Passwort</string>
+    <string name="login_snackbar_wrong">Dieses Passwort ist nicht korrekt</string>
+    <string name="login_dialog_password_text">Geben Sie Ihr Passwort ein, um sich anzumelden</string>
+    <string name="login_child_without_password">Du kannst dich nicht als %s anmelden, weil kein Passwort für Dich festgelegt wurde</string>
+    <string name="login_child_already_current_user">Du bist schon der aktuelle Benutzer dieses Gerätes</string>
+    <string name="login_child_info">Dadurch wirst du als aktueller Nutzer dieses Gerätes festgelegt</string>
+    <string name="login_child_done_toast">Der Benutzer dieses Gerätes wurde geändert</string>
+    <string name="login_scan_code">Code scannen</string>
+    <string name="login_scan_code_err_expired">Dieser Code ist alt</string>
+    <string name="login_scan_code_err_not_linked">Dieser Schlüssel ist nicht verknüpft</string>
+    <string name="login_category_blocked">Die Kategorie %1$s ist momentan gesperrt (%2$s), sodass Sie sich nicht mit diesem Benutzer anmelden können</string>
+
+    <string name="main_tab_overview">Übersicht</string>
+    <string name="main_tab_uninstall">Deinstallieren</string>
+    <string name="main_tab_about">Über</string>
+
+    <string name="manage_category_for_unassigned_apps_title">Kategorie für nicht zugeordnete Apps</string>
+    <string name="manage_category_for_unassigned_apps_intro">
+        Sie können eine Kategorie wählen deren Regeln für Apps ohne Kategorie angewendet werden.
+    </string>
+    <string name="manage_category_for_unassigned_apps_status_enabled">Diese Kategorie wird für nicht zugeordnete Apps verwendet</string>
+    <string name="manage_category_for_unassigned_apps_status_disabled">Diese Kategorie wird nicht für nicht zugeordnete Apps verwendet</string>
+    <string name="manage_category_for_unassigned_apps_btn_enable">Diese Kategorie für nicht zugeordnete Apps verwenden</string>
+    <string name="manage_category_for_unassigned_apps_btn_disable">Diese Kategorie nicht mehr für nicht zugeordnete Apps verwenden</string>
+
+    <string name="category_networks_title">Netzwerke</string>
+    <string name="category_networks_help">Hier können WLAN-Drahtlosnetzwerke hinzugefügt werden.
+        Diese Kategorie kann hiermit abhängig vom aktuellen Drahtlosnetzwerk gesperrt oder erlaubt werden.
+        Ein Netzwerk wird durch einen Access Point identifiziert. Im Fall von mehreren Access Points/Repeatern
+        müssen alle einzeln hinzugefügt werden.
+        Das vorübergehende Deaktivieren von Zeitbegrenzungen deaktiviert auch die Beschränkungen durch diese Funktion.
+    </string>
+    <string name="category_networks_empty">Sie haben keine Netzwerke hinzugefügt. Diese Kategorie ist nicht
+        abhängig vom Netzwerk.
+    </string>
+    <plurals name="category_networks_not_empty">
+        <item quantity="one">Es wurde %d Netzwerk hinzugefügt.</item>
+        <item quantity="other">Es wurden %d Netzwerke hinzugefügt.</item>
+    </plurals>
+    <string name="category_networks_status_missing_permission">Die Berechtigung zum Abrufen vom aktuellen Netzwerk fehlt</string>
+    <string name="category_networks_status_none_connected">Sie sind mit keinem WLAN verbunden</string>
+    <string name="category_networks_status_connected_no_match">Das aktuelle WLAN wurde nicht hinzugefügt</string>
+    <string name="category_networks_status_connected_no_match_full">Das aktuelle WLAN wurde nicht hinzugefügt,
+        aber es können keine weiteren WLANs hinzugefügt werden
+    </string>
+    <string name="category_networks_status_connected_has_match">Das aktuelle WLAN wurde hinzugefügt</string>
+    <string name="category_networks_action_add">Netzwerk hinzufügen</string>
+    <string name="category_networks_action_grant">Berechtigung erteilen</string>
+    <string name="category_networks_action_remove">Alle Netzwerke entfernen</string>
+    <string name="category_networks_toast_all_removed">alle Netzwerke entfernt</string>
+    <string name="category_networks_toast_enable_location_service">Bitte den Standortzugriff aktivieren</string>
+    <string name="category_networks_type_allow_list">Sperren wenn nicht verbunden</string>
+    <string name="category_networks_type_block_list">Sperren wenn verbunden</string>
+
+    <string name="manage_child_tab_other">erweiterte Einstellungen</string>
+
+    <string name="manage_child_category_no_time_limits">Keine Zeitbegrenzung</string>
+    <string name="manage_child_category_no_time_limits_short">keine Begrenzung</string>
+
+    <string name="manage_child_categories_intro_title">Kategorien</string>
+    <string name="manage_child_categories_intro_text">
+        TimeLimit verwaltet die Einschränkungen in Kategorien.
+        Sie können mehrere Apps und Einschränkungen je Kategorie wählen.
+        Das ermöglicht es z.B., eine Zeitbegrenzung für alle Spiele festzulegen.
+    </string>
+
+    <string name="manage_child_manipulation_text">
+        Es gab eine Manipulation.
+        Gehen Sie zurück zur Übersicht und öffnen Sie den Geräte-Eintrag für Details.
+    </string>
+
+    <string name="manage_child_category_for_unassigned_apps">wird für Apps ohne Kategorie verwendet</string>
+
+    <string name="manage_child_timezone_title">Zeitzone</string>
+    <string name="manage_child_timezone_change_button">Zeitzone ändern</string>
+    <string name="manage_child_timezone_search_hint">Zeitzone suchen</string>
+
+    <string name="manage_child_password_title">Kind-Passwort</string>
+    <string name="manage_child_password_info">Ein Kind kann
+        sich mit seinem Passwort als aktueller Benutzer eines Gerätes festlegen
+        (mit dem Anmeldebildschirm, der mit dem Schloss-Button unten rechts geöffnet werden kann)
+    </string>
+    <string name="manage_child_password_status_yes">Dieses Kind hat ein Passwort</string>
+    <string name="manage_child_password_status_no">Dieses Kind hat kein Passwort</string>
+    <string name="manage_child_password_btn_set">Passwort festlegen (als Elternteil)</string>
+    <string name="manage_child_password_btn_change">Passwort ändern (als das Kind selbst)</string>
+
+    <string name="manage_child_redirected_toast">Mit der Zurück-Taste geht es zur Übersicht von TimeLimit</string>
+
+    <string name="manage_child_special_mode_wizard_block_title">%s vorübergehend sperren</string>
+    <string name="manage_child_special_mode_wizard_block_option">vorübergehend sperren</string>
+    <string name="manage_child_special_mode_wizard_disable_limits_title">Begrenzungen von %s deaktivieren</string>
+    <string name="manage_child_special_mode_wizard_disable_limits_option">Begrenzungen vorübergehend deaktivieren</string>
+
+    <string name="manage_child_confirm_enable_limits_again_title">Begrenzungen aktivieren</string>
+    <string name="manage_child_confirm_enable_limits_again_text">Sollen die Begrenzungen für die Kategorie %s wirklich wieder aktiviert werden?</string>
+
+    <string name="manage_device_activity_level_blocking_title">Sperren auf Activity-Ebene</string>
+    <string name="manage_device_activity_level_blocking_text">
+        Das ermöglicht es (abhänging von den Apps), einige Funktionen in Apps zu sperren.
+        Wenn Sie nicht verstehen, was Activities unter Android sind, dann aktivieren Sie diese Funktion nicht.
+        Sie können Activities zu Kategorien hinzufügen, indem Sie im Kategorie-App-Hinzufüge-Bildschirm
+        lange auf eine App tippen.
+    </string>
+    <string name="manage_device_activity_level_blocking_checkbox">Sperren auf Activity-Ebene aktivieren</string>
+
+    <string name="manage_device_default_user_title">Standardbenutzer</string>
+    <string name="manage_device_default_user_info">Der Standardbenutzer ist ein Benutzer,
+        zu dem jeder an dem Gerät ohne Eingabe eines Passworts wechseln kann (um sich abzumelden).
+        Das ist sinnvoll bei Geräten, die von verschiedenen Benutzern genutzt werden können.
+    </string>
+    <string name="manage_device_default_user_status">Der Standardbenutzer ist %s</string>
+    <string name="manage_device_default_user_switch_btn">Zum Standardbenutzer wechseln</string>
+    <string name="manage_device_default_user_switch_reason_remote">Sie können nur am Gerät selbst zum Standardbenutzer wechseln</string>
+    <string name="manage_device_default_user_switch_reason_unset">Sie können nicht zum Standardbenutzer wechseln,
+        solange es keinen Standardbenutzer gibt</string>
+    <string name="manage_device_default_user_switch_reason_already_done">Sie können
+        nicht zum Standardbenutzer wechseln, wenn der Standardbenutzer bereits der aktuelle Benutzer ist
+    </string>
+    <string name="manage_device_default_user_set_btn_set">Standardbenutzer wählen</string>
+    <string name="manage_device_default_user_set_btn_change">Standardbenutzer ändern</string>
+    <string name="manage_device_default_user_selection_none">kein Standardbenutzer</string>
+    <string name="manage_device_default_user_timeout_off">Dieses Gerät wechselt nicht automatisch zum Standardbenutzer</string>
+    <string name="manage_device_default_user_timeout_on">Dieses Gerät wechselt automatisch zum Standardbenutzer, wenn es %s nicht benutzt wurde</string>
+    <string name="manage_device_default_user_timeout_btn_enable">automatischen Wechsel zum Standardbenutzer aktivieren</string>
+    <string name="manage_device_default_user_timeout_btn_change">automatischen Wechsel zum Standardbenutzer konfigurieren</string>
+    <string name="manage_device_default_user_timeout_dialog_title">automatisch zum Standardbenutzer wechseln</string>
+    <string name="manage_device_default_user_timeout_dialog_disable">nie</string>
+
+    <string name="manage_device_introduction_title">Was ist das?</string>
+    <string name="manage_device_introduction_text">
+        Das ist die Ansicht, um ein Gerät zu verwalten.
+        \nHier können Sie einen Nutzer zuweisen, die Berechtigungen anpassen und
+        die Netzwerkzeitverifizierung konfigurieren.
+        \nEinschränkungen gibt es für Benutzer und nicht für Geräte.
+        Drücken Sie Zurück, um einen Benutzer zu konfigurieren.
+    </string>
+
+    <string name="manage_device_manipulation_title">Manipulation</string>
+    <string name="manage_device_manipulation_text">
+        Folgendes wurde manipuliert:
+    </string>
+    <string name="manage_device_manipulation_type_past">In der Vergangenheit:</string>
+    <string name="manage_device_manipulation_type_current">Jetzt gerade:</string>
+    <string name="manage_device_manipulation_device_admin_disabled">Geräteadministrator deaktiviert</string>
+    <string name="manage_device_manipulation_device_admin_disable_attempt">Geräteadministrator-Deaktivierung wurde versucht</string>
+    <string name="manage_device_manipulation_usage_stats_access">Nutzungsdatenzugriff</string>
+    <string name="manage_device_manipulation_notification_access">Benachrichtigungszugriff</string>
+    <string name="manage_device_manipulation_overlay_permission">Berechtigung zum Anzeigen über anderen Apps</string>
+    <string name="manage_device_manipulation_accessibility_service">Bedienhilfe-Berechtigung</string>
+    <string name="manage_device_manipulation_app_version">ältere App-Version installiert</string>
+    <string name="manage_device_manipulation_reboot">Gerät wurde neu gestartet</string>
+    <string name="manage_device_manipulation_existed">Es gab eine Manipulation, die wieder beendet wurde</string>
+    <string name="manage_device_manipulation_unknown">unbekannte Manipulation</string>
+    <string name="manage_device_manipulation_fgs_killer">mittels Task-Manager beendet</string>
+    <string name="manage_device_manipulation_btn_ignore">Warnungen bestätigen und ausblenden</string>
+    <string name="manage_device_manipulation_toast_nothing_selected">Sie müssen zuerst Warnungen wählen, die Sie ignorieren möchten</string>
+
+    <string name="manage_device_reboot_manipulation_title">Gerätneustart als Manipulation einstufen</string>
+    <string name="manage_device_reboot_manipulation_text">
+        Wenn TimeLimit nach einem Neustart nicht schnell genug startet,
+        dann können Sie hier einstellen,
+        dass das als Manipulation gewertet werden soll.
+        Dadurch wird JEDER Gerät(neu)start als Manipulation eingestuft.
+    </string>
+    <string name="manage_device_reboot_manipulation_checkbox">Neustart als Manipulation einstufen</string>
+
+    <string name="manage_device_troubleshooting_title">Warum wird dieses Gerät nicht eingeschränkt?</string>
+    <string name="manage_device_troubleshooting_text_no_child">Es wurde kein Kind-Benutzer für dieses Gerät gewählt. Nur Kind-Benutzer werden eingeschränkt.</string>
+    <string name="manage_device_troubleshooting_text_battery_optimization">Dem Gerät wurde zumindest schon
+        einmal ein Kind-Benutzer zugeordnet. Wenn es noch nicht funktioniert, dann finden Sie weitere mögliche Problemursachen unter
+        <a href="https://timelimit.io/de/#limits-dont-work">https://timelimit.io/de/#limits-dont-work</a>.
+    </string>
+
+    <string name="manage_device_card_user_title">Benutzer</string>
+    <string name="manage_device_card_permission_title">Berechtigungen</string>
+    <string name="manage_device_card_feature_title">Funktionen</string>
+    <string name="manage_device_card_manage_title">Verwaltung</string>
+    <string name="manage_device_card_manage_text">sonstige Einstellungen für dieses Gerät</string>
+
+    <string name="manage_device_added_at">Hinzugefügt: %s</string>
+    <string name="manage_device_is_this_device">Das ist das Gerät, das Sie gerade vor sich haben</string>
+
+    <string name="manage_device_current_user_title">Benutzer des Geräts</string>
+    <string name="manage_device_current_user_none">Keine Angabe - keine Begrenzungen</string>
+
+    <string name="manage_device_feature_summary_none">Keine Funktionen aktiviert</string>
+
+    <string name="manage_device_permissions_summary_none">Keine Berechtigungen gewährt</string>
+
+    <string name="manage_device_permissions_usagestats_title">Berechtigung zum Nutzungsdatenzugriff</string>
+    <string name="manage_device_permissions_usagestats_title_short">Nutzungsdatenzugriff</string>
+    <string name="manage_device_permissions_usagestats_text">
+        Der Nutzungsdatenzugriff ermöglicht es, die Nutzung des Gerätes zu erfassen.
+        Dies wird genutzt, um zu ermitteln, welche App genutzt wird, damit die Zeit gezählt werden kann oder die App gesperrt werden kann.
+    </string>
+
+    <string name="manage_device_permission_notification_access_title">Benachrichtigungszugriff</string>
+    <string name="manage_device_permission_notification_access_text">
+        Der Benachrichtigungszugriff wird von TimeLimit genutzt, um nicht nur Apps, sondern auch
+        deren Benachrichtigungen zu sperren.
+        Zusätzlich wird dadurch die Hintergrundwiedergabe von Medienplayern erfasst und eingeschränkt.
+    </string>
+
+    <string name="manage_device_permissions_overlay_title">Über anderen Apps anzeigen</string>
+    <string name="manage_device_permissions_overlay_text">
+        Das Anzeigen über anderen Apps kann das Sperren in einigen Fällen verbessern.
+        Außerdem ist diese Berechtigung eine Möglichkeit, um TimeLimit bei neueren Android-Versionen zu erlauben,
+        den Sperrbildschirm zu öffnen.
+    </string>
+
+    <string name="manage_device_permission_accessibility_title">Bedienhilfe</string>
+    <string name="manage_device_permission_accessibility_text">
+        Damit \"drückt\" TimeLimit den Home-Button, bevor der Sperrbildschirm aufgerufen wird.
+        Das kann das Sperren in einigen Fällen verbessern.
+        Außerdem ist diese Berechtigung eine Möglichkeit, um TimeLimit bei neueren Android-Versionen zu erlauben,
+        den Sperrbildschirm zu öffnen.
+    </string>
+
+    <string name="manage_device_permission_device_admin_title">Geräte-Administrator</string>
+    <string name="manage_device_permission_device_admin_text">Der Geräte-Administrator bzw.
+        Geräte-Besitzer kann abhängig von den Umständen verwendet werden, um Manipulationen zu erkennen oder zu verhindern.
+    </string>
+    <string name="manage_device_permission_device_admin_text_disabled">
+        Die Geräte-Administrator-Berechtigung wurde nicht gewährt. TimeLimit kann jederzeit beendet werden, ohne dass das erkannt wird.
+    </string>
+    <string name="manage_device_permission_device_admin_text_simple">
+        Die Geräte-Administrator-Berechtigung wurde gewährt.
+        TimeLimit kann wahrscheinlich erkennen, wenn es beendet wurde.
+        Es ist aber auch anzunehmen, dass das Kind TimeLimit dennoch beenden kann.
+    </string>
+    <string name="manage_device_permission_device_admin_text_password">
+        Die Geräte-Administrator-Berechtigung mit der Möglichkeit, das System bei einem Manipulationsversuch zu sperren, wurde gewährt.
+        Diese muss deaktiviert werden, bevor TimeLimit über die Systemeinstellungen beendet oder deinstalliert werden kann.
+        Falls Sie sich hierüber ausgesperrt haben, wenden Sie sich an den Support.
+    </string>
+    <string name="manage_device_permission_device_admin_text_owner">
+        Die Geräte-Besitzer-Berechtigung wurde gewährt und verhindert das Beenden und Deinstallieren von TimeLimit.
+        Diese Berechtigung kann nur durch TimeLimit bzw. ein Elternteil, das TimeLimit deinstalliert, deaktiviert werden.
+    </string>
+
+    <string name="manage_device_permission_status_granted">Die Berechtigung wurde erteilt</string>
+    <string name="manage_device_permission_status_not_granted">Die Berechtigung wurde nicht erteilt</string>
+    <string name="manage_device_permission_status_not_required">Die Berechtigung wird aufgrund der alten Android-Version nicht benötigt</string>
+    <string name="manage_device_permission_status_not_supported">Diese Funktion wird von diesem Gerät nicht unterstützt</string>
+
+    <string name="manage_device_permission_btn_modify">Ändern</string>
+
+    <string name="manage_device_permission_no_ui_usage_stats_text">
+        Dieses Gerät hat keine grafische Oberfläche zum Erteilen dieser Berechtigung - diese kann
+        nur von einem Computer mittels ADB geändert werden.
+        \n\nAktivieren mittels:\n\n%s
+        \n\nDeaktivieren mittels:\n\n%s
+    </string>
+    <string name="manage_device_permission_no_ui_device_admin">
+        Dieses Gerät hat keine grafische Oberfläche zum Erteilen dieser Berechtigung - diese kann
+        nur von einem Computer mittels ADB aktiviert werden:
+        \n\n%s
+        \n\nDie Berechtigung kann über die Deinstallations-Funktion von TimeLimit deaktiviert werden.
+    </string>
+
+    <string name="manage_device_downgrade_title">Downgrade</string>
+    <string name="manage_device_downgrade_text">Auf diesem Gerät wurde eine neuere Version von TimeLimit durch eine ältere ersetzt</string>
+
+    <string name="manage_device_rename">Gerät umbenennen</string>
+    <string name="manage_device_rename_toast_empty">Der Name für ein Gerät darf nicht leer sein</string>
+
+    <string name="manage_disable_time_limits_title">Zeitbegrenzungen deaktivieren</string>
+    <string name="manage_disable_time_limits_text">Hiermit können alle Zeitbegrenzungen und Sperrzeiten aufgehoben werden</string>
+    <string name="manage_disable_time_limits_info_enabled">Zeitbegrenzungen sind deaktiviert bis %s</string>
+
+    <string name="manage_disable_time_limits_btn_enable">Zeitbegrenzungen wieder aktivieren</string>
+    <string name="manage_disable_time_limits_btn_10_min">für 10 Minuten</string>
+    <string name="manage_disable_time_limits_btn_30_min">für 30 Minuten</string>
+    <string name="manage_disable_time_limits_btn_1_hour">für 1 Stunde</string>
+    <string name="manage_disable_time_limits_btn_2_hour">für 2 Stunden</string>
+    <string name="manage_disable_time_limits_btn_4_hour">für 4 Stunden</string>
+    <string name="manage_disable_time_limits_btn_today">für Heute</string>
+    <string name="manage_disable_time_limits_btn_time">bis zu einer Uhrzeit</string>
+    <string name="manage_disable_time_limits_btn_date">bis zu einem Datum</string>
+    <string name="manage_disable_time_limits_btn_no_end_time">ohne geplante Endzeit</string>
+    <string name="manage_disable_time_limits_btn_until">bis %s</string>
+
+    <string name="manage_disable_time_limits_dialog_until">Zeitbegrenzungen deaktivieren bis ...</string>
+    <string name="manage_disable_time_limits_toast_time_in_past">Der gewählte Zeitpunkt liegt in der Vergangenheit</string>
+    <string name="manage_disable_time_limits_toast_time_not_increased_but_child_mode">Ohne Anmeldung als Elternteil darf die Sperrung verlängert werden, aber nicht verkürzt werden</string>
+
+    <string name="manage_parent_change_password_title">Passwort ändern</string>
+    <string name="manage_parent_change_password_text">Mit der Kentniss des aktuellen Passworts ein neues Passwort wählen</string>
+    <string name="manage_parent_change_password_old_password_hint">aktuelles Passwort</string>
+    <string name="manage_parent_change_password_toast_success">Das Passwort wurde geändert</string>
+    <string name="manage_parent_change_password_toast_wrong_password">Das alte Passwort ist falsch</string>
+
+    <string name="manage_parent_u2f_title">U2F-Schlüssel</string>
+    <string name="manage_parent_u2f_description">U2F-Tokens (über USB oder NFC) zum Authentifizieren einrichten</string>
+
+    <string name="manage_parent_remove_user_title">Benutzer entfernen</string>
+    <string name="manage_parent_remove_user_text">
+        Um %1$s zu löschen, wird das Passwort von %1$s
+        und das Passwort eines anderen Elternteils benötigt.
+        Damit soll verhindert werden, dass Sie sich aussperren.
+    </string>
+    <string name="manage_parent_remove_user_status_not_authenticated">
+        Melden Sie sich mit einem anderen Benutzer an, um %1$s zu löschen.
+    </string>
+    <string name="manage_parent_remove_user_status_wrong_account">
+        Sie sind als %1$s angemeldet. Melden Sie sich als einen anderen Benutzer an.
+    </string>
+    <string name="manage_parent_remove_user_status_ready">
+        Geben Sie das Passwort von %1$s ein, um %1$s zu löschen.
+    </string>
+    <string name="manage_parent_remove_user_status_last_without_login_limit">Das ist der letzte Benutzer,
+        der sich jederzeit anmelden kann. Daher kann dieser nicht entfernt werden.
+    </string>
+
+    <string name="manage_user_key_title">Benutzerschlüssel</string>
+    <string name="manage_user_key_info">Hiermit kann sich ein Benutzer durch
+        das Scannen eines Barcodes anmelden. Der gescannte Code muss von TimeLimit
+        generiert worden sein. Dafür muss TimeLimit auf einem anderen Gerät als
+        Schlüsselgenerator eingerichtet sein.
+    </string>
+    <string name="manage_user_key_not_enrolled">Es gibt keinen Schlüssel für diesen Benutzer</string>
+    <string name="manage_user_key_is_enrolled">Dieser Benutzer hat den Schlüssel %s</string>
+    <string name="manage_user_key_add">Schlüssel hinzufügen</string>
+    <string name="manage_user_key_remove">Schlüssel entfernen</string>
+    <string name="manage_user_key_added">Der Schlüssel wurde hinzugefügt</string>
+    <string name="manage_user_key_invalid">Dies ist kein gültiger TimeLimit-Schlüssel</string>
+    <string name="manage_user_key_other_user">Dieser Schlüssel ist schon bei einem anderen Benutzer hinterlegt</string>
+    <string name="manage_user_key_wrong_user">Nur der Benutzer selbst kann seine Schlüssel verwalten</string>
+
+    <string name="manipulation_activity_intro">Es gab eine Manipulation. Deswegen muss dieses Gerät durch ein Elternteil freigegeben werden.</string>
+
+    <string name="must_read_child_manipulation">
+        Die Hilfe informiert auch über Details zu den folgenden zwei Themen:
+        \n\n1. TimeLimit läuft — wie auch alle anderen Apps — in einer Sandbox. Dadurch kann TimeLimit
+        nicht selbst verhinderen, dass es vom Kind deaktiviert oder entfernt wird.
+        \n\n2. TimeLimit ist für den Einsatz auf dem originalen Android (AOSP) sowie damit vergleichbaren Umgebungen konzipiert.
+        Das entspricht dem vorinstallierten System auf Google Pixel Smartphones sowie den Systemen
+        LineageOS und GrapheneOS. Bei anderen Systemen kann es Probleme beim Einschränken geben,
+        insbesondere durch sogenannte Energiesparfunktionen. In vielen Fällen lassen sich die Probleme durch
+        Änderungen an den Systemeinstellungen beheben.
+    </string>
+    <string name="must_read_add_already_assigned_apps">
+        Apps mit Kategorie werden beim Hinzufügen aus der vorherigen Kategorie entfernt - für mehrere Kategorien gleichzeitig können Sie Ober- und Unter-Kategorien verwenden
+    </string>
+    <string name="must_read_blocked_time_areas_obsolete">
+        Die Sperrzeiten sind alt. Die meisten Fälle werden durch
+        die Zeitbegrenzungsregeln für Teile eines Tages mit 0 Minuten Dauer besser abgedeckt.
+    </string>
+
+    <string name="notification_channel_app_status_title">App-Status</string>
+    <string name="notification_channel_app_status_description">Zeigt u.a. die verbleibende Nutzungsdauer der momentan genutzten App an</string>
+
+    <string name="notification_channel_blocked_notification_title">blockierte Benachrichtigungen</string>
+    <string name="notification_channel_blocked_notification_text">Zeigt an, wann eine Benachrichtigung einer anderen App von TimeLimit blockiert wurde</string>
+
+    <string name="notification_channel_time_warning_title">Zeitwarnungen</string>
+    <string name="notification_channel_time_warning_text">Benachrichtigungen für Kinder, wenn nur noch wenig Zeit übrig ist</string>
+
+    <string name="notification_channel_apps_temporarily_allowed_title">vorübergehend erlaubte Apps</string>
+    <string name="notification_channel_apps_temporarily_allowed_text">Zeigt an, wenn Apps vorübergehend erlaubt wurden, und bietet die Option, dies rückgängig zu machen</string>
+
+    <string name="notification_channel_extra_time_started_title">Extrazeit beginnt</string>
+    <string name="notification_channel_extra_time_started_description">Informiert, wenn des reguläre Zeitkontingent verbraucht ist und nun Extrazeit verwendet wird</string>
+
+    <string name="notification_filter_not_blocked_title">TimeLimit hat eine Benachrichtigung blockiert</string>
+    <string name="notification_filter_blocking_failed_title">TimeLimit konnte eine Benachrichtigung nicht blockieren</string>
+
+    <string name="notification_extra_time_started">Extrazeit beginnt</string>
+
+    <string name="obsolete_message">Sie verwenden TimeLimit auf einer älteren Android-Version.
+        Das kann funktionieren, aber es wird nicht empfohlen.
+    </string>
+
+    <string name="overview_header_devices">Geräte</string>
+    <string name="overview_header_users">Benutzer</string>
+
+    <string name="overview_intro_title">Willkommen bei TimeLimit</string>
+    <string name="overview_intro_text">
+        Das ist die Übersicht. Hier finden Sie Geräte und Benutzer (ggf. müssen Sie erst scrollen).
+        \n\nBei den Geräten können Sie den Status der Geräte einsehen und den Nutzer eines Gerätes festlegen.
+        \n\nBei den Benutzern können Sie die erlaubten Apps und die Zeitbeschränkungen wählen.
+    </string>
+
+    <string name="overview_device_item_manipulation">An diesem Gerät wurden Manipulationen durchgeführt</string>
+    <string name="overview_device_item_missing_permission">An diesem Gerät wurde eine erforderliche Berechtigung nicht gewährt</string>
+
+    <string name="overview_user_item_temporarily_blocked">vorübergehend gesperrt</string>
+    <string name="overview_user_item_temporarily_blocked_until">gesperrt bis %s</string>
+    <string name="overview_user_item_temporarily_disabled">Zeitbegrenzungen vorübergehend deaktiviert</string>
+    <string name="overview_user_item_temporarily_disabled_until">Zeitbegrenzungen deaktiviert bis %s</string>
+    <string name="overview_user_item_role_child">wird eingeschränkt</string>
+    <string name="overview_user_item_role_parent">kann Einstellungen ändern</string>
+
+    <string name="parent_limit_login_title">Anmeldeverhinderungskategorie</string>
+    <string name="parent_limit_login_help">Hier können Sie eine Kategorie wählen.
+        Sobald diese Kategorie gesperrt ist können Sie sich nicht mehr als Elternteil anmelden, sodass
+        Sie dann keine Einstellungen mehr ändern können.
+        Damit können Sie verhindern, dass Sie Einschränkungen abschalten, die Sie sich gesetzt haben,
+        während diese wirken.
+    </string>
+    <string name="parent_limit_login_status_disabled">Sie können sich jederzeit anmelden</string>
+    <string name="parent_limit_login_status_enabled">Sie können sich nicht anmelden, wenn %1$s für %2$s gesperrt ist</string>
+    <string name="parent_limit_login_status_needs_other_user">Sie müssen einen Elternteil-Benutzer als Backup (damit Sie
+        sich nicht aussperren) erstellen, bevor Sie diese Funktion verwenden können.</string>
+    <string name="parent_limit_login_select_button">Kategorie wählen</string>
+    <string name="parent_limit_login_dialog_no_selection">keine Kategorie</string>
+    <string name="parent_limit_login_dialog_item">%1$s/%2$s</string>
+    <string name="parent_limit_login_error_user_itself">Sie müssen als der entsprechende Benutzer angemeldet sein, um eine Kategorie
+        zu wählen. Andere Benutzer können diese Funktion nur wieder deaktivieren.
+    </string>
+    <string name="parent_limit_login_pre_block_disabled">Das Sperren im voraus ist deaktiviert</string>
+    <string name="parent_limit_login_pre_block_enabled">Das Anmelden wird %s vor der Kategorie gesperrt</string>
+    <string name="parent_limit_login_pre_block_button">Sperren im voraus konfigurieren</string>
+    <string name="parent_limit_login_pre_block_dialog_title">Sperren im voraus</string>
+    <string name="parent_limit_login_pre_block_dialog_other_user">Andere Benutzer können den Wert nur auf 0 setzen</string>
+
+    <string name="parent_mode_key_title">Schlüssel</string>
+    <string name="parent_mode_key_id">Schlüssel-ID: %s</string>
+    <string name="parent_mode_help_text">
+        Sie haben den Eltern-Schlüssel-Modus gewählt.
+        Dies ermöglicht es, dieses Gerät als Schlüssel zu benutzen,
+        indem es im Elternbenutzereintrag am anderen Gerät hinzugefügt wird.
+        Eine Fernsteuerung ist hiermit nicht möglich.
+        Wenn das nicht das ist, was Sie wollen,
+        dann installieren Sie TimeLimit erneut.
+    </string>
+
+    <string name="password_validator_too_short">Das Passwort muss mindestens <xliff:g example="5" id="number of chars">%d</xliff:g> Zeichen haben</string>
+
+    <string name="rename_child_title">Kind-Benutzer umbenennen</string>
+
+    <string name="duplicate_child_title">Benutzer duplizieren</string>
+    <string name="duplicate_child_message">Möchten Sie einen neuen Benutzer mit den gleichen Einstellungen erstellen?</string>
+    <string name="duplicate_child_done_toast">Der Benutzer wurde dupliziert</string>
+    <string name="duplicate_child_user_name">duplizierter Benutzer</string>
+
+    <string name="reset_hidden_hints_title">Angezeigte Hinweise zurücksetzen</string>
+    <string name="reset_hidden_hints_description">Sie können einige Hinweise ausblenden. Das ermöglicht es Ihnen, diese Hinweise erneut anzuzeigen.</string>
+    <string name="reset_hidden_hints_not_possible">Sie haben keine Hinweise ausgeblendet</string>
+    <string name="reset_hidden_hints_btn">Hinweise erneut anzeigen</string>
+
+    <string name="scan_key_missing_title">Binary Eye wird benötigt</string>
+    <string name="scan_key_missing_text">Zum Scannen der Barcodes wird die App Binary Eye benötigt</string>
+    <string name="scan_key_missing_install">Binary Eye installieren</string>
+
+    <string name="select_time_span_view_minutes">Minuten</string>
+    <string name="select_time_span_view_hours">Stunden</string>
+    <string name="select_time_span_view_days">Tage</string>
+
+    <string name="set_password_view_not_identical">Die Passwörter sind nicht identisch</string>
+    <string name="set_password_view_label_password">Neues Passwort</string>
+    <string name="set_password_view_label_password_repeat">Neues Passwort wiederholen</string>
+    <string name="set_password_view_checkbox_no_password">Passwortschutz nicht verwenden</string>
+
+    <string name="setup_device_permissions_text">
+        TimeLimit benötigt einige Berechtigungen, um funktionieren zu können.
+        Wirklich erforderlich ist nur der Nutzungsdatenzugriff.
+        Ab Android 10 wird zum Öffnen des Sperrbildschirms die Berechtigung
+        \"Über anderen Apps anzeigen\" oder \"Bedienhilfe\" benötigt.
+        Die weiteren Berechtigungen ermöglichen Zusatzfunktionen.
+    </string>
+
+    <string name="setup_help_look_for_this_icon">Achten Sie auf dieses Symbol:</string>
+    <string name="setup_help_there_is_help_like_at_example">Überall, wo Sie es sehen, können
+        Sie es antippen, um zusätzliche Informationen zu etwas anzuzeigen, wie im folgenden
+        Beispiel oben rechts
+    </string>
+    <string name="setup_help_info_about_support_and_documentation">Falls Ihnen das nicht weiterhilft,
+        gibt es zusätzlich https://timelimit.io/de/dokumentation/
+        \nEinige Fragen werden unter https://timelimit.io/de/ beantwortet und es kann auch hilfreich sein,
+        https://timelimit.io/de/konfigurationsansaetze/ zu lesen, da die Voreinstellung mit einer sehr
+        hohen Wahrscheinlichkeit nicht das ist, was Sie brauchen. Diese Seiten sind auch im
+        Über-Bildschirm verlinkt, Sie müssen sich diese also nicht notieren.
+        Falls der Fall eintritt, dass all dies nicht weiterhilft, gibt es immer noch den Support.
+        Jede ordentliche Supportanfrage wird zügig und ordentlich beantwortet.
+    </string>
+
+    <string name="setup_local_mode_explaination">Legen Sie nun ein Passwort fest, mit dem Sie die Einstellungen ändern können. Sie können später weitere Elternteile/ Passwörter hinzufügen.</string>
+
+    <string name="setup_select_mode_intro">Bitte wählen Sie einen Modus</string>
+
+    <string name="setup_select_mode_child_title">(eingeschränktes) Gerät eines Kindes</string>
+    <string name="setup_select_mode_child_text">
+        Dieses Gerät wird durch TimeLimit eingeschränkt.
+    </string>
+
+    <string name="setup_select_mode_parent_title">(Schlüssel-)Gerät eines Elternteils</string>
+    <string name="setup_select_mode_parent_text">
+        TimeLimit schränkt dieses Gerät nicht ein. Es wird als zusätzlicher Schlüssel bei einem anderen Gerät verwendet,
+        um dort die Einstellungen von TimeLimit zu entsperren. Am anderen Gerät kann auch jederzeit ein Passwort verwendet werden.
+    </string>
+    <string name="setup_select_mode_parent_progress">Erstelle Schlüssel</string>
+    <string name="setup_select_mode_parent_error_owner">TimeLimit ist Gerätebesitzer und kann nicht als Schlüssel eingerichtet werden.</string>
+
+    <string name="setup_select_mode_uninstall_title">TimeLimit entfernen</string>
+    <string name="setup_select_mode_uninstall_text">
+        Nicht wirklich eine Art der Einrichtung.
+        TimeLimit deaktiviert alle Berechtigungen, die eine Deinstallation verhindern (falls vorhanden)
+        und startet die eigene Deinstallation.
+    </string>
+
+    <string name="setup_category_allowed">Erlaubte Apps</string>
+    <string name="setup_category_games">Erlaubte Spiele</string>
+    <string name="setup_username_child">Kind 1</string>
+    <string name="setup_username_parent">Elternteil 1</string>
+
+    <string name="setup_terms_title">Wilkommen bei TimeLimit</string>
+    <string name="about_terms_title">Rechtliches</string>
+    <string name="terms_btn_accept">Akzeptieren und Fortfahren</string>
+
+    <string name="uninstall_reset_title">App zurücksetzen</string>
+    <string name="uninstall_reset_text">
+        Alle Einstellungen von TimeLimit werden von diesem Gerät gelöscht.
+        Danach kann TimeLimit erneut eingerichtet oder deinstalliert werden.
+    </string>
+    <string name="uninstall_reset_check_conirm">Ich möchte TimeLimit wirklich von diesem Gerät entfernen</string>
+
+    <string name="usage_history_title">Nutzungsverlauf</string>
+    <string name="usage_history_empty_title">Kein Nutzungsverlauf vorhanden</string>
+    <string name="usage_history_empty_text">
+        Die Nutzungszeiten werden nur erfasst,
+        wenn Zeitbegrenzungsregeln existieren und die zeitbegrenzten Apps genutzt werden
+    </string>
+    <string name="usage_history_time_area">von %s bis %s</string>
+    <string name="usage_history_item_session_duration_limit">Sitzungsdauerbegrenzung von %s mit %s Pause</string>
+    <string name="usage_history_item_last_usage">Letzte Verwendung: %s</string>
+    <string name="usage_history_filter_all_categories">Alle Kategorien</string>
+
+    <string name="usage_stats_permission_required_and_missing_title">Nutzungsdatenzugriff wird benötigt</string>
+    <string name="usage_stats_permission_required_and_missing_text">
+        TimeLimit benötigt diese Berechtigung, um korrekt zu funktionieren.
+        Wählen Sie die Option \"Berechtigungen\", um eine Berechtigung zu erteilen.
+    </string>
+
+    <string name="activity_launch_permission_required_and_missing_title">Über anderen Apps anzeigen oder Bedienhilfe wird benötigt</string>
+
+    <string name="util_join_and">und</string>
+
+    <plurals name="util_time_seconds">
+        <item quantity="one">%d Sekunde</item>
+        <item quantity="other">%d Sekunden</item>
+    </plurals>
+
+    <plurals name="util_time_minutes">
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minuten</item>
+    </plurals>
+
+    <plurals name="util_time_hours">
+        <item quantity="one">%d Stunde</item>
+        <item quantity="other">%d Stunden</item>
+    </plurals>
+
+    <plurals name="util_time_days">
+        <item quantity="one">%d Tag</item>
+        <item quantity="other">%d Tage</item>
+    </plurals>
+
+    <string name="util_time_blocked">Blockiert</string>
+    <string name="util_time_less_minute">wenige Augenblicke</string>
+    <string name="util_limit_hours_and_minutes"><xliff:g id="hours">%1$s</xliff:g> und <xliff:g>%2$s</xliff:g></string>
+    <string name="util_time_remaining">Noch <xliff:g example="3 minutes" id="time">%1$s</xliff:g></string>
+    <string name="util_time_done">Zeit verbraucht</string>
+    <string name="util_time_pause_in">Pause in %s</string>
+    <string name="util_time_pause_shortly">gleich eine Pause</string>
+
+    <string name="util_time_unused">Unbenutzt</string>
+    <string name="util_time_used"><xliff:g example="4 minutes" id="used time">%1$s</xliff:g> benutzt</string>
+
+    <string name="util_day_from_to">%s bis %s</string>
+    <string name="util_day_no_day">an keinen Tagen</string>
+
+    <string name="widget_msg_unconfigured">Dieses Widget funktioniert nur auf beschränkten Geräten</string>
+    <string name="widget_msg_no_child">Momentan hat dieses Gerät keinen Kind-Benutzer</string>
+    <string name="widget_msg_no_category">Das Kind hat keine Kategorien</string>
+    <string name="widget_msg_no_filtered_category">Das Kind hat keine für das Widget ausgewählten Kategorien</string>
+    <string name="widget_config_mode_all">alle Kategorien anzeigen</string>
+    <string name="widget_config_mode_filter">sichtbare Kategorien filtern</string>
+    <string name="widget_config_error_filter_empty">Sie müssen mindestens eine Kategorie auswählen</string>
+    <string name="widget_config_other_translucent">Transparenz aktivieren</string>
+
+    <string name="wiazrd_next">Weiter</string>
+
+    <string name="admin_description_direct">Dies ermöglicht es TimeLimit zu verhindern, ausgeschaltet zu werden</string>
+
+    <string name="admin_disable_warning">Soll der Geräteadministrator wirklich deaktiviert werden?</string>
+
+    <string name="manage_child_tasks">Aufgaben</string>
+    <string name="manage_child_tasks_add">Aufgabe erstellen</string>
+    <string name="manage_child_tasks_edit">Aufgabe bearbeiten</string>
+    <string name="manage_child_tasks_intro">Aufgaben sind Tätigkeiten, die ein Kind machen kann,
+        um Extrazeit zu bekommen. Ein Elternteil muss die Erledigung bestätigen, bevor die Extrazeit
+        wirksam wird.
+    </string>
+    <string name="manage_child_task_last_grant">Letzte Bestätigung: %s</string>
+    <string name="manage_child_tasks_select_category">Kategorie wählen</string>
+    <string name="manage_child_tasks_title_hint">Aufgabentitel</string>
+    <string name="manage_child_tasks_toast_saved">Aufgabe gespeichert</string>
+    <string name="manage_child_tasks_toast_removed">Aufgabe wurde gelöscht</string>
+
+    <string name="task_review_title">Aufgabenbestätigung</string>
+    <string name="task_review_text">%1$s hat angegeben, %2$s erledigt zu haben. Ist das richtig?</string>
+    <string name="task_review_category">Dafür wird es %1$s Extrazeit für %2$s geben</string>
+    <string name="task_review_last_grant">Diese Aufgabe wurde zuletzt bestätigt am %s</string>
+
+    <string name="dummy_app_unassigned_system_image_app">nicht zugeordnete Apps von der Systempartition</string>
+    <string name="dummy_app_feature_adb">Entwickleroptionen</string>
+    <string name="dummy_app_feature_dns">DNS-Einstellungen</string>
+    <string name="dummy_app_activity_audio">Hintergrundmusikwiedergabe</string>
+
+    <string name="biometric_title">Biometrische Authentifizierung</string>
+    <string name="biometric_title_enable">Biometrische Authentifizierung aktivieren</string>
+    <string name="biometric_title_disable">Biometrische Authentifizierung deaktivieren</string>
+    <string name="biometric_enable_prompt_description">Bestätigen Sie die Verwendung Ihrer biometrischen Anmeldemerkmale, um diese für die Anmeldung als %s zuzulassen.</string>
+    <string name="biometric_login_prompt_description">Bestätigen Sie Ihre biometrischen Anmeldemerkmale, um sich als %s anzumelden.</string>
+    <string name="biometric_login_button_description">Biometrische Anmeldemerkmale erfassen</string>
+    <string name="biometric_auth_failed">Authentifizierung als %s mit biometrischen Anmeldemerkmalen fehlgeschlagen.</string>
+    <string name="biometric_auth_failed_reason">Grund: %s</string>
+    <string name="biometric_manage_description_enabled">%s kann sich mit den im Gerät hinterlegten biometrischen Merkmalen anmelden.</string>
+    <string name="biometric_manage_description_disabled">Biometrische Authententifizierung als %s ist nicht aktiv.</string>
+    <string name="biometric_manage_info">Erlaubt es sich an ein (Eltern-)Konto mit biometrischen Anmeldemerkmalen, die auf diesem Gerät registriert sind, anzumelden, z.B. einen Fingerabdruck scannen statt das Passwort einzugeben.</string>
+    <string name="biometric_manage_enable_dialog_text">Hiermit werden ALLE auf dem Gerät hinterlegten biometrischen Merkmale akzeptiert. Jede Person mit registrierten biometrischen Merkmalen könnte sich als %s anmelden, auch Kindkontonutzer oder in TimeLimit nicht erfasste Personen.</string>
+    <string name="biometric_manage_disable_password_required_dialog_text">Um zu verhindern, dass Sie sich selbst aus diesem Konto aussperren, ist es erforderlich sich mit dem Passwort dieses Kontos anzumelden, um die biometrische Authentifizierung zu deaktivieren.</string>
+    <string name="biometric_manage_not_owner_dialog_text">Es ist nicht erlaubt die Einstellungen zur biometrischen Authentifizierung für andere Nutzer zu ändern. Bitte melden Sie sich als %s an, um Zugriff zu bekommen.</string>
+    <string name="biometric_manage_no_credentials_dialog_text">Keine biometrischen Merkmale registriert. Es müssen erst biometrische Merkmale für dieses Gerät hinterlegt werden, um diese Funktion nutzen zu können.</string>
+    <string name="biometric_manage_no_credentials_dialog_action_default">Einstellungen öffnen</string>
+    <string name="biometric_manage_no_credentials_dialog_action_v28">Anmeldemerkmale erfassen</string>
+    <string name="biometric_manage_error_no_hw">Kein biometrisches Erfassungsgerät erkannt.</string>
+    <string name="biometric_manage_error_hw_not_available">Das Gerät zur biometrischen Merkmalserfassung ist gerade nicht verfügbar.</string>
+
+    <string name="notify_permission_title">Benachrichtigungen</string>
+    <string name="notify_permission_text">Abhängig von der verwendeten Android-Version benötigen Apps
+        und damit auch TimeLimit
+        eine Berechtigung, um Benachrichtigungen anzuzeigen. Das wird z.B. verwendet,
+        um die verbleibende Zeit anzuzeigen und beim Sperren
+        von Benachrichtigungen einen Hinweis anzuzeigen.
+        Es wird ausdrücklich empfohlen, das Anzeigen von Benachrichtigungen zu erlauben.
+    </string>
+    <string name="notify_permission_text_granted">Das Anzeigen von Benachrichtigungen wurde erlaubt</string>
+    <string name="notify_permission_btn_grant">Erlauben</string>
+    <string name="notify_permission_btn_later">ohne Aktivierung der Benachrichtigungsfunktion fortfahren</string>
+    <string name="notify_permission_rejected_toast">abgelehnt; möglicherweise können Sie dies nur noch über die Systemeinstellungen erlauben</string>
+
+    <string name="manage_parent_u2f_add_key">Token hinzufügen</string>
+    <string name="manage_parent_u2f_status_wait_key">Warte auf einen Schlüssel; Verbinden Sie jetzt den Schlüssel; NFC %s</string>
+    <string name="manage_parent_u2f_status_wait_key_nfc_enabled">ist aktiviert</string>
+    <string name="manage_parent_u2f_status_wait_key_nfc_disabled">ist deaktiviert</string>
+    <string name="manage_parent_u2f_status_wait_key_nfc_unsupported">wird von Ihrem Gerät nicht unterstützt</string>
+    <string name="manage_parent_u2f_status_working">Verknüpfung läuft; Gerät noch nicht trennen</string>
+    <string name="manage_parent_u2f_status_interrupted">Verbindung unterbrochen</string>
+    <string name="manage_parent_u2f_status_failed">Anfrage fehlgeschlagen</string>
+    <string name="manage_parent_u2f_status_already_linked">Dieses Gerät ist bereits verknüpft</string>
+    <string name="manage_parent_u2f_status_needs_user_interaction">Warte auf Druck der Bestätigen-Taste am Schlüssel</string>
+    <string name="manage_parent_u2f_status_done">Das Gerät wurde verknüpft</string>
+
+    <string name="manage_parent_u2f_remove_key_text">Möchten sich diesen Schlüssel wirklich entfernen?</string>
+    <string name="manage_parent_u2f_remove_key_requires_password">Schlüssel können nur nach einer Anmeldung ohne Schlüssel entfernt werden</string>
+
+    <string name="manage_parent_u2f_err_wrong_user">Nur der Benutzer selbst kann seine U2F-Schlüssel verwalten</string>
+
+    <string name="u2f_login_error_unknown">unbekannter Schlüssel</string>
+    <string name="u2f_login_error_invalid">ungültiger Schlüssel</string>
+
+    <string name="app_clicked_dialog_message">Tippen Sie zum Entfernen der App aus der Kategorie auf das Mülleimer-Symbol.
+        Um die Kategorie zu wechseln, müssen Sie lange auf die App tippen.
+    </string>
+</resources>

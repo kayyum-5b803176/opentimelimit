@@ -1,0 +1,91 @@
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.timelimit.android.ui.manage.child.advanced.ManageChildAdvancedFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <io.timelimit.android.ui.view.ManageDisableTimelimitsView
+                android:id="@+id/disable_time_limits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include android:id="@+id/user_timezone"
+                layout="@layout/user_timezone_view" />
+
+            <include android:id="@+id/password"
+                layout="@layout/manage_child_password" />
+
+            <include android:id="@+id/limit_viewing"
+                layout="@layout/limit_user_viewing_view" />
+
+            <include android:id="@+id/self_limit_add"
+                layout="@layout/allow_child_self_limit_add_view" />
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/generic_manage_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        style="?materialButtonOutlinedStyle"
+                        android:id="@+id/rename_child_button"
+                        android:text="@string/rename_child_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        style="?materialButtonOutlinedStyle"
+                        android:id="@+id/duplicate_child_button"
+                        android:text="@string/duplicate_child_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        style="?materialButtonOutlinedStyle"
+                        android:id="@+id/delete_user_button"
+                        android:text="@string/delete_child_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

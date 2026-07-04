@@ -1,0 +1,117 @@
+<!--
+    TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="io.timelimit.android.ui.manage.category.blocked_times.CopyBlockedTimeAreasDialogFragment">
+
+    <data>
+        <variable
+            name="sourceDayName"
+            type="String" />
+
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <LinearLayout
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="8dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            tools:text="@string/blocked_time_areas_copy_from"
+            android:text="@{TextUtils.isEmpty(sourceDayName) ? @string/blocked_time_areas_copy_from : @string/blocked_time_areas_copy_to(sourceDayName)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <io.timelimit.android.ui.view.SafeViewFlipper
+            android:id="@+id/flipper"
+            android:measureAllChildren="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/select_source_day"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- items are added at runtime -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/to_monday"
+                    android:text="@string/day_of_week_monday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/to_tuesday"
+                    android:text="@string/day_of_week_tuesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/to_wednesday"
+                    android:text="@string/day_of_week_wednesday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/to_thursday"
+                    android:text="@string/day_of_week_thursday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/to_friday"
+                    android:text="@string/day_of_week_friday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/to_saturday"
+                    android:text="@string/day_of_week_saturday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/to_sunday"
+                    android:text="@string/day_of_week_sunday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_margin="8dp"
+                    android:id="@+id/save_button"
+                    android:layout_gravity="end"
+                    android:text="@string/generic_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </io.timelimit.android.ui.view.SafeViewFlipper>
+    </LinearLayout>
+</layout>

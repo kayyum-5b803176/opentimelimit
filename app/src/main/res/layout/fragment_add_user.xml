@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.user.create.AddUserFragment">
+
+    <data>
+        <variable
+            name="isCreatingChildUser"
+            type="boolean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <io.timelimit.android.ui.view.SafeViewFlipper
+        android:layout_width="match_parent"
+        android:id="@+id/flipper"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:text="@string/add_user_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:inputType="textPersonName"
+                            android:id="@+id/name"
+                            android:hint="@string/add_user_hint_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:checked="true"
+                                android:id="@+id/radio_type_parent"
+                                android:text="@string/add_user_type_parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <RadioButton
+                                android:id="@+id/radio_type_child"
+                                android:text="@string/add_user_type_child"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:visibility="@{isCreatingChildUser ? View.VISIBLE : View.GONE}"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:text="@string/add_user_child_password_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <io.timelimit.android.ui.view.SetPasswordView
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:id="@+id/create_btn"
+                            android:layout_gravity="end"
+                            android:text="@string/generic_create"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/circular_progress_indicator" />
+
+        <include android:id="@+id/missing_auth_view" layout="@layout/fragment_add_user_missing_authentication" />
+    </io.timelimit.android.ui.view.SafeViewFlipper>
+</layout>

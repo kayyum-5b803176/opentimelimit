@@ -1,0 +1,130 @@
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2022 Jonas Lochmann
+    Copyright <C> 2020 Marcel Voigt
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.timelimit.android.ui.manage.parent.ManageParentFragment">
+
+    <data>
+        <variable
+            name="username"
+            type="String" />
+
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.manage.parent.ManageParentFragmentHandlers" />
+
+        <import type="android.text.TextUtils" />
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="@{() -> handlers.onChangePasswordClicked()}"
+                    android:foreground="?selectableItemBackground"
+                    app:cardUseCompatPadding="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/manage_parent_change_password_title"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="@string/manage_parent_change_password_text"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="@{() -> handlers.onManageU2FClicked()}"
+                    android:foreground="?selectableItemBackground"
+                    app:cardUseCompatPadding="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="@string/manage_parent_u2f_title"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="@string/manage_parent_u2f_description"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <include android:id="@+id/user_key"
+                    layout="@layout/manage_user_key_view" />
+
+                <include android:id="@+id/biometric_auth"
+                    layout="@layout/manage_user_biometric_auth_view" />
+
+                <include android:id="@+id/timezone"
+                    layout="@layout/user_timezone_view" />
+
+                <include android:id="@+id/parent_limit_login"
+                    layout="@layout/parent_limit_login_view" />
+
+                <include android:id="@+id/delete_parent"
+                    layout="@layout/delete_parent_view" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            app:fabSize="normal"
+            android:src="@drawable/ic_lock_open_white_24dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="end|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

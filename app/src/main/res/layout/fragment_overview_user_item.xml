@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="username"
+            type="String" />
+
+        <variable
+            name="isTemporarilyBlocked"
+            type="Boolean" />
+
+        <variable
+            name="areTimeLimitsDisabled"
+            type="Boolean" />
+
+        <variable
+            name="isParent"
+            type="Boolean" />
+
+        <variable
+            name="isChild"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/card"
+        android:foreground="?selectableItemBackground"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_account_circle_black_24dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                tools:text="Anton"
+                android:text="@{username}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_settings_black_24dp"
+                android:visibility="@{safeUnbox(isParent) ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/overview_user_item_role_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_security_black_24dp"
+                android:visibility="@{safeUnbox(isChild) ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/overview_user_item_role_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                android:visibility="@{safeUnbox(isTemporarilyBlocked) ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/overview_user_item_temporarily_blocked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_alarm_off_black_24dp"
+                android:visibility="@{safeUnbox(areTimeLimitsDisabled) ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/overview_user_item_temporarily_disabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,128 @@
+/*
+ * Open TimeLimit Copyright <C> 2019 - 2024 Jonas Lochmann
+ * Copyright <C> 2020 Marcel Voigt
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation version 3 of the License.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk 34
+    defaultConfig {
+        applicationId "io.timelimit.android.open"
+        minSdkVersion 19
+        targetSdkVersion 33
+        versionCode 217
+        versionName "7.1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas".toString())
+            }
+            javacOptions {
+                option("-Xmaxerrs", 500)
+            }
+        }
+
+        buildConfigField 'String', 'backdoorPublicKey', '"30819f300d06092a864886f70d010101050003818d0030818902818100bbb0f6029315d9a2344cac25b3af1ae751447eee6308f160d68969704b6cb4674e93ad462b13a166596d0d436a546fafb78ad79fabe158eb9b17aad4945a3cf74a6a2f771e5c836547f1ce47ce866eb2b994e5984b1e3c7457da133dde02bd0d575f588cd5bcca3acbf77c30f76bde4b16911da89caafe532c2f64b4f3f1d44b0203010001"'
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    lint {
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml")
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        debug {
+            multiDexEnabled true
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    namespace 'io.timelimit.android'
+}
+
+dependencies {
+    def nav_version = "2.7.7"
+    def room_version = "2.6.1"
+    def paging_version = "3.3.1"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.6.1' // can not upgrade due to SDK 19
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation "com.google.android.material:material:1.12.0"
+    implementation 'androidx.fragment:fragment-ktx:1.7.0' // can not upgrade due to SDK 19
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    implementation 'androidx.biometric:biometric:1.1.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.6.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.0'
+
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.3'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.squareup.okio:okio:3.6.0'
+
+    implementation 'org.whispersystems:curve25519-java:0.5.0'
+
+    implementation 'com.google.zxing:core:3.3.3'
+}

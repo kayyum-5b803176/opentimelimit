@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2022 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="subtitle"
+            type="String" />
+
+        <variable
+            name="currentCategoryTitle"
+            type="String" />
+
+        <variable
+            name="checked"
+            type="Boolean" />
+
+        <variable
+            name="showIcon"
+            type="boolean" />
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:foreground="?selectableItemBackground"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="@{showIcon ? View.VISIBLE : View.GONE}"
+                android:id="@+id/icon"
+                tools:src="@mipmap/ic_launcher"
+                android:layout_margin="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="@android:dimen/app_icon_size" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAppearance="?android:textAppearanceLarge"
+                    tools:text="Android Settings"
+                    android:text="@{title}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:visibility="@{TextUtils.isEmpty(currentCategoryTitle) ? View.GONE : View.VISIBLE}"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:text="@string/category_apps_add_dialog_already_assigned_to"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@{@string/category_apps_add_dialog_already_assigned_to(currentCategoryTitle)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textAppearance="?android:textAppearanceSmall"
+                    tools:text="com.android.settings"
+                    android:text="@{subtitle}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="@{safeUnbox(checked) ? View.VISIBLE : View.GONE}"
+                android:tint="?colorPrimary"
+                android:layout_margin="8dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_box_black_24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+            <ImageView
+                android:visibility="@{safeUnbox(checked) ? View.GONE : View.VISIBLE}"
+                android:tint="@color/gray"
+                android:layout_margin="8dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_box_outline_blank_black_24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

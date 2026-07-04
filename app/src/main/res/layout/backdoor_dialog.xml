@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2022 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="enableButtons"
+            type="boolean" />
+
+        <variable
+            name="nonce"
+            type="String" />
+
+        <variable
+            name="input"
+            type="String" />
+
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.backdoor.BackdoorDialogListener" />
+    </data>
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/backdoor_intro_text" />
+            </ScrollView>
+
+            <Button
+                android:id="@+id/intro_confirm_button"
+                android:text="@string/backdoor_intro_confirm"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/backdoor_instruction_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="?colorAccent"
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:text="abcdefghijklmnopqrstuvwxyz"
+                android:text="@{nonce}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/backdoor_instruction_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:text="012345-6789A-BCDEF"
+                android:textColor="?colorAccent"
+                android:singleLine="true"
+                android:ellipsize="start"
+                android:text="@{input}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                style="?android:progressBarStyleHorizontal"
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                app:justifyContent="center"
+                tools:ignore="HardcodedText"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(0)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(1)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(2)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(3)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(4)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(5)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(6)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(7)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(8)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(9)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(10)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(11)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(12)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(13)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(14)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.onButtonClicked(15)}"
+                    android:enabled="@{enableButtons}"
+                    android:text="F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:minWidth="64dp"
+                    style="?materialButtonOutlinedStyle"
+                    android:onClick="@{() -> handlers.removeLastChar()}"
+                    android:enabled="@{enableButtons}"
+                    android:text="&lt;"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+    </ViewFlipper>
+</layout>

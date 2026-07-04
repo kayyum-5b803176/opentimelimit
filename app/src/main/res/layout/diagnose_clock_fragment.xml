@@ -1,0 +1,125 @@
+<!--
+    Open TimeLimit Copyright <C> 2019 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.timelimit.android.ui.diagnose.DiagnoseClockFragment">
+
+    <data>
+        <variable
+            name="epochalSeconds"
+            type="Long" />
+
+        <variable
+            name="timeZone"
+            type="String" />
+
+        <variable
+            name="timeOfDay"
+            type="String" />
+
+        <variable
+            name="dateString"
+            type="String" />
+
+        <variable
+            name="dayOfWeek"
+            type="Integer" />
+
+        <variable
+            name="dayOfEpoch"
+            type="Long" />
+
+        <variable
+            name="minuteOfWeek"
+            type="Integer" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_margin="8dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:text="@string/diagnose_clock_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_epoch_seconds(epochalSeconds)}"
+                    tools:text="@string/diagnose_clock_epoch_seconds"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_timezone(timeZone)}"
+                    tools:text="@string/diagnose_clock_timezone"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_time_of_day(timeOfDay)}"
+                    tools:text="@string/diagnose_clock_time_of_day"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_date(dateString)}"
+                    tools:text="@string/diagnose_clock_date"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_day_of_week(dayOfWeek)}"
+                    tools:text="@string/diagnose_clock_day_of_week"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_day_of_epoch(dayOfEpoch)}"
+                    tools:text="@string/diagnose_clock_day_of_epoch"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@{@string/diagnose_clock_minute_of_week(minuteOfWeek)}"
+                    tools:text="@string/diagnose_clock_minute_of_week"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</layout>

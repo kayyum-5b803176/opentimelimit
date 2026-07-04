@@ -1,0 +1,411 @@
+<!--
+    TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.timelimit.android.ui.setup.SetupDevicePermissionsFragment">
+
+    <data>
+        <variable
+            name="usageStatsAccess"
+            type="io.timelimit.android.integration.platform.RuntimePermissionStatus" />
+
+        <variable
+            name="notificationAccessPermission"
+            type="io.timelimit.android.integration.platform.NewPermissionStatus" />
+
+        <variable
+            name="protectionLevel"
+            type="io.timelimit.android.integration.platform.ProtectionLevel" />
+
+        <variable
+            name="overlayPermission"
+            type="RuntimePermissionStatus" />
+
+        <variable
+            name="accessibilityServiceEnabled"
+            type="boolean" />
+
+        <variable
+            name="handlers"
+            type="io.timelimit.android.ui.setup.SetupDevicePermissionsHandlers" />
+
+        <import type="android.view.View" />
+        <import type="io.timelimit.android.integration.platform.RuntimePermissionStatus" />
+        <import type="io.timelimit.android.integration.platform.NewPermissionStatus" />
+        <import type="io.timelimit.android.integration.platform.ProtectionLevel" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/setup_device_permissions_text"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/usage_stats_access_title"
+                        android:nextFocusDown="@id/usage_stats_access_btn"
+                        tools:ignore="UnusedAttribute"
+                        android:drawableTint="?colorOnSurface"
+                        android:background="?selectableItemBackground"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:onClick="@{() -> handlers.helpUsageStatsAccess()}"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/manage_device_permissions_usagestats_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{usageStatsAccess == RuntimePermissionStatus.Granted ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_green"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{usageStatsAccess == RuntimePermissionStatus.NotGranted ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_red"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{usageStatsAccess == RuntimePermissionStatus.NotRequired ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_green"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_required"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/usage_stats_access_btn"
+                        android:nextFocusUp="@id/usage_stats_access_title"
+                        android:nextFocusDown="@id/device_admin_btn"
+                        style="?materialButtonOutlinedStyle"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/manage_device_permission_btn_modify"
+                        android:layout_gravity="end"
+                        android:onClick="@{() -> handlers.openUsageStatsSettings()}"
+                        android:enabled="@{usageStatsAccess != RuntimePermissionStatus.NotRequired}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <requestFocus />
+                    </Button>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/manage_device_permission_device_admin_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:visibility="@{protectionLevel == ProtectionLevel.None ? View.VISIBLE : View.GONE}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_device_admin_text_disabled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:visibility="@{protectionLevel == ProtectionLevel.SimpleDeviceAdmin ? View.VISIBLE : View.GONE}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_device_admin_text_simple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:visibility="@{protectionLevel == ProtectionLevel.PasswordDeviceAdmin ? View.VISIBLE : View.GONE}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_device_admin_text_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:visibility="@{protectionLevel == ProtectionLevel.DeviceOwner ? View.VISIBLE : View.GONE}"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_device_admin_text_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/device_admin_btn"
+                        android:nextFocusUp="@id/usage_stats_access_btn"
+                        android:nextFocusDown="@id/notification_access_title"
+                        style="?materialButtonOutlinedStyle"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/manage_device_permission_btn_modify"
+                        android:layout_gravity="end"
+                        android:onClick="@{() -> handlers.manageDeviceAdmin()}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/notification_access_title"
+                        android:nextFocusUp="@id/device_admin_btn"
+                        android:nextFocusDown="@id/notification_access_button"
+                        tools:ignore="UnusedAttribute"
+                        android:drawableTint="?colorOnSurface"
+                        android:background="?selectableItemBackground"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:onClick="@{() -> handlers.helpNotificationAccess()}"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/manage_device_permission_notification_access_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{notificationAccessPermission == NewPermissionStatus.Granted ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_green"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{notificationAccessPermission == NewPermissionStatus.NotGranted ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_red"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{notificationAccessPermission == NewPermissionStatus.NotSupported ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_red"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_supported"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/notification_access_button"
+                        android:nextFocusUp="@id/notification_access_title"
+                        android:nextFocusDown="@id/overlay_title"
+                        style="?materialButtonOutlinedStyle"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/manage_device_permission_btn_modify"
+                        android:layout_gravity="end"
+                        android:onClick="@{() -> handlers.openNotificationAccessSettings()}"
+                        android:enabled="@{notificationAccessPermission != NewPermissionStatus.NotSupported}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/overlay_title"
+                        android:nextFocusUp="@id/notification_access_button"
+                        android:nextFocusDown="@id/overlay_btn"
+                        tools:ignore="UnusedAttribute"
+                        android:drawableTint="?colorOnSurface"
+                        android:background="?selectableItemBackground"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:onClick="@{() -> handlers.helpDrawOverOtherApps()}"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/manage_device_permissions_overlay_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{overlayPermission == RuntimePermissionStatus.Granted ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_green"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{overlayPermission == RuntimePermissionStatus.NotGranted ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_red"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{overlayPermission == RuntimePermissionStatus.NotRequired ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_green"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_required"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/overlay_btn"
+                        android:nextFocusUp="@id/overlay_title"
+                        android:nextFocusDown="@id/accessibility_title"
+                        style="?materialButtonOutlinedStyle"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/manage_device_permission_btn_modify"
+                        android:layout_gravity="end"
+                        android:onClick="@{() -> handlers.openDrawOverOtherAppsScreen()}"
+                        android:enabled="@{overlayPermission != RuntimePermissionStatus.NotRequired}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/accessibility_title"
+                        android:nextFocusUp="@id/overlay_btn"
+                        android:nextFocusDown="@id/accessibility_btn"
+                        tools:ignore="UnusedAttribute"
+                        android:drawableTint="?colorOnSurface"
+                        android:background="?selectableItemBackground"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:onClick="@{() -> handlers.helpAccesibility()}"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/manage_device_permission_accessibility_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{accessibilityServiceEnabled == true ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_green"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="@{accessibilityServiceEnabled == false ? View.VISIBLE : View.GONE}"
+                        android:textColor="@color/text_red"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/manage_device_permission_status_not_granted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/accessibility_btn"
+                        android:nextFocusUp="@id/accessibility_title"
+                        android:nextFocusDown="@id/next_btn"
+                        style="?materialButtonOutlinedStyle"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/manage_device_permission_btn_modify"
+                        android:layout_gravity="end"
+                        android:onClick="@{() -> handlers.openAccessibilitySettings()}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:nextFocusUp="@id/accessibility_btn"
+                android:id="@+id/next_btn"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:enabled="@{usageStatsAccess != RuntimePermissionStatus.NotGranted}"
+                android:onClick="@{() -> handlers.gotoNextStep()}"
+                android:text="@string/wiazrd_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

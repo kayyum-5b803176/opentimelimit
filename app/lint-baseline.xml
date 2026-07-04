@@ -1,0 +1,4977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 4.1.2">
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="172"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/apps/ChildAppsModel.kt"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_category_settings.xml: [layout/fragment_category_settings.xml => layout/manage_parent_category.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_battery_limit_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_time_warnings_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_notification_filter.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_networks_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_for_unassigned_apps.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="81"/>
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="44"/>
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="50"/>
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_category_settings.xml: [layout/fragment_category_settings.xml => layout/manage_parent_category.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_battery_limit_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_time_warnings_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_notification_filter.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_networks_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_for_unassigned_apps.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="84"/>
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="44"/>
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="50"/>
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_category_settings.xml: [layout/fragment_category_settings.xml => layout/manage_parent_category.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_battery_limit_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_time_warnings_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_notification_filter.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_networks_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_for_unassigned_apps.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="87"/>
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="44"/>
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="50"/>
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_category_settings.xml: [layout/fragment_category_settings.xml => layout/manage_parent_category.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_battery_limit_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_time_warnings_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_notification_filter.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_networks_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_for_unassigned_apps.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="90"/>
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="44"/>
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="50"/>
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_category_settings.xml: [layout/fragment_category_settings.xml => layout/manage_parent_category.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_battery_limit_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_time_warnings_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/category_notification_filter.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_networks_view.xml defines @+id/title_view, layout/fragment_category_settings.xml => layout/manage_category_for_unassigned_apps.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="93"/>
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="44"/>
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="50"/>
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_manage_child_advanced.xml: [layout/fragment_manage_child_advanced.xml => layout/manage_child_password.xml defines @+id/title_view, layout/fragment_manage_child_advanced.xml => layout/limit_user_viewing_view.xml defines @+id/title_view, layout/fragment_manage_child_advanced.xml => layout/allow_child_self_limit_add_view.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_manage_child_advanced.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/manage_child_password.xml"
+            line="39"/>
+        <location
+            file="src/main/res/layout/limit_user_viewing_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/allow_child_self_limit_add_view.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/enable_switch, defined or included multiple times in layout/fragment_manage_child_advanced.xml: [layout/fragment_manage_child_advanced.xml => layout/limit_user_viewing_view.xml defines @+id/enable_switch, layout/fragment_manage_child_advanced.xml => layout/allow_child_self_limit_add_view.xml defines @+id/enable_switch]">
+        <location
+            file="src/main/res/layout/fragment_manage_child_advanced.xml"
+            line="45"/>
+        <location
+            file="src/main/res/layout/limit_user_viewing_view.xml"
+            line="41"/>
+        <location
+            file="src/main/res/layout/allow_child_self_limit_add_view.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_manage_child_advanced.xml: [layout/fragment_manage_child_advanced.xml => layout/manage_child_password.xml defines @+id/title_view, layout/fragment_manage_child_advanced.xml => layout/limit_user_viewing_view.xml defines @+id/title_view, layout/fragment_manage_child_advanced.xml => layout/allow_child_self_limit_add_view.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_manage_child_advanced.xml"
+            line="45"/>
+        <location
+            file="src/main/res/layout/manage_child_password.xml"
+            line="39"/>
+        <location
+            file="src/main/res/layout/limit_user_viewing_view.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/allow_child_self_limit_add_view.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_manage_parent.xml: [layout/fragment_manage_parent.xml => layout/manage_user_key_view.xml defines @+id/title_view, layout/fragment_manage_parent.xml => layout/parent_limit_login_view.xml defines @+id/title_view, layout/fragment_manage_parent.xml => layout/manage_user_biometric_auth_view.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_manage_parent.xml"
+            line="78"/>
+        <location
+            file="src/main/res/layout/manage_user_key_view.xml"
+            line="47"/>
+        <location
+            file="src/main/res/layout/parent_limit_login_view.xml"
+            line="54"/>
+        <location
+            file="src/main/res/layout/manage_user_biometric_auth_view.xml"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/fragment_manage_parent.xml: [layout/fragment_manage_parent.xml => layout/manage_user_key_view.xml defines @+id/title_view, layout/fragment_manage_parent.xml => layout/parent_limit_login_view.xml defines @+id/title_view, layout/fragment_manage_parent.xml => layout/manage_user_biometric_auth_view.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/fragment_manage_parent.xml"
+            line="84"/>
+        <location
+            file="src/main/res/layout/manage_user_key_view.xml"
+            line="47"/>
+        <location
+            file="src/main/res/layout/parent_limit_login_view.xml"
+            line="54"/>
+        <location
+            file="src/main/res/layout/manage_user_biometric_auth_view.xml"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/checkbox, defined or included multiple times in layout/manage_device_features_fragment.xml: [layout/manage_device_features_fragment.xml => layout/manage_device_activity_level_blocking.xml defines @+id/checkbox, layout/manage_device_features_fragment.xml => layout/manage_device_reboot_manipulation_view.xml defines @+id/checkbox]">
+        <location
+            file="src/main/res/layout/manage_device_features_fragment.xml"
+            line="45"/>
+        <location
+            file="src/main/res/layout/manage_device_activity_level_blocking.xml"
+            line="42"/>
+        <location
+            file="src/main/res/layout/manage_device_reboot_manipulation_view.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/title_view, defined or included multiple times in layout/manage_device_features_fragment.xml: [layout/manage_device_features_fragment.xml => layout/manage_device_activity_level_blocking.xml defines @+id/title_view, layout/manage_device_features_fragment.xml => layout/manage_device_reboot_manipulation_view.xml defines @+id/title_view]">
+        <location
+            file="src/main/res/layout/manage_device_features_fragment.xml"
+            line="45"/>
+        <location
+            file="src/main/res/layout/manage_device_activity_level_blocking.xml"
+            line="32"/>
+        <location
+            file="src/main/res/layout/manage_device_reboot_manipulation_view.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="DuplicateIncludedIds"
+        message="Duplicate id @+id/password, defined or included multiple times in layout/new_login_fragment.xml: [layout/new_login_fragment.xml => layout/new_login_fragment_password.xml defines @+id/password, layout/new_login_fragment.xml => layout/new_login_fragment_child_password.xml defines @+id/password]">
+        <location
+            file="src/main/res/layout/new_login_fragment.xml"
+            line="35"/>
+        <location
+            file="src/main/res/layout/new_login_fragment_password.xml"
+            line="50"/>
+        <location
+            file="src/main/res/layout/new_login_fragment_child_password.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 27 (current min is 19): `android.content.pm.PackageManager#FEATURE_PC`">
+        <location
+            file="src/main/java/io/timelimit/android/logic/BackgroundTaskLogic.kt"
+            line="119"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `banner` is only used in API level 21 and higher (current min is 19)">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `drawableTint` is only used in API level 23 and higher (current min is 19)">
+        <location
+            file="src/main/res/layout/edit_task_fragment.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is 19)">
+        <location
+            file="src/main/res/layout/fragment_blocked_time_areas_minute_tile.xml"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/AdbDeviceAdminDialogFragment.kt"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/AdbUsageStatsDialogFragment.kt"
+            line="35"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddAlreadyAssignedAppsInfoDialog.kt"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="76"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="77"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="79"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="80"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="81"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="95"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="138"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="138"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/addactivity/AddAppActivitiesDialogFragment.kt"
+            line="190"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="72"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="94"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="95"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="96"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/apps/add/AddCategoryAppsFragment.kt"
+            line="287"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/addusedtime/AddUsedTimeDialogFragment.kt"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/addusedtime/AddUsedTimeDialogFragment.kt"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/addusedtime/AddUsedTimeDialogFragment.kt"
+            line="67"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/addusedtime/AddUsedTimeDialogFragment.kt"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/addusedtime/AddUsedTimeDialogFragment.kt"
+            line="165"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/apps/assign/AssignAppCategoryDialogFragment.kt"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/apps/assign/AssignAppCategoryDialogFragment.kt"
+            line="59"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/apps/assign/AssignAppCategoryDialogFragment.kt"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/apps/assign/AssignAppCategoryDialogFragment.kt"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/backdoor/BackdoorDialogFragment.kt"
+            line="94"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/apps/ChildAppsFragment.kt"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/blocked_times/CopyBlockedTimeAreasDialogFragment.kt"
+            line="101"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/blocked_times/CopyBlockedTimeAreasDialogFragment.kt"
+            line="111"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/blocked_times/CopyBlockedTimeAreasDialogFragment.kt"
+            line="112"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/category/create/CreateCategoryDialogFragment.kt"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/category/create/CreateCategoryDialogFragment.kt"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/DeleteChildDialogFragment.kt"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/DeleteChildDialogFragment.kt"
+            line="50"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilDateDialogFragment.kt"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilDateDialogFragment.kt"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilDateDialogFragment.kt"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilDateDialogFragment.kt"
+            line="100"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilDateDialogFragment.kt"
+            line="115"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilTimeDialogFragment.kt"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilTimeDialogFragment.kt"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilTimeDialogFragment.kt"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilTimeDialogFragment.kt"
+            line="98"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/managedisabletimelimits/DisableTimelimitsUntilTimeDialogFragment.kt"
+            line="119"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/DurationPickerDialogFragment.kt"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/DurationPickerDialogFragment.kt"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/DurationPickerDialogFragment.kt"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/DurationPickerDialogFragment.kt"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/DurationPickerDialogFragment.kt"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/DurationPickerDialogFragment.kt"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/EnableNotificationFilterDialogFragment.kt"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/EnableNotificationFilterDialogFragment.kt"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/InformAboutDeviceOwnerDialogFragment.kt"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/InformAboutDeviceOwnerDialogFragment.kt"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/overview/main/MainFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of getActivity()!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/overview/main/MainFragment.kt"
+            line="103"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/ManageChildFragment.kt"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/ManageDeviceAdvancedFragment.kt"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/ManageDeviceAdvancedFragment.kt"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireFragmentManager() instead of fragmentManager!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/ManageDeviceAdvancedFragment.kt"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/feature/ManageDeviceFeaturesFragment.kt"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/feature/ManageDeviceFeaturesFragment.kt"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireFragmentManager() instead of fragmentManager!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/feature/ManageDeviceFeaturesFragment.kt"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireFragmentManager() instead of fragmentManager!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/feature/ManageDeviceFeaturesFragment.kt"
+            line="113"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="133"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="133"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="134"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="134"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/ManageDevicePermissionsFragment.kt"
+            line="86"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/ManageDevicePermissionsFragment.kt"
+            line="88"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/user/ManageDeviceUserFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/user/ManageDeviceUserFragment.kt"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/user/ManageDeviceUserFragment.kt"
+            line="74"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireFragmentManager() instead of fragmentManager!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/user/ManageDeviceUserFragment.kt"
+            line="171"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/parent/ManageParentFragment.kt"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/parent/ManageParentFragment.kt"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireFragmentManager() instead of fragmentManager!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/parent/ManageParentFragment.kt"
+            line="103"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/parentmode/ParentModeCodeFragment.kt"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/contacts/SelectDialerDialogFragment.kt"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/contacts/SelectDialerDialogFragment.kt"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/contacts/SelectDialerDialogFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/contacts/SelectDialerDialogFragment.kt"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/SelectParentCategoryDialogFragment.kt"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/SelectParentCategoryDialogFragment.kt"
+            line="59"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/SelectParentCategoryDialogFragment.kt"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/settings/SelectParentCategoryDialogFragment.kt"
+            line="94"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/SetChildPasswordDialogFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/SetChildPasswordDialogFragment.kt"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserDialogFragment.kt"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserDialogFragment.kt"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserDialogFragment.kt"
+            line="82"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="59"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="89"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="102"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="102"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/defaultuser/SetDeviceDefaultUserTimeoutDialogFragment.kt"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireActivity() instead of activity!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="94"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="94"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/timezone/SetUserTimezoneDialogFragment.kt"
+            line="120"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/TimePickerDialogFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/timelimit_rules/edit/TimePickerDialogFragment.kt"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/UpdateChildNameDialogFragment.kt"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/UpdateChildNameDialogFragment.kt"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/UpdateChildPasswordDialogFragment.kt"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/UpdateChildPasswordDialogFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/UpdateChildPasswordDialogFragment.kt"
+            line="83"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/UpdateChildPasswordDialogFragment.kt"
+            line="88"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/child/advanced/password/UpdateChildPasswordDialogFragment.kt"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireArguments() instead of arguments!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/UpdateDeviceTitleDialogFragment.kt"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/UpdateDeviceTitleDialogFragment.kt"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="UseRequireInsteadOfGet"
+        message="Use requireContext() instead of context!!">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/UpdateDeviceTitleDialogFragment.kt"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        message="Must be one of: Context.POWER_SERVICE, Context.WINDOW_SERVICE, Context.LAYOUT_INFLATER_SERVICE, Context.ACCOUNT_SERVICE, Context.ACTIVITY_SERVICE, Context.ALARM_SERVICE, Context.NOTIFICATION_SERVICE, Context.ACCESSIBILITY_SERVICE, Context.CAPTIONING_SERVICE, Context.KEYGUARD_SERVICE, Context.LOCATION_SERVICE, Context.SEARCH_SERVICE, Context.SENSOR_SERVICE, Context.STORAGE_SERVICE, Context.STORAGE_STATS_SERVICE, Context.WALLPAPER_SERVICE, Context.VIBRATOR_SERVICE, Context.CONNECTIVITY_SERVICE, Context.IPSEC_SERVICE, Context.VPN_MANAGEMENT_SERVICE, Context.NETWORK_STATS_SERVICE, Context.WIFI_SERVICE, Context.WIFI_AWARE_SERVICE, Context.WIFI_P2P_SERVICE, Context.WIFI_RTT_RANGING_SERVICE, Context.NSD_SERVICE, Context.AUDIO_SERVICE, Context.FINGERPRINT_SERVICE, Context.BIOMETRIC_SERVICE, Context.MEDIA_ROUTER_SERVICE, Context.TELEPHONY_SERVICE, Context.TELEPHONY_SUBSCRIPTION_SERVICE, Context.CARRIER_CONFIG_SERVICE, Context.EUICC_SERVICE, Context.TELECOM_SERVICE, Context.CLIPBOARD_SERVICE, Context.INPUT_METHOD_SERVICE, Context.TEXT_SERVICES_MANAGER_SERVICE, Context.TEXT_CLASSIFICATION_SERVICE, Context.APPWIDGET_SERVICE, Context.DROPBOX_SERVICE, Context.DEVICE_POLICY_SERVICE, Context.UI_MODE_SERVICE, Context.DOWNLOAD_SERVICE, Context.NFC_SERVICE, Context.BLUETOOTH_SERVICE, Context.USB_SERVICE, Context.LAUNCHER_APPS_SERVICE, Context.INPUT_SERVICE, Context.DISPLAY_SERVICE, Context.USER_SERVICE, Context.RESTRICTIONS_SERVICE, Context.APP_OPS_SERVICE, Context.ROLE_SERVICE, Context.CAMERA_SERVICE, Context.PRINT_SERVICE, Context.CONSUMER_IR_SERVICE, Context.TV_INPUT_SERVICE, Context.USAGE_STATS_SERVICE, Context.MEDIA_SESSION_SERVICE, Context.BATTERY_SERVICE, Context.JOB_SCHEDULER_SERVICE, Context.MEDIA_PROJECTION_SERVICE, Context.MIDI_SERVICE, Context.HARDWARE_PROPERTIES_SERVICE, Context.SHORTCUT_SERVICE, Context.SYSTEM_HEALTH_SERVICE, Context.COMPANION_DEVICE_SERVICE, Context.CROSS_PROFILE_APPS_SERVICE">
+        <location
+            file="src/main/java/io/timelimit/android/integration/platform/android/foregroundapp/LollipopForegroundAppHelper.kt"
+            line="54"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/user/create/AddUserFragment.kt"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/user/create/AddUserFragment.kt"
+            line="85"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/user/create/AddUserFragment.kt"
+            line="101"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/advanced/ManageDeviceAdvancedFragment.kt"
+            line="87"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/feature/ManageDeviceFeaturesFragment.kt"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="117"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="138"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/ManageDeviceFragment.kt"
+            line="172"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/ManageDevicePermissionsFragment.kt"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/permission/ManageDevicePermissionsFragment.kt"
+            line="238"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/user/ManageDeviceUserFragment.kt"
+            line="139"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/device/manage/user/ManageDeviceUserFragment.kt"
+            line="149"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/parent/ManageParentFragment.kt"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="FragmentLiveDataObserve"
+        message="Use viewLifecycleOwner as the LifecycleOwner.">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/parent/ManageParentFragment.kt"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UseSwitchCompatOrMaterialXml"
+        message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UseSwitchCompatOrMaterialXml"
+        message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
+        <location
+            file="src/main/res/layout/lock_action_fragment.xml"
+            line="156"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_baseline_directions_bike_24.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_baseline_directions_bike_24.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_baseline_expand_more_24.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_baseline_expand_more_24.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_baseline_wifi_lock_24.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_baseline_wifi_lock_24.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_fingerprint_24dp.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable">
+        <location
+            file="src/main/res/drawable/ic_fingerprint_24dp.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/add_item_view.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/fragment_add_category_activities_item.xml"
+            line="83"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/fragment_add_category_activities_item.xml"
+            line="92"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/fragment_add_category_apps_item.xml"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/fragment_add_category_apps_item.xml"
+            line="102"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/fragment_category_apps_item.xml"
+            line="72"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`">
+        <location
+            file="src/main/res/layout/show_more_list_item.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/allow_child_self_limit_add_view.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/allow_child_self_limit_add_view.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/category_battery_limit_view.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/category_notification_filter.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/category_rich_card.xml"
+            line="122"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/category_rich_card.xml"
+            line="124"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/category_rich_card.xml"
+            line="134"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/category_rich_card.xml"
+            line="136"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/category_time_warnings_view.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/fragment_category_settings.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="83"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="88"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="95"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="100"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="82"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="95"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="82"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="213"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="215"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="283"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="285"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="353"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/fragment_setup_device_permissions.xml"
+            line="355"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/limit_user_viewing_view.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/limit_user_viewing_view.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_action_fragment.xml"
+            line="142"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/lock_action_fragment.xml"
+            line="144"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="161"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="162"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="174"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="175"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="188"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="189"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="202"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="203"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="216"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="217"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="230"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="231"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="244"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="245"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="258"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="259"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="272"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="273"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="286"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="287"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_category_for_unassigned_apps.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_category_networks_view.xml"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/manage_child_manipulation_warning.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_child_password.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_child_password.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_activity_level_blocking.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_activity_level_blocking.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_default_user.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_default_user.xml"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/manage_device_manipulation_view.xml"
+            line="50"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="152"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="154"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="223"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="225"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="294"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="296"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="365"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="367"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_device_reboot_manipulation_view.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_device_reboot_manipulation_view.xml"
+            line="36"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_parent_category.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/manage_user_key_view.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/manage_user_key_view.xml"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <location
+            file="src/main/res/layout/missing_permission_view.xml"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/parent_limit_login_view.xml"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/parent_limit_login_view.xml"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableTint` instead of `android:drawableTint`">
+        <location
+            file="src/main/res/layout/view_manage_disable_time_limits.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableEndCompat` instead of `android:drawableEnd`">
+        <location
+            file="src/main/res/layout/view_manage_disable_time_limits.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;characters&quot;): This should probably be a plural rather than a string">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="945"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;letters&quot;): This should probably be a plural rather than a string">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="946"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `category_settings_battery_limit_mobile`; found both 0 and 1">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="237"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="270"/>
+    </issue>
+
+    <issue
+        id="QueryAllPackagesPermission"
+        message="A `&lt;queries>` declaration should generally be used instead of QUERY_ALL_PACKAGES; \&#xA;see https://g.co/dev/packagevisibility for details">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `AppLogic` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="src/main/java/io/timelimit/android/logic/AndroidAppLogic.kt"
+            line="30"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DatabaseBackup` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="src/main/java/io/timelimit/android/data/backup/DatabaseBackup.kt"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `AppLogic` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="src/main/java/io/timelimit/android/logic/DefaultAppLogic.kt"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DefaultCategories` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="src/main/java/io/timelimit/android/ui/user/create/DefaultCategories.kt"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/widget_background` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="src/main/res/layout/widget_times.xml"
+            line="20"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.activity_homescreen` appears to be unused">
+        <location
+            file="src/main/res/layout/activity_homescreen.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.activity_homescreen_item` appears to be unused">
+        <location
+            file="src/main/res/layout/activity_homescreen_item.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.activity_unlock_after_manipulation` appears to be unused">
+        <location
+            file="src/main/res/layout/activity_unlock_after_manipulation.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.annoy_activity` appears to be unused">
+        <location
+            file="src/main/res/layout/annoy_activity.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.widget_background` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.transparent` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.orange_text` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="30"/>
+        <location
+            file="src/main/res/values-night/colors.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.configure_homescreen_delay_dialog` appears to be unused">
+        <location
+            file="src/main/res/layout/configure_homescreen_delay_dialog.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.confirm_delete_dialog` appears to be unused">
+        <location
+            file="src/main/res/layout/confirm_delete_dialog.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.diagnose_experimental_flag_item` appears to be unused">
+        <location
+            file="src/main/res/layout/diagnose_experimental_flag_item.xml"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.edit_text_bottom_sheet_dialog` appears to be unused">
+        <location
+            file="src/main/res/layout/edit_text_bottom_sheet_dialog.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_about` appears to be unused">
+        <location
+            file="src/main/res/layout/fragment_about.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_overview_device_item` appears to be unused">
+        <location
+            file="src/main/res/layout/fragment_overview_device_item.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_overview_intro` appears to be unused">
+        <location
+            file="src/main/res/layout/fragment_overview_intro.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_overview_task_review` appears to be unused">
+        <location
+            file="src/main/res/layout/fragment_overview_task_review.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_overview_user_item` appears to be unused">
+        <location
+            file="src/main/res/layout/fragment_overview_user_item.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.fragment_setup_select_mode` appears to be unused">
+        <location
+            file="src/main/res/layout/fragment_setup_select_mode.xml"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.help_dialog_fragment` appears to be unused">
+        <location
+            file="src/main/res/layout/help_dialog_fragment.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_add_circle_outline_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_add_circle_outline_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_wifi_lock_24` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_baseline_wifi_lock_24.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_battery_alert_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_battery_alert_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_block_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_block_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_fingerprint_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_fingerprint_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_keyboard_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_keyboard_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_pause_circle_outline_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_pause_circle_outline_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_security_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_security_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_settings_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_settings_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_smartphone_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_smartphone_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_timer_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_timer_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_warning_black_24dp` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_warning_black_24dp.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.limit_login_pre_block_dialog_fragment` appears to be unused">
+        <location
+            file="src/main/res/layout/limit_login_pre_block_dialog_fragment.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.lock_action_fragment` appears to be unused">
+        <location
+            file="src/main/res/layout/lock_action_fragment.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.lock_activity` appears to be unused">
+        <location
+            file="src/main/res/layout/lock_activity.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.lock_fragment_category_button` appears to be unused">
+        <location
+            file="src/main/res/layout/lock_fragment_category_button.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.lock_reason_fragment` appears to be unused">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.manage_user_biometric_auth_dialog` appears to be unused">
+        <location
+            file="src/main/res/layout/manage_user_biometric_auth_dialog.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment_child_already_current_user` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment_child_already_current_user.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment_child_password` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment_child_password.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment_child_without_password` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment_child_without_password.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment_parent_login_blocked` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment_parent_login_blocked.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment_password` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment_password.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.new_login_fragment_user_list` appears to be unused">
+        <location
+            file="src/main/res/layout/new_login_fragment_user_list.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.reset_shown_hints` appears to be unused">
+        <location
+            file="src/main/res/layout/reset_shown_hints.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.setup_help_info_fragment` appears to be unused">
+        <location
+            file="src/main/res/layout/setup_help_info_fragment.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.single_fragment_wrapper` appears to be unused">
+        <location
+            file="src/main/res/layout/single_fragment_wrapper.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.generic_skip` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="32"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.generic_login` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="33"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.generic_logout` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_version` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="40"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_contact_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="42"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_contact_mail` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="43"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_source_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_source_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_contained_software_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="53"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_contained_software_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="54"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_diagnose_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="85"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_diagnose_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="54"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_developer_key_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="88"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_developer_key_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.annoy_info` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="117"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.annoy_timer` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="120"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="87"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.annoy_reason` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="123"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_fga_query_range_min` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="403"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="360"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_lom` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="406"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="363"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_slb` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="407"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="364"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_mau` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="408"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="365"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_chs` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="409"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="366"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_chd` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="410"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="367"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_nas` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="411"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="368"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_mld` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="412"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="369"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_mad` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="413"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="370"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_bss` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="414"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="371"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_hmw` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="415"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="372"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_exf_esb` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="416"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="373"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_copy_to_clipboard` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="426"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="383"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.diagnose_copied_to_clipboard` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="427"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="384"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.homescreen_selection_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="431"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="388"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.homescreen_selection_intro` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="432"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="389"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.homescreen_selection_change_info` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="433"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="390"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.homescreen_delay_config_dialog_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="436"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="392"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.homescreen_delay_config_dialog_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="437"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="393"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_tab_reason` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="452"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="408"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_tab_action` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="453"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="409"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_tab_task` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="454"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="410"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_header_blocked` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="455"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="411"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_header_what` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="457"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="413"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_header_why` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="458"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="414"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_allow_temporarily_header` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="460"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="416"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_allow_temporarily_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="461"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="417"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_add_to_category_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="467"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="422"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_add_to_category_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="468"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="423"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_goto_main_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="470"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="425"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_goto_main_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="471"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="426"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_extratime_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="473"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="428"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_extratime_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="474"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_disable_temporarily_lock_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="476"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="430"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_disable_temporarily_all_categories` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="477"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="431"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_grant_permission_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="479"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="433"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_grant_permission_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="480"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="434"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_no_category` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="482"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="436"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_temporarily_blocked` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="487"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="439"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_blocked_time` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="490"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="442"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_time_over` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="493"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="445"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_time_over_etra_time_can_be_used_later` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="496"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="448"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_battery_limit` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="500"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="452"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_session_duration` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="505"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="457"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_missing_required_network` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="510"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="461"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_missing_network_check_permission` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="513"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="465"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_reason_forbidden_network` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="517"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="469"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_task_introduction` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="538"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="490"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.lock_task_review_pending_dialog` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="545"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="498"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_user_selection_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="550"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="503"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_snackbar_wrong` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="552"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="505"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_dialog_password_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="553"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="506"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_child_without_password` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="554"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="507"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_child_already_current_user` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="555"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="508"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_child_info` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="556"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="509"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_child_done_toast` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="557"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="510"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_scan_code` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="558"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="511"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_scan_code_err_expired` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="559"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="512"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_scan_code_err_not_linked` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="560"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="513"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.login_category_blocked` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="561"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="514"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_parent_remove_user_status_not_authenticated` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="837"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="799"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_parent_remove_user_status_wrong_account` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="840"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="802"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_parent_remove_user_status_last_without_login_limit` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="846"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="808"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_user_key_info` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="851"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="813"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_user_key_added` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="858"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="821"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_user_key_invalid` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="859"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="822"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manage_user_key_other_user` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="860"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="823"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.manipulation_activity_intro` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="862"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="825"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.must_read_child_manipulation` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="864"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="827"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.obsolete_message` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="892"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="854"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_header_devices` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="896"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="858"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_header_users` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="897"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="859"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_intro_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="899"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="861"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_intro_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="900"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="862"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_device_item_manipulation` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="906"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="868"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_device_item_missing_permission` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="907"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="869"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_user_item_temporarily_disabled` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="911"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="873"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_user_item_role_child` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="913"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="875"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.overview_user_item_role_parent` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="914"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="876"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_help` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="917"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="879"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_status_disabled` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="921"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="885"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_status_enabled` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="922"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="886"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_dialog_no_selection` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="925"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="890"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_dialog_item` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="926"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="891"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_error_user_itself` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="927"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="892"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_pre_block_enabled` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="931"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="896"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_pre_block_dialog_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="933"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="898"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.parent_limit_login_pre_block_dialog_other_user` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="934"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="899"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reset_hidden_hints_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="955"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="920"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reset_hidden_hints_description` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="956"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="921"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reset_hidden_hints_not_possible` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="957"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="922"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reset_hidden_hints_btn` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="958"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="923"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.scan_key_missing_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="960"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="925"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.scan_key_missing_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="961"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="926"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.scan_key_missing_install` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="962"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="927"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_help_look_for_this_icon` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="981"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="946"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_help_there_is_help_like_at_example` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="982"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="947"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_help_info_about_support_and_documentation` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="986"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="951"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_intro` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="995"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="962"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_child_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="997"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="964"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_child_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="998"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="965"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_parent_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1002"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="969"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_parent_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1003"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="970"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_parent_progress` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1008"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="974"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_uninstall_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1010"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="976"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.setup_select_mode_uninstall_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1011"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="977"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.about_terms_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1023"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="989"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.uninstall_reset_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1041"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="992"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.widget_empty_view` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1099"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1053"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.task_review_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1126"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1077"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.task_review_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1127"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1078"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.task_review_category` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1128"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1079"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.task_review_last_grant` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1129"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1080"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_title_disable` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1135"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1086"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_enable_prompt_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1136"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_enable_prompt_description` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1137"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1087"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_login_prompt_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1138"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_login_prompt_description` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1139"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1088"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_login_button_description` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1140"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1089"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_auth_failed` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1141"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1090"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_auth_failed_reason` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1142"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1091"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_info` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1147"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1094"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_enable_dialog_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1148"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_enable_dialog_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1149"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1095"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_disable_password_required_dialog_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1150"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_disable_password_required_dialog_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1151"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1096"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_not_owner_dialog_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1152"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_not_owner_dialog_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1153"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1097"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_no_credentials_dialog_title` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1154"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_no_credentials_dialog_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1155"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1098"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_no_credentials_dialog_action` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1156"/>
+        <location
+            file="src/main/res/values-v28/strings.xml"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_no_credentials_dialog_action_default` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1157"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1099"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_no_credentials_dialog_action_v28` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1158"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1100"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.biometric_manage_error_no_hw` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="1159"/>
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="1101"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.widget_times` appears to be unused">
+        <location
+            file="src/main/res/layout/widget_times.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.widget_times_item` appears to be unused">
+        <location
+            file="src/main/res/layout/widget_times_item.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `RelativeLayout` layout or its `FrameLayout` parent is useless">
+        <location
+            file="src/main/res/layout/activity_homescreen.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is useless">
+        <location
+            file="src/main/res/layout/activity_unlock_after_manipulation.xml"
+            line="28"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is useless">
+        <location
+            file="src/main/res/layout/annoy_activity.xml"
+            line="20"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is useless">
+        <location
+            file="src/main/res/layout/fragment_add_user_missing_authentication.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is useless">
+        <location
+            file="src/main/res/layout/fragment_usage_history.xml"
+            line="54"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `HorizontalScrollView` layout or its `RelativeLayout` parent is possibly useless">
+        <location
+            file="src/main/res/layout/view_select_days.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `FrameLayout` parent is possibly useless">
+        <location
+            file="src/main/res/layout/widget_times_item.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="351"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="394"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="783"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="821"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/banner.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/banner.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/widget_preview.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/widget_preview.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher.png, ic_launcher_round.png">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"/>
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="ButtonOrder"
+        message="Cancel button should be on the left (was &quot;&quot;Select all&quot; | Cancel | &quot;Add Apps&quot;&quot;, should be &quot;Cancel | &quot;Select all&quot; | &quot;Add Apps&quot;&quot;)">
+        <location
+            file="src/main/res/layout/fragment_add_category_apps.xml"
+            line="122"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`">
+        <location
+            file="src/main/res/layout/edit_task_fragment.xml"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`">
+        <location
+            file="src/main/res/layout/edit_text_bottom_sheet_dialog.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="AlwaysShowAction"
+        message="Prefer &quot;`ifRoom`&quot; instead of &quot;`always`&quot;">
+        <location
+            file="src/main/res/menu/fragment_main_menu.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/app_filter_view.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/change_parent_password_fragment.xml"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/change_password_view.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/delete_parent_view.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/edit_task_fragment.xml"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/edit_text_bottom_sheet_dialog.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/fragment_add_category_activities.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/fragment_add_user.xml"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/new_login_fragment_child_password.xml"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/new_login_fragment_password.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/set_child_timezone_dialog_fragment.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/view_set_password.xml"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute">
+        <location
+            file="src/main/res/layout/view_set_password.xml"
+            line="74"/>
+    </issue>
+
+    <issue
+        id="KtxExtensionAvailable"
+        message="Add suffix `-ktx` to enable the Kotlin extensions for this library">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/activity_homescreen_item.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/add_item_view.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/blocking_overlay.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/contacts_fragment.xml"
+            line="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/diagnose_experimental_flag_fragment.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/diagnose_experimental_flag_item.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/diagnose_foreground_app_fragment.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_about.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_add_category_activities_item.xml"
+            line="81"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_add_category_activities_item.xml"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_add_category_apps_item.xml"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_add_category_apps_item.xml"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_add_category_apps_item.xml"
+            line="100"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_category_apps_item.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_category_apps_item.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_child_apps_item.xml"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_manage_device.xml"
+            line="257"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_manage_parent.xml"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_uninstall.xml"
+            line="75"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/lock_activity.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/lock_reason_fragment.xml"
+            line="90"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/manage_device_advanced_fragment.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/manage_device_features_fragment.xml"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/manage_device_permissions_fragment.xml"
+            line="418"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/manage_device_user_fragment.xml"
+            line="70"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/new_login_fragment_password.xml"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/parent_mode_code_fragment.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/setup_help_info_fragment.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/show_more_list_item.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/single_fragment_wrapper.xml"
+            line="35"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/view_select_time_span.xml"
+            line="72"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/view_select_time_span.xml"
+            line="149"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`">
+        <location
+            file="src/main/res/layout/edit_text_bottom_sheet_dialog.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;8dp&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/change_parent_password_fragment.xml"
+            line="76"/>
+    </issue>
+
+    <issue
+        id="NullSafeMutableLiveData"
+        message="Cannot set non-nullable LiveData value to `null`">
+        <location
+            file="src/main/java/io/timelimit/android/ui/manage/category/usagehistory/UsageHistoryModel.kt"
+            line="53"/>
+    </issue>
+
+</issues>

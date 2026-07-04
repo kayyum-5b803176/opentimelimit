@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    TimeLimit Copyright <C> 2020 Marcel Voigt
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="userName"
+            type="String" />
+        <variable
+            name="biometricAuthEnabled"
+            type="boolean" />
+        <variable
+            name="errorText"
+            type="String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/title_view"
+                android:text="@string/biometric_manage_title"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:background="?selectableItemBackground"
+                app:drawableEndCompat="@drawable/ic_info_outline_black_24dp"
+                app:drawableTint="?colorOnSurface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@{biometricAuthEnabled ? @string/biometric_manage_description_enabled(userName) : @string/biometric_manage_description_disabled(userName)}"
+                tools:text="@string/biometric_manage_description_disabled"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:visibility="@{errorText == null || errorText.isEmpty() ? View.VISIBLE : View.GONE}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@{errorText}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:visibility="@{errorText == null || errorText.isEmpty() ? View.GONE : View.VISIBLE}"
+                app:drawableStartCompat="@android:drawable/ic_dialog_alert"
+                app:drawableTint="?android:attr/textColorSecondary"
+                android:drawablePadding="8dp"
+                tools:text="@string/biometric_manage_error_hw_not_available"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/toggle_biometric_auth_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/biometric_manage_switch_text"
+                android:checked="@{biometricAuthEnabled}"
+                android:enabled="@{errorText == null || errorText.isEmpty()}" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

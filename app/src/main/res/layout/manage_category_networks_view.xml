@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TimeLimit Copyright <C> 2019 - 2021 Jonas Lochmann
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="status"
+            type="NetworkStatus" />
+
+        <variable
+            name="addedNetworksText"
+            type="String" />
+
+        <variable
+            name="showRemoveNetworksButton"
+            type="boolean" />
+
+        <import type="android.view.View" />
+        <import type="io.timelimit.android.ui.manage.category.settings.networks.ManageCategoryNetworksView.NetworkStatus" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                tools:ignore="UnusedAttribute"
+                android:drawableTint="?colorOnSurface"
+                android:id="@+id/title_view"
+                android:background="?selectableItemBackground"
+                android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:text="@string/category_networks_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:text="@string/category_networks_empty"
+                android:text="@{addedNetworksText}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:layout_marginTop="8dp"
+                android:visibility="@{showRemoveNetworksButton ? View.VISIBLE : View.GONE}"
+                android:id="@+id/network_mode_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="@string/category_networks_type_allow_list"
+                    android:id="@+id/network_mode_allow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:text="@string/category_networks_type_block_list"
+                    android:id="@+id/network_mode_block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <Button
+                android:visibility="@{showRemoveNetworksButton ? View.VISIBLE : View.GONE}"
+                android:id="@+id/remove_btn"
+                android:layout_gravity="end"
+                android:text="@string/category_networks_action_remove"
+                style="?borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{status == NetworkStatus.MissingPermission ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/category_networks_status_missing_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{status == NetworkStatus.NoneConnected ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/category_networks_status_none_connected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{status == NetworkStatus.ConnectedButNotAdded ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/category_networks_status_connected_no_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{status == NetworkStatus.ConnectedNotAddedButFull ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/category_networks_status_connected_no_match_full"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="@{status == NetworkStatus.ConnectedAndAdded ? View.VISIBLE : View.GONE}"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/category_networks_status_connected_has_match"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/grant_permission_button"
+                android:visibility="@{status == NetworkStatus.MissingPermission ? View.VISIBLE : View.GONE}"
+                style="?materialButtonOutlinedStyle"
+                android:text="@string/category_networks_action_grant"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/add_network_button"
+                android:visibility="@{status == NetworkStatus.ConnectedButNotAdded ? View.VISIBLE : View.GONE}"
+                style="?materialButtonOutlinedStyle"
+                android:text="@string/category_networks_action_add"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

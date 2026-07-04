@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2024 Jonas Lochmann
+    Copyright <C> 2020 Marcel Voigt
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="generic_ok">OK</string>
+    <string name="generic_cancel">Cancel</string>
+    <string name="generic_help">Help</string>
+    <string name="generic_undo">Undo</string>
+    <string name="generic_save">Save</string>
+    <string name="generic_create">Create</string>
+    <string name="generic_delete">Delete</string>
+    <string name="generic_go">Go</string>
+    <string name="generic_manage_card">Manage</string>
+    <string name="generic_enable">Enable</string>
+    <string name="generic_show_more">Show more</string>
+    <string name="generic_no">No</string>
+    <string name="generic_yes">Yes</string>
+    <string name="generic_skip">Skip</string>
+    <string name="generic_login">Login</string>
+    <string name="generic_logout">Logout</string>
+
+    <string name="generic_swipe_to_dismiss">Swipe to the side to remove this message</string>
+
+    <string name="generic_runtime_permission_rejected">Permission rejected; You can manage permissions in the system settings</string>
+
+    <string name="about_version">Version %s</string>
+
+    <string name="about_contact_title">Help ressources</string>
+    <string name="about_contact_mail">
+        https://timelimit.io/en/#support
+        \nhttps://timelimit.io/en/configsuggestions/
+    </string>
+
+    <string name="about_source_title">Source code</string>
+    <string name="about_source_text" translatable="false">
+        <a href="https://codeberg.org/timelimit/opentimelimit-android">https://codeberg.org/timelimit/opentimelimit-android</a>
+    </string>
+
+    <string name="about_contained_software_title">contained Software</string>
+    <string name="about_contained_software_text" translatable="false">
+        Kotlin Standard Library
+        (<a href="https://github.com/JetBrains/kotlin/blob/master/license/LICENSE.txt">Apache License, Version 2.0</a>)
+        \nKotlin Coroutines
+        (<a href="https://github.com/JetBrains/kotlin/blob/master/license/LICENSE.txt">Apache License, Version 2.0</a>)
+        \nAndroid X
+        (<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>)
+        \nAndroid Navigation Component
+        (<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>)
+        \nAndroid Room
+        (<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>)
+        \nAndroid X Paging Library
+        (<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>)
+        \n<a href="https://github.com/JakeWharton/ThreeTenABP">Three Ten Android Backport</a>
+        (<a href="https://github.com/JakeWharton/ThreeTenABP/blob/master/LICENSE.txt">Apache License, Version 2.0</a>)
+        \n<a href="https://github.com/jeremyh/jBCrypt">JBcrypt</a>
+        (<a href="https://github.com/jeremyh/jBCrypt/blob/master/LICENSE">ISC license</a>)
+        \n<a href="https://github.com/KeepSafe/TapTargetView">TapTargetView</a>
+        (<a href="https://github.com/KeepSafe/TapTargetView/blob/master/LICENSE">Apache License, Version 2.0</a>
+        \n<a href="https://github.com/google/flexbox-layout">Flexbox Layout</a>
+        (<a href="https://github.com/google/flexbox-layout/blob/master/LICENSE">Apache License, Version 2.0</a>)
+        \n<a href="https://github.com/square/okio">Okio</a>
+        (<a href="https://github.com/square/okio/blob/master/LICENSE.txt">Apache License, Version 2.0</a>)
+        \n<a href="https://github.com/signalapp/curve25519-java">curve25519-java</a>
+        (<a href="https://github.com/signalapp/curve25519-java/blob/master/LICENSE">GNU General Public License v3.0</a>)
+        \n<a href="https://github.com/zxing/zxing">ZXing</a>
+        (<a href="https://github.com/zxing/zxing/blob/master/LICENSE">Apache License 2.0</a>)
+    </string>
+
+    <string name="about_diagnose_title">Error diagnose</string>
+    <string name="about_diagnose_text">Tap here to access details which help diagnosing errors</string>
+
+    <string name="about_developer_key_title">Developer PGP-Key fingerprint</string>
+    <string name="about_developer_key_text" translatable="false">2E5C 672D E893 055D 04F5 B7BC 36B4 49FB 5364 BDC4</string>
+
+    <string name="add_used_time_title">Add usage duration</string>
+    <string name="add_used_time_title_with_category_title">Add usage duration for %s</string>
+    <!-- telescreen is a reference to https://en.wikipedia.org/wiki/Nineteen_Eighty-Four -->
+    <string name="add_used_time_description">This allows to add used time/ mark time as used
+        in case it was used outside of TimeLimit, e.g. when you want to add telescreen usage
+        to the used time
+    </string>
+    <string name="add_used_time_confirmation_toast">%1$s used time added for %2$s</string>
+
+    <string name="add_user_title">Create user</string>
+    <string name="add_user_hint_name">Name of the user</string>
+    <string name="add_user_type_parent">Parent</string>
+    <string name="add_user_type_child">Child</string>
+    <string name="add_user_confirmation_done">User was created</string>
+    <string name="add_user_child_password_info">If you chose a password for the child,
+        then it can switch to its own user with its password.
+        This is only useful if there are multiple child users.
+        This feature is disabled if a child does not have a password.
+    </string>
+
+    <string name="add_user_authentication_required_text">
+        Only parents may add users
+    </string>
+
+    <string name="add_user_authentication_required_btn">Authenticate</string>
+
+    <string name="annoy_info">
+        There was a manipulation of TimeLimit. Due to that, this device is locked now.
+    </string>
+    <string name="annoy_timer">
+        The device can be unlocked in %s.
+    </string>
+    <string name="annoy_unlock_temp_button">Unlock for a moment</string>
+    <string name="annoy_unlock_parent_button">Unlock a bit longer</string>
+    <string name="annoy_reason">
+        This was manipulated: %s
+    </string>
+    <string name="annoy_unlock_dialog_text">After unlocking, you should fix the cause for the blocking.
+        Otherwise, the device will be locked again.
+    </string>
+    <string name="annoy_unlock_dialog_action">Unlock</string>
+
+    <string name="authentication_required_overlay_title">Sign in to change settings</string>
+    <string name="authentication_required_overlay_text">The settings will be locked again when you leave TimeLimit</string>
+
+    <string name="backdoor_start_btn">Uninstall TimeLimit without password using the support</string>
+    <string name="backdoor_intro_text">This feature is for the case that a confirmed bug locks you out.
+        This is not for forgotten/wrongly noted passwords. Correct passwords that are not accepted are only
+        a case for the feature if that is a confirmed/proven bug.
+    </string>
+    <string name="backdoor_intro_confirm">I understand</string>
+    <string name="backdoor_instruction_1">Send the following nonce (with the reason for the unlocking) to the support to get a unlock code:</string>
+    <string name="backdoor_instruction_2">Enter the received code:</string>
+    <string name="backdoor_toast_invalid_code">This code is invalid</string>
+
+    <string name="background_logic_whitelisted">in the internal whitelist</string>
+    <string name="background_logic_temporarily_allowed">temporarily allowed</string>
+    <string name="background_logic_limits_disabled">time limits disabled</string>
+    <string name="background_logic_no_timelimit">no time limit</string>
+    <string name="background_logic_idle_title">idle</string>
+    <string name="background_logic_idle_text">no running App detected</string>
+    <string name="background_logic_error">Error</string>
+    <string name="background_logic_error_permission">missing permission</string>
+    <string name="background_logic_error_internal">internal issue</string>
+    <string name="background_logic_using_extra_time">Extra time (%s)</string>
+    <string name="background_logic_opening_lockscreen">Opening lock screen</string>
+    <string name="background_logic_permission_sanction_title">Missing permission</string>
+    <string name="background_logic_permission_sanction_text">assuming that everything is used</string>
+    <string name="background_logic_errpr_detailed_instanceid_sorting">There is an issue with
+        the data in the usage stats database of your device.
+        Due to that, TimeLimit can not reliable detect the running Apps.
+        You can do nothing to solve this except waiting for four days or doing a reset of the whole device.
+        Reinstalling TimeLimit does NOT help.
+    </string>
+
+    <string name="background_logic_temporarily_allowed_title">Apps are temporarily allowed</string>
+    <string name="background_logic_temporarily_allowed_text">Tap here or turn screen off to undo</string>
+
+    <string name="background_logic_timeout_title">auto logout enabled</string>
+    <string name="background_logic_timeout_text">TimeLimit still runs to do that</string>
+
+    <string name="background_logic_paused_title">Temporarily disabled</string>
+    <string name="background_logic_paused_text">No limitations apply</string>
+
+    <string name="background_logic_toast_sync_apps">TimeLimit: Failure while trying to update the app list</string>
+    <string name="background_logic_toast_block_audio">TimeLimit: Music playback stopped (notification filter): %s</string>
+    <string name="background_logic_toast_block_audio_failed">TimeLimit: Failed to stop music playback</string>
+
+    <string name="blocked_time_areas">
+        Blocked time areas
+    </string>
+
+    <string name="blocked_time_areas_help_about">
+        You can set blocked time areas here.
+        During a blocked time area, no Apps of the category can be used.
+        You can define the time area to the minute.
+    </string>
+
+    <string name="blocked_time_areas_help_colors">
+        There are 2 colors in this view: green means allowed, red means blocked.
+    </string>
+
+    <string name="blocked_time_areas_help_structure">
+        The days and hour are displayed as headlines, the minutes as tiles.
+        You can jump to a day using the day dropdown.
+    </string>
+
+    <string name="blocked_time_areas_help_modify">
+        To change one area, tap on the start time. It will become blue.
+        Then select the end time.
+        Now, the area colors will be inverted.
+    </string>
+
+    <string name="blocked_time_areas_snackbar_modified">
+        The blocked time areas were changed
+    </string>
+
+    <string name="blocked_time_areas_snackbar_child_hint">You can only add limits without parent; Undoing is not possible</string>
+
+    <string name="blocked_time_areas_checkbox_detailed">show detailed settings</string>
+
+    <string name="blocked_time_areas_copy_to_other_days">Copy settings from one day to other days</string>
+    <string name="blocked_time_areas_copy_from">Copy from</string>
+    <string name="blocked_time_areas_copy_to">Copy from %s to</string>
+
+    <string name="category_apps_title">assigned Apps</string>
+
+    <string name="category_apps_add_dialog_btn_positive">Add Apps</string>
+    <string name="category_apps_add_dialog_filter_hint">Search Apps</string>
+    <string name="category_apps_add_dialog_show_sys_apps">Show system Apps</string>
+    <string name="category_apps_add_dialog_show_assigned_to_other_category">Show Apps assigned to other categories</string>
+    <string name="category_apps_add_dialog_select_all">Select all</string>
+    <plurals name="category_apps_add_dialog_hidden_entries">
+        <item quantity="one">%d hidden entry selected</item>
+        <item quantity="other">%s hidden entries selected</item>
+    </plurals>
+
+    <string name="category_apps_add_dialog_cannot_add_activities_already_sth_selected">
+        You can only add Activities if you did not select any Apps for assigning.
+    </string>
+    <string name="category_apps_add_activity_dialog_search_hint">Search Activities</string>
+    <string name="category_apps_add_activity_btn_positive">Add Activities</string>
+    <string name="category_apps_add_activity_empty_filtered">
+        There are no Activities which match this search term
+    </string>
+    <string name="category_apps_add_activity_empty_shown">
+        There are no Activities which can be assigned now
+    </string>
+    <string name="category_apps_add_activity_empty_unfiltered">
+        There are no known activities.
+        Please check if blocking at activity level was enabled.
+    </string>
+
+    <string name="category_apps_item_removed_toast">%s was removed</string>
+
+    <string name="category_apps_add_dialog_already_assigned_to">Already assigned to %s</string>
+
+    <string name="category_apps_add_empty_no_known_apps">TimeLimit did not (yet) record any Apps</string>
+    <string name="category_apps_add_empty_due_to_filter">There are no matching Apps for the current list filter</string>
+
+    <string name="category_notification_filter_title">Notification filter</string>
+    <string name="category_notification_filter_text">
+        When enabling the notification access in the device entries,
+        then notifications are blocked at blocked time areas and when the time is over.
+        Here you can enable blocking all notifications from Apps of a category.
+        This will block (background) music playback, too.
+        This feature requires that the notification access was enabled. Otherwise,
+        it does not work.
+    </string>
+    <string name="category_notifications_filter_checkbox">Block all notifications</string>
+    <string name="category_notification_filter_missing_permission">TimeLimit does not have the notification access permission.</string>
+    <string name="category_notification_filter_delay_intro">It is possible to delay blocking the notifications.
+        This only applies when the category itself is not blocked.
+        If the category itself is blocked, then the delay is ignored.
+    </string>
+    <string name="category_notification_filter_delay_switch">Delay blocking</string>
+    <string name="category_notification_filter_delay_prefix">Delay blocking by</string>
+    <string name="category_notification_filter_delay_suffix">seconds</string>
+    <string name="category_notification_filter_save_toast">Your changes were saved</string>
+    <string name="category_notification_filter_summary_disabled">Notifications are not blocked</string>
+    <string name="category_notification_filter_summary_has_permission">Notifications are blocked when the category is blocked</string>
+    <string name="category_notification_filter_summary_enabled_no_delay">Notifications are always blocked</string>
+    <string name="category_notification_filter_summary_enabled_with_delay">Notifications are always blocked but delayed by %s</string>
+
+    <string name="category_settings">Advanced Settings</string>
+    <string name="category_settings_rename">Rename category</string>
+    <string name="category_settings_rename_empty">The new name must not be empty</string>
+    <string name="category_settings_delete">Delete category</string>
+    <string name="category_settings_extra_time_title">Extra time</string>
+    <string name="category_settings_extra_time_info">
+        The extra time allows (if not limited by rules) to use the category longer than usually.
+        It is used if the regular time was used up and does not expire otherwise.
+    </string>
+    <string name="category_settings_extra_time_change">Change extra time</string>
+    <string name="category_settings_extra_time_change_toast">The new extra time was saved</string>
+    <string name="category_settings_extra_time_switch_limit_to_day">Reset extra time after today</string>
+
+    <string name="category_settings_delete_dialog">Do you want to delete the category %s?</string>
+
+    <string name="category_settings_parent_category_title">Parent category</string>
+    <string name="category_settings_parent_category_intro">When the parent category of a category is blocked (e.g. because the time is over), then the child category is blocked too. When using the child category, the used time is also added to the parent category.</string>
+    <string name="category_settings_parent_category_assigned_to">This category is a child category of %s now.</string>
+    <string name="category_settings_parent_category_button">Select parent category</string>
+    <string name="category_settings_parent_category_none">no parent category</string>
+
+    <string name="category_settings_battery_limit_title">Battery limit</string>
+    <string name="category_settings_battery_limit_description">This allows to set minimum battery levels for this category</string>
+    <string name="category_settings_battery_limit_charging">While charging, the battery must have at least %d\%%</string>
+    <string name="category_settings_battery_limit_mobile">While discharging, the battery must have at least %d\%%</string>
+    <string name="category_settings_battery_limit_confirm_toast">The battery limit was saved</string>
+
+    <string name="category_time_limit_rules">time limit rules</string>
+    <string name="category_time_limit_rules_about">
+        Here you can configure time limit rules.
+        Every rule describes one limit.
+        Times without rules are unlimited.
+    </string>
+    <string name="category_time_limit_rules_applied_to_extra_time">is applied to extra time, too</string>
+    <string name="category_time_limit_rules_ignore_on_extra_time">does not apply to extra time</string>
+    <string name="category_time_limit_rules_time_area">only applied from %s to %s</string>
+    <string name="category_time_limit_rules_session_limit">%s break after %s usage</string>
+    <string name="category_time_limit_rule_dialog_new">Create rule</string>
+    <string name="category_time_limit_rule_dialog_edit">Edit rule</string>
+    <string name="category_time_limit_rules_apply_to_extra_time">Apply to the extra time</string>
+    <string name="category_time_limit_rules_apply_to_whole_day">Apply to whole day</string>
+    <string name="category_time_limit_rules_apply_to_part_day_1">Apply from</string>
+    <string name="category_time_limit_rules_apply_to_part_day_2">to</string>
+    <string name="category_time_limit_rules_apply_to_part_day_3"></string>
+    <string name="category_time_limit_rules_invalid_range">The start time must be before the end time</string>
+    <string name="category_time_limit_rules_enable_session_limit">Limit session duration</string>
+    <string name="category_time_limit_rules_session_limit_duration">Maximum session duration</string>
+    <string name="category_time_limit_rules_session_limit_pause">Break duration after session</string>
+    <string name="category_time_limit_rules_per_day">daily</string>
+    <string name="category_time_limit_rules_per_week">weekly</string>
+    <string name="category_time_limit_rules_enable_expires">Let this rule expire</string>
+    <string name="category_time_limit_rules_expires_at">Invalidate rule at</string>
+    <string name="category_time_limit_rules_expires_at_short">Expires at %s</string>
+
+    <string name="category_time_limit_rules_snackbar_created">Rule was created</string>
+    <string name="category_time_limit_rules_snackbar_updated">Rule was modified</string>
+    <string name="category_time_limit_rules_snackbar_deleted">Rule was deleted</string>
+
+    <string name="category_time_limit_rules_warning_day_part">This rule
+        will limit the usage duration only in the specified interval.
+        Without rules for other times or blocked time areas, there will
+        be no limit outside of this interval.
+    </string>
+    <string name="category_time_limit_rules_warning_zero_day_part">You did not select any days.
+        This rule would not limit anything.
+    </string>
+    <string name="category_time_limit_rules_error_self_limit_only_more_strict">Without parent
+        login, you can only make the rules more strict.
+    </string>
+
+    <string name="time_warning_title">Time warnings</string>
+    <string name="time_warning_desc">If there is less time remaining than checked, then a notification will be shown</string>
+
+    <string name="time_warning_not_title">Time warning for %s</string>
+    <string name="time_warning_not_title_session">Session duration warning for %s</string>
+    <string name="time_warning_not_title_blocked_time_area">Blocked time area warning for %s</string>
+
+    <string name="child_apps_title">Apps</string>
+    <string name="child_apps_sort_by_category">Sort by category</string>
+    <string name="child_apps_sort_by_title">Sort by title</string>
+    <string name="child_apps_unassigned">without category</string>
+    <string name="child_apps_empty_category">This category is empty</string>
+
+    <string name="child_self_limit_add_title">Self limit adding</string>
+    <string name="child_self_limit_add_switch">Allow this user to add limits for itself</string>
+    <string name="child_self_limit_add_help">This is mainly useful for the self limitation.
+        It allows the user to add some limits without signing in as parent:
+        \n- adding time limit rules
+        \n- extending blocked time areas
+        \n- adding used time
+        \n- creating categories
+        \n- enabling the notification filter for a category
+        \n- setting a parent category as long as the category is moved downwards in the category hierarchy
+        \n- adding Apps to categories if they are moved to a child category of their current category or
+        if they are not part of any category and the target category is a child category of the category for not assigned Apps
+        \n- block categories temporarily/ extend temporarily blocking of categories
+        \n- disable the temporarily disabling of the limitations for a category
+    </string>
+    <string name="child_self_limit_add_caused_missing_options_hint">
+        Some options are unavailable because no parent user is signed in
+    </string>
+
+    <string name="contacts_snackbar_added">Contact was added</string>
+    <string name="contacts_title_long">Allowed contacts</string>
+    <string name="contacts_description">This is a list of phone numbers.
+        Parents can add items from the contact list of the device.
+        Every user of this device can start a call to one of these numbers using this screen.
+        This works if the phone app is blocked.
+        The phone numbers are only saved at this device and are never transmitted.
+    </string>
+    <string name="contacts_add">Add contact</string>
+    <string name="contacts_snackbar_remove_auth">You must sign in to remove contacts</string>
+    <string name="contacts_snackbar_removed">%s was removed</string>
+    <string name="contacts_snackbar_call_failed">Could not start call</string>
+    <string name="contacts_snackbar_call_started">Call started; You can hang up using the notification area</string>
+
+    <string name="create_category_title">Create category</string>
+    <string name="create_category_hint">name of the new category</string>
+
+    <string name="day_of_week_monday">Monday</string>
+    <string name="day_of_week_tuesday">Tuesday</string>
+    <string name="day_of_week_wednesday">Wednesday</string>
+    <string name="day_of_week_thursday">Thursday</string>
+    <string name="day_of_week_friday">Friday</string>
+    <string name="day_of_week_saturday">Saturday</string>
+    <string name="day_of_week_sunday">Sunday</string>
+
+    <string name="day_of_week_monday_short">Mo</string>
+    <string name="day_of_week_tuesday_short">Tu</string>
+    <string name="day_of_week_wednesday_short">We</string>
+    <string name="day_of_week_thursday_short">Th</string>
+    <string name="day_of_week_friday_short">Fr</string>
+    <string name="day_of_week_saturday_short">Sa</string>
+    <string name="day_of_week_sunday_short">Su</string>
+
+    <string-array name="days_of_week_array">
+        <item>@string/day_of_week_monday</item>
+        <item>@string/day_of_week_tuesday</item>
+        <item>@string/day_of_week_wednesday</item>
+        <item>@string/day_of_week_thursday</item>
+        <item>@string/day_of_week_friday</item>
+        <item>@string/day_of_week_saturday</item>
+        <item>@string/day_of_week_sunday</item>
+    </string-array>
+
+    <string name="delete_child_title">Delete user</string>
+    <string name="delete_child_text">Are you sure that you want to delete the child user %s?</string>
+
+    <string name="diagnose_clock_title">System clock</string>
+
+    <string name="diagnose_clock_epoch_seconds">Epochal seconds: %d</string>
+    <string name="diagnose_clock_timezone">Time zone: %s</string>
+    <string name="diagnose_clock_time_of_day">Time of day: %s</string>
+    <string name="diagnose_clock_date">Date: %s</string>
+    <string name="diagnose_clock_day_of_week">Day of week (0 = monday, ...): %d</string>
+    <string name="diagnose_clock_day_of_epoch">Day of epoch: %d</string>
+    <string name="diagnose_clock_minute_of_week">Minute of week: %d</string>
+    <string name="diagnose_fga_txt_export_btn">Export text OS usage stats</string>
+    <string name="diagnose_fga_export_toast_done">Export finished</string>
+
+    <string name="diagnose_connection_title">Connection status</string>
+    <string name="diagnose_connection_network_id">Network ID</string>
+
+    <string name="diagnose_fga_title">Foreground-App-Detection</string>
+    <string name="diagnose_fga_query_range">Requested time range</string>
+    <string name="diagnose_fga_query_range_min">Minimum (Default)</string>
+
+    <string name="diagnose_exf_title">Experimental flags</string>
+    <string name="diagnose_exf_slb">Block Apps at system level</string>
+    <string name="diagnose_exf_chs">TimeLimit as launcher</string>
+    <string name="diagnose_exf_chd">Delay launcher redirection</string>
+    <string name="diagnose_exf_nas">Force network time at system level</string>
+    <string name="diagnose_exf_mld">Increase the main loop interval</string>
+    <string name="diagnose_exf_mad">Try to detect multiple active Apps (splitscreen support)</string>
+    <string name="diagnose_exf_hmw">Hide manipulation warning in the category list</string>
+    <string name="diagnose_exf_esb">Do not use a overlay or the home button for blocking</string>
+    <string name="diagnose_exf_soc">Enable strict overlay permission check</string>
+
+    <string name="diagnose_bat_title">Battery</string>
+    <string name="diagnose_bat_status">Status: %s</string>
+    <string name="diagnose_bat_status_charging">Charging/ full</string>
+    <string name="diagnose_bat_status_mobile">Not charging</string>
+    <string name="diagnose_bat_level">Level: %d\%%</string>
+
+    <string name="diagnose_don_title">Device Owner Organization Name</string>
+    <string name="diagnose_don_no_owner_toast">TimeLimit is NOT set as device owner</string>
+    <string name="diagnose_don_not_supported_toast">Your system does not support setting the organization name</string>
+
+    <string name="diagnose_bg_task_loop_ex">Background task loop exception</string>
+
+    <string name="diagnose_copy_to_clipboard">Copy to clipboard</string>
+    <string name="diagnose_copied_to_clipboard">Copied to clipboard</string>
+
+    <string name="diagnose_er_title">Exit Reasons</string>
+    <string name="diagnose_er_empty">there is no data; this data is only available at Android 11 and newer</string>
+
+    <string name="error_general">The operation failed</string>
+
+    <string name="homescreen_selection_title">Homescreen selection</string>
+    <string name="homescreen_selection_intro">TimeLimit itself is no complete homescreen, so you can chose what should be shown</string>
+    <string name="homescreen_selection_change_info">You can open this menu at any time by repeating tapping the home button</string>
+
+
+    <string name="homescreen_delay_config_dialog_title">Homescreen redirection delay</string>
+    <string name="homescreen_delay_config_dialog_text">Here you can configure the delay for the redirection in seconds</string>
+
+    <string name="inform_about_device_owner_title">Device owner permission is recommended</string>
+    <string name="inform_about_device_owner_text">
+        Starting with Android 5, the device admin only detects manipulations.
+        It is recommended to grant the device owner permission using adb.
+    </string>
+    <string name="inform_about_device_owner_continue">Only enable device admin</string>
+
+    <string name="limit_user_viewing_title">Restrict viewing the user</string>
+    <string name="limit_user_viewing_checkbox">Only allow parents and the user itself to view its details</string>
+    <string name="limit_user_viewing_help">This allows preventing other child users to
+        view the configuration and used times of this child user
+    </string>
+
+    <string name="lock_tab_reason">Reason</string>
+    <string name="lock_tab_action">Actions</string>
+    <string name="lock_tab_task">Tasks</string>
+    <string name="lock_header_blocked">Blocked!</string>
+
+    <string name="lock_header_what">What was blocked?</string>
+    <string name="lock_header_why">Why was it blocked?</string>
+
+    <string name="lock_allow_temporarily_header">allow temporarily</string>
+    <string name="lock_allow_temporarily_text">
+        Allow using %1$s. %1$s will be blocked when the
+        option for it in the notification area was selected or the
+        screen was turned off.
+    </string>
+
+    <string name="lock_add_to_category_title">Add to a category</string>
+    <string name="lock_add_to_category_text">Use this option if you know this App and you want to allow it</string>
+
+    <string name="lock_goto_main_title">Open TimeLimit</string>
+    <string name="lock_goto_main_text">Open TimeLimit to view and/ or change the settings</string>
+
+    <string name="lock_extratime_title">Add extra time</string>
+    <string name="lock_extratime_text" translatable="false">@string/category_settings_extra_time_info</string>
+
+    <string name="lock_disable_temporarily_lock_title">Disable temporary blocking</string>
+    <string name="lock_disable_temporarily_all_categories">all categories</string>
+
+    <string name="lock_grant_permission_title">Grant permission</string>
+    <string name="lock_grant_permission_text">Allow TimeLimit to see the connected network</string>
+
+    <string name="lock_disable_limits_temporarily_text">Temporarily disable limits for the category to allow using this application</string>
+
+    <string name="lock_reason_no_category">
+        This App was not assigned to any category.
+        Due to that, there are no restriction settings.
+        And the simplest solution in this case is to block the App.
+    </string>
+    <string name="lock_reason_temporarily_blocked">
+        This %s is part of a category which was temporarily blocked.
+    </string>
+    <string name="lock_reason_blocked_time">
+        This %s is part of a category which is blocked at this time.
+    </string>
+    <string name="lock_reason_time_over">
+        This %s is part of a category whose time limit was reached.
+    </string>
+    <string name="lock_reason_time_over_etra_time_can_be_used_later">
+        This %s is part of a category whose time limit was reached.
+        There is still extra time, but the usage limit for the extra time was reached, too.
+    </string>
+    <string name="lock_reason_battery_limit">
+        This %s is part of a category which has got a battery limit and this
+        battery limit was reached.
+        To unlock it, charge the battery.
+    </string>
+    <string name="lock_reason_session_duration">
+        This %s is part of a category which has got a session duration limit
+        and this limit was reached.
+        It will be unlocked after the break duration.
+    </string>
+    <string name="lock_reason_missing_required_network">
+        This %s is only allowed in some networks, but no connection to such network was found.
+    </string>
+    <string name="lock_reason_missing_network_check_permission">
+        This %s is not allowed in some networks but the permission
+        to check the network was not granted.
+    </string>
+    <string name="lock_reason_forbidden_network">
+        This %s may not be used in the current network.
+    </string>
+
+    <string name="lock_reason_short_no_category">no category</string>
+    <string name="lock_reason_short_temporarily_blocked">temporarily blocked</string>
+    <string name="lock_reason_short_time_over">time over</string>
+    <string name="lock_reason_short_blocked_time_area">blocked time area</string>
+    <string name="lock_reason_short_notification_blocking">all notifications are blocked</string>
+    <string name="lock_reason_short_battery_limit">battery limit reached</string>
+    <string name="lock_reason_short_session_duration">session duration limit reached</string>
+    <string name="lock_reason_short_missing_required_network">no allowed network</string>
+    <string name="lock_reason_short_missing_network_check_permission">missing network check permission</string>
+    <string name="lock_reason_short_forbidden_network">forbidden network</string>
+
+    <string name="lock_overlay_warning">
+        Failed to open the lock screen.
+        You can try using the home or overview button to leave this screen.
+    </string>
+    <string name="lock_overlay_text">Blocking %s</string>
+
+    <string name="lock_task_introduction">Doing tasks allows getting extra time.
+        Parent users must add tasks and they must confirm that a task was done
+        before the extra time is granted.
+    </string>
+    <string name="lock_task_confirm_dialog">Have you finished this task? The time
+        will only be granted if a parent confirms it.</string>
+    <string name="lock_task_confirm_dialog_from_manage_screen">A parent must sign in first to modify the task.</string>
+    <string name="lock_task_review_pending_dialog">It is noted that this task is finished.
+        The only missing part is a parent which confirms this at the start screen of TimeLimit.
+    </string>
+    <string name="lock_task_review_pending_hint">waiting for confirmation</string>
+
+    <string name="login_user_selection_text">Choose an user to authenticate</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_snackbar_wrong">The password is invalid</string>
+    <string name="login_dialog_password_text">Enter your password to sign in</string>
+    <string name="login_child_without_password">You can\'t sign in as %s because there was no password configured</string>
+    <string name="login_child_already_current_user">You are already the current user of this device</string>
+    <string name="login_child_info">This will set you as the current user of this device</string>
+    <string name="login_child_done_toast">The user of this device was changed</string>
+    <string name="login_scan_code">Scan code</string>
+    <string name="login_scan_code_err_expired">This code is old</string>
+    <string name="login_scan_code_err_not_linked">This key is not linked</string>
+    <string name="login_category_blocked">The category %1$s is blocked now (%2$s) so you can not sign in with this user now</string>
+
+    <string name="main_tab_overview">Overview</string>
+    <string name="main_tab_uninstall">Uninstall</string>
+    <string name="main_tab_about">About</string>
+
+    <string name="manage_category_for_unassigned_apps_title">Category for unassigned Apps</string>
+    <string name="manage_category_for_unassigned_apps_intro">
+        You can select a category whose rules will be applied to Apps without category.
+    </string>
+    <string name="manage_category_for_unassigned_apps_status_enabled">This category is used for unassigned Apps</string>
+    <string name="manage_category_for_unassigned_apps_status_disabled">This category is not used for unassigned Apps</string>
+    <string name="manage_category_for_unassigned_apps_btn_enable">Use this category for unassigned Apps</string>
+    <string name="manage_category_for_unassigned_apps_btn_disable">Stop using this category for unassigned Apps</string>
+
+    <string name="category_networks_title">Networks</string>
+    <string name="category_networks_help">Here you can add WiFi networks. This can be used to
+        allow or block the category depending on the network.
+        A network is identified by an access point. In case of multiple access points/repeaters,
+        you have to add all of them one by one.
+        Disabling the time limits temporarily additionally disables limitations caused by this feature.
+    </string>
+    <string name="category_networks_empty">You did not add any networks. This category does not depend on specific networks.</string>
+    <plurals name="category_networks_not_empty">
+        <item quantity="one">You added %d network.</item>
+        <item quantity="other">You added %d networks.</item>
+    </plurals>
+    <string name="category_networks_status_missing_permission">The permission to get the connected network is missing</string>
+    <string name="category_networks_status_none_connected">You are not connected to any WiFi network</string>
+    <string name="category_networks_status_connected_no_match">You are connected to a network which was not added</string>
+    <string name="category_networks_status_connected_no_match_full">You are connected to a network which was not added,
+        but you can not add more networks to this category
+    </string>
+    <string name="category_networks_status_connected_has_match">You are connected to a network which was added</string>
+    <string name="category_networks_action_add">Add network</string>
+    <string name="category_networks_action_grant">Grant permission</string>
+    <string name="category_networks_action_remove">Remove all networks</string>
+    <string name="category_networks_toast_all_removed">All networks removed</string>
+    <string name="category_networks_toast_enable_location_service">Please enable location access</string>
+    <string name="category_networks_type_allow_list">Block when not connected</string>
+    <string name="category_networks_type_block_list">Block when connected</string>
+
+    <string name="manage_child_tab_other">Advanced settings</string>
+
+    <string name="manage_child_category_no_time_limits">no time limit</string>
+    <string name="manage_child_category_no_time_limits_short">no limit</string>
+
+    <string name="manage_child_categories_intro_title">Categories</string>
+    <string name="manage_child_categories_intro_text">
+        TimeLimit manages the limits using categories.
+        You can select multiple Apps and limits per category.
+        This allows for example to set one limit for all games.
+    </string>
+
+    <string name="manage_child_manipulation_title" translatable="false">@string/manage_device_manipulation_title</string>
+    <string name="manage_child_manipulation_text">
+        There was a manipulation.
+        Go back to the overview and open the device entry for details.
+    </string>
+
+    <string name="manage_child_category_for_unassigned_apps">used for Apps without category</string>
+
+    <string name="manage_child_timezone_title">Timezone</string>
+    <string name="manage_child_timezone_change_button">Change timezone</string>
+    <string name="manage_child_timezone_search_hint">Search timezone</string>
+
+    <string name="manage_child_password_title">Child password</string>
+    <string name="manage_child_password_info">A child with a password
+        can set itself as the current user of a device
+        (using the authentication screen which is opened by the lock button at the bottom right)
+    </string>
+    <string name="manage_child_password_status_yes">This child has got a password</string>
+    <string name="manage_child_password_status_no">This child does not have a password</string>
+    <string name="manage_child_password_btn_set">Set password (for parents)</string>
+    <string name="manage_child_password_btn_change">Change password (for the child itself)</string>
+
+    <string name="manage_child_redirected_toast">Press back to show the overview screen of TimeLimit</string>
+
+    <string name="manage_child_special_mode_wizard_block_title">Block %s temporarily</string>
+    <string name="manage_child_special_mode_wizard_block_option" >block temporarily</string>
+    <string name="manage_child_special_mode_wizard_disable_limits_title">Disable limits for %s</string>
+    <string name="manage_child_special_mode_wizard_disable_limits_option">disable limits temporarily</string>
+
+    <string name="manage_child_confirm_enable_limits_again_title">Enable limitations</string>
+    <string name="manage_child_confirm_enable_limits_again_text">Would you like to enable the limitations for the category %s?</string>
+
+    <string name="manage_device_activity_level_blocking_title">Activity level blocking</string>
+    <string name="manage_device_activity_level_blocking_text">
+        This allows (depending on the App) blocking some features within an App.
+        If you don\'t understand what Android-Activities are, don\'t enable this.
+        You can add activities to a category by holding the App at the add category apps screen.
+    </string>
+    <string name="manage_device_activity_level_blocking_checkbox">Enable activity level blocking</string>
+
+    <string name="manage_device_default_user_title">Default user</string>
+    <string name="manage_device_default_user_info">The default user is a user
+        to which any user at the device can switch without a password (to sign out).
+        This is useful at devices which can be used by multiple different users.
+    </string>
+    <string name="manage_device_default_user_status">The current default user is %s</string>
+    <string name="manage_device_default_user_switch_btn">Switch to the default user</string>
+    <string name="manage_device_default_user_switch_reason_remote">You can only switch to the default user at the device itself</string>
+    <string name="manage_device_default_user_switch_reason_unset">You can only switch to the default user if a default user was configured</string>
+    <string name="manage_device_default_user_switch_reason_already_done">You can not switch to the default user if the default user is already the current user</string>
+    <string name="manage_device_default_user_set_btn_set">Set default user</string>
+    <string name="manage_device_default_user_set_btn_change">Change default user</string>
+    <string name="manage_device_default_user_selection_none">No default user</string>
+    <string name="manage_device_default_user_timeout_off">The device will not switch automatically to the default user</string>
+    <string name="manage_device_default_user_timeout_on">The device will switch automatically to the default user when it was not used for %s</string>
+    <string name="manage_device_default_user_timeout_btn_enable">enable switching automatically to default user</string>
+    <string name="manage_device_default_user_timeout_btn_change">configure switching automatically to default user</string>
+    <string name="manage_device_default_user_timeout_dialog_title">Automatically switch to the default user</string>
+    <string name="manage_device_default_user_timeout_dialog_disable">never</string>
+
+    <string name="manage_device_introduction_title">What is this?</string>
+    <string name="manage_device_introduction_text">
+        This is the screen to manage a device.
+        \nYou can assign a user, manage the permissions and configure the usage
+        of the network time verification here.
+        \nLimits are for users and not for devices. Go back to the overview to configure a user.
+    </string>
+
+    <string name="manage_device_manipulation_title">Manipulation</string>
+    <string name="manage_device_manipulation_text">
+        The following was manipulated:
+    </string>
+    <string name="manage_device_manipulation_type_past">In the past:</string>
+    <string name="manage_device_manipulation_type_current">Currently active:</string>
+    <string name="manage_device_manipulation_device_admin_disabled">device admin disabled</string>
+    <string name="manage_device_manipulation_device_admin_disable_attempt">disabling devcie admin was attempted</string>
+    <string name="manage_device_manipulation_usage_stats_access">usage stats access</string>
+    <string name="manage_device_manipulation_notification_access">notification access</string>
+    <string name="manage_device_manipulation_overlay_permission">draw over other Apps permission</string>
+    <string name="manage_device_manipulation_accessibility_service">Accessibility service permission</string>
+    <string name="manage_device_manipulation_app_version">older App version installed</string>
+    <string name="manage_device_manipulation_reboot">device was rebooted</string>
+    <string name="manage_device_manipulation_existed">there was a manipulation which was stopped again</string>
+    <string name="manage_device_manipulation_unknown">unknown Manipulation</string>
+    <string name="manage_device_manipulation_fgs_killer">killed using task manager</string>
+    <string name="manage_device_manipulation_btn_ignore">Confirm and hide warnings</string>
+    <string name="manage_device_manipulation_toast_nothing_selected">You have to select warnings to ignore first</string>
+
+    <string name="manage_device_reboot_manipulation_title">Consider device reboot a manipulation</string>
+    <string name="manage_device_reboot_manipulation_text">
+        If TimeLimit does not start fast enough after a reboot, then you can
+        enable considering that as a manipulation.
+        This considers EVERY device (re)boot a manipulation.
+    </string>
+    <string name="manage_device_reboot_manipulation_checkbox">consider reboot a manipulation</string>
+
+    <string name="manage_device_troubleshooting_title">Why is this device not limited?</string>
+    <string name="manage_device_troubleshooting_text_no_child">There is no child assigned to this device. Only children are limited.</string>
+    <string name="manage_device_troubleshooting_text_battery_optimization">You assigned a child user to this device already.
+        If it still does not work, then you can find details about other possible causes at <a href="https://timelimit.io/en/#limits-dont-work">https://timelimit.io/en/#limits-dont-work</a>.
+    </string>
+
+    <string name="manage_device_card_user_title">User</string>
+    <string name="manage_device_card_permission_title">Permissions</string>
+    <string name="manage_device_card_feature_title">Features</string>
+    <string name="manage_device_card_manage_title">Manage</string>
+    <string name="manage_device_card_manage_text">other settings for this device</string>
+
+    <string name="manage_device_added_at">Added: %s</string>
+    <string name="manage_device_is_this_device">This is the device which is in front of you</string>
+
+    <string name="manage_device_current_user_title">User of the device</string>
+    <string name="manage_device_current_user_none">No selection - no limits</string>
+
+    <string name="manage_device_feature_summary_none">No features enabled</string>
+
+    <string name="manage_device_permissions_summary_none">No permissions granted</string>
+
+    <string name="manage_device_permissions_usagestats_title">Usage stats access</string>
+    <string name="manage_device_permissions_usagestats_title_short">Usage stats</string>
+    <string name="manage_device_permissions_usagestats_text">
+        TimeLimit uses the permission for the usage stats access.
+        This is only used to detect the currently used App.
+    </string>
+
+    <string name="manage_device_permission_notification_access_title">Notification access</string>
+    <string name="manage_device_permission_notification_access_text">
+        TimeLimit uses the notification access to block notifications of blocked apps.
+        Notifications and their contents are not saved. Additionally, this is used to
+        detect and block background music playback.
+    </string>
+
+    <string name="manage_device_permissions_overlay_title">Draw over other Apps</string>
+    <string name="manage_device_permissions_overlay_text">
+        Enabling drawing on top of other Apps can improve blocking in some cases.
+        Moreover, this is one way to allow TimeLimit at newer Android versions to open the lockscreen.
+    </string>
+
+    <string name="manage_device_permission_accessibility_title">Accessibility service</string>
+    <string name="manage_device_permission_accessibility_text">
+        This is used to \"press\" the home button before showing the lock screen.
+        This fixes blocking in some cases.
+        Moreover, this is one way to allow TimeLimit at newer Android versions to open the lockscreen.
+    </string>
+
+    <string name="manage_device_permission_device_admin_title">Device admin</string>
+    <string name="manage_device_permission_device_admin_text">The device admin/owner permission
+            can depending on circumstances be used to detect/prevent manipulations.
+    </string>
+    <string name="manage_device_permission_device_admin_text_disabled">
+        The device admin permission was not granted.
+        TimeLimit can be stopped at any time without detecting this.
+    </string>
+    <string name="manage_device_permission_device_admin_text_simple">
+        The device admin permission was granted.
+        It is very likely that TimeLimit can detect if it was stopped.
+        However, it is still possible that the child is able to stop TimeLimit.
+    </string>
+    <string name="manage_device_permission_device_admin_text_password">
+        The device admin permission with the possibility to lock the system after an manipulation was granted.
+        This must be disabled before TimeLimit can be uninstalled or stopped using the system settings.
+        If you have locked out yourself, consult the support.
+    </string>
+    <string name="manage_device_permission_device_admin_text_owner">
+        The device owner permission was granted and prevents disabling and uninstalling TimeLimit.
+        This permission can only be disabled by TimeLimit/ a parent which uninstalls TimeLimit.
+    </string>
+
+    <string name="manage_device_permission_status_granted">The permission was granted</string>
+    <string name="manage_device_permission_status_not_granted">The permission was not granted</string>
+    <string name="manage_device_permission_status_not_required">The permission is not needed due to the old Android version</string>
+    <string name="manage_device_permission_status_not_supported">This feature is not supported by this device</string>
+
+    <string name="manage_device_permission_btn_modify">Modify</string>
+
+    <string name="manage_device_permission_no_ui_usage_stats_text">
+        This device does not allow changing this permission graphically. You can only
+        change it from a PC using ADB.
+        \n\nEnable:\n\n%s
+        \n\nDisable:\n\n%s
+    </string>
+    <string name="manage_device_permission_no_ui_device_admin">
+        This device does not allow changing this permission graphically. You can only
+        enable it from a PC using ADB.
+        \n\n%s
+        \n\nYou can disable it by using the uninstall feature of TimeLimit.
+    </string>
+
+    <string name="manage_device_downgrade_title">Downgrade</string>
+    <string name="manage_device_downgrade_text">On this device, a newer version of TimeLimit was replaced by an older one</string>
+
+    <string name="manage_device_rename">Rename device</string>
+    <string name="manage_device_rename_toast_empty">The name of an device must not be empty.</string>
+
+    <string name="manage_disable_time_limits_title">Disable time limits</string>
+    <string name="manage_disable_time_limits_text">Using this, all time limits and blocked time areas can be disabled</string>
+    <string name="manage_disable_time_limits_info_enabled">Time limits are disabled until %s</string>
+
+    <string name="manage_disable_time_limits_btn_enable">Enable time limits again</string>
+    <string name="manage_disable_time_limits_btn_10_min">for 10 minutes</string>
+    <string name="manage_disable_time_limits_btn_30_min">for 30 minutes</string>
+    <string name="manage_disable_time_limits_btn_1_hour">for 1 hour</string>
+    <string name="manage_disable_time_limits_btn_2_hour">for 2 hours</string>
+    <string name="manage_disable_time_limits_btn_4_hour">for 4 hours</string>
+    <string name="manage_disable_time_limits_btn_today">for today</string>
+    <string name="manage_disable_time_limits_btn_time">until a time</string>
+    <string name="manage_disable_time_limits_btn_date">until a date</string>
+    <string name="manage_disable_time_limits_btn_no_end_time">no scheduled end time</string>
+    <string name="manage_disable_time_limits_btn_until">until %s</string>
+
+    <string name="manage_disable_time_limits_dialog_until">Disable time limits until ...</string>
+    <string name="manage_disable_time_limits_toast_time_in_past">The selected time is in the past</string>
+    <string name="manage_disable_time_limits_toast_time_not_increased_but_child_mode">The blocked time may be increased but not decreased without a parent who signs in</string>
+
+    <string name="manage_parent_change_password_title">Change password</string>
+    <string name="manage_parent_change_password_text">Set a new password knowing the old one</string>
+    <string name="manage_parent_change_password_old_password_hint">Current password</string>
+    <string name="manage_parent_change_password_toast_success">The password was changed</string>
+    <string name="manage_parent_change_password_toast_wrong_password">The old password is invalid</string>
+
+    <string name="manage_parent_u2f_title">U2F Keys</string>
+    <string name="manage_parent_u2f_description">Setup U2F Tokens (using USB or NFC) to authenticate</string>
+
+    <string name="manage_parent_remove_user_title">Remove user</string>
+    <string name="manage_parent_remove_user_text">
+        To delete %1$s, you need the password of %1$s
+        and the password of an other parent account.
+        This should prevent that you lock out yourself.
+    </string>
+    <string name="manage_parent_remove_user_status_not_authenticated">
+        Sign in with an other user to delete %1$s.
+    </string>
+    <string name="manage_parent_remove_user_status_wrong_account">
+        You are logged in as %1$s. Sign in as an other user.
+    </string>
+    <string name="manage_parent_remove_user_status_ready">
+        Enter the password of %1$s to delete %1$s.
+    </string>
+    <string name="manage_parent_remove_user_status_last_without_login_limit">This is the last user
+        who can sign in at any time. Due to that, you can not remove it.
+    </string>
+
+    <string name="manage_user_key_title">User key</string>
+    <string name="manage_user_key_info">A key is a barcode which allows the user
+        to sign in by scanning it. This code must be generated by TimeLimit.
+        This requires TimeLimit at another device configured as key generator.
+    </string>
+    <string name="manage_user_key_not_enrolled">There is no key for this user</string>
+    <string name="manage_user_key_is_enrolled">This user has got the key %s</string>
+    <string name="manage_user_key_add">Add key</string>
+    <string name="manage_user_key_remove">remove key</string>
+    <string name="manage_user_key_added">The key was added</string>
+    <string name="manage_user_key_invalid">This was no valid TimeLimit key</string>
+    <string name="manage_user_key_other_user">This key is already linked to an other user</string>
+    <string name="manage_user_key_wrong_user">Only the user itself can manage his keys</string>
+
+    <string name="manipulation_activity_intro">There was a manipulation. Due to that, this device must be unlocked by a parent.</string>
+
+    <string name="must_read_child_manipulation">
+        The help contains details about the following two topics:
+        \n\n1. TimeLimit is executed — like all other Apps — within a sandbox. Due to this, TimeLimit
+        itself can not prevent that the child disables or removes it.
+        \n\n2. TimeLimit is made for the original Android (AOSP) and similar environments.
+        This are e.g. the preinstalled OS at Google Pixel phones, LineageOS and GrapheneOS.
+        There can be issues at other systems, for example due to so called power saving features.
+        In most cases, the issues can be fixed by changing the system settings.
+    </string>
+    <string name="must_read_add_already_assigned_apps">
+        Apps with category are removed from the previous category when they are added to a new category -
+        use parent and child categories to \"add\" an App to multiple categories
+    </string>
+    <string name="must_read_blocked_time_areas_obsolete">
+        The blocked time areas are old. For most cases, using time limit rules with 0 minutes duration
+        for a part of a day is a better solution.
+    </string>
+
+    <string name="notification_channel_app_status_title">Apps status</string>
+    <string name="notification_channel_app_status_description">Shows amongst other things the remaining time for the currently used App</string>
+
+    <string name="notification_channel_blocked_notification_title">blocked notifications</string>
+    <string name="notification_channel_blocked_notification_text">Shows when a notification was blocked by TimeLimit</string>
+
+    <string name="notification_channel_time_warning_title">Time warning</string>
+    <string name="notification_channel_time_warning_text">Notification for childs if there is not much time remaining</string>
+    <string name="time_warning_custom_add">Add time warning</string>
+
+    <string name="notification_channel_apps_temporarily_allowed_title">Temporarily allowed Apps</string>
+    <string name="notification_channel_apps_temporarily_allowed_text">Shows that some Apps were temporarily allowed and provides the option to revoke that</string>
+
+    <string name="notification_channel_extra_time_started_title">Extra time starts</string>
+    <string name="notification_channel_extra_time_started_description">Informs when the regular time contingent was consumed and the extra time starts</string>
+
+    <string name="notification_filter_not_blocked_title">TimeLimit has blocked a notification</string>
+    <string name="notification_filter_blocking_failed_title">TimeLimit could not block a notification</string>
+
+    <string name="notification_extra_time_started">Extra time starts</string>
+
+    <string name="obsolete_message">You are using TimeLimit at a obsolete Android version.
+        Although this can work, it is not recommend.
+    </string>
+
+    <string name="overview_header_devices">Devices</string>
+    <string name="overview_header_users">Users</string>
+
+    <string name="overview_intro_title">Welcome to TimeLimit</string>
+    <string name="overview_intro_text">
+        This is the overview. Here you can see devices and users (maybe you have to scroll first).
+        \n\nUnder devices, you can see the status of a device and assign a user.
+        \n\nUnder users, you can configure the allowed Apps and time limits.
+    </string>
+
+    <string name="overview_device_item_manipulation">There was a manipulation on this device</string>
+    <string name="overview_device_item_missing_permission">A required permission was not granted on this device</string>
+
+    <string name="overview_user_item_temporarily_blocked">temporarily blocked</string>
+    <string name="overview_user_item_temporarily_blocked_until">temporarily blocked until %s</string>
+    <string name="overview_user_item_temporarily_disabled">Time limits temporarily disabled</string>
+    <string name="overview_user_item_temporarily_disabled_until">Time limits temporarily disabled until %s</string>
+    <string name="overview_user_item_role_child">is restricted</string>
+    <string name="overview_user_item_role_parent">can change settings</string>
+
+    <string name="parent_limit_login_title">Limit login category</string>
+    <string name="parent_limit_login_help">Here you can select a category. As soon as Apps of this
+        category are blocked, you can not sign in with your parent user. This
+        can be used to prevent you from disabling limits which you set for yourself while they are active.
+    </string>
+    <string name="parent_limit_login_status_disabled">You can sign in at any time</string>
+    <string name="parent_limit_login_status_enabled">You can not sign in when %1$s is blocked for %2$s</string>
+    <string name="parent_limit_login_status_needs_other_user">You must create another parent user as backup (in case you lock out yourself) before you can use this feature</string>
+    <string name="parent_limit_login_select_button">Select category</string>
+    <string name="parent_limit_login_dialog_no_selection">no category</string>
+    <string name="parent_limit_login_dialog_item">%1$s/%2$s</string>
+    <string name="parent_limit_login_error_user_itself">You must be signed in as the user
+        to select a category. Other users can only disable this feature.
+    </string>
+    <string name="parent_limit_login_pre_block_disabled">Preblocking is disabled</string>
+    <string name="parent_limit_login_pre_block_enabled">Logging in will be blocked %s before the category is blocked</string>
+    <string name="parent_limit_login_pre_block_button">Set preblock duration</string>
+    <string name="parent_limit_login_pre_block_dialog_title">Configure preblocking</string>
+    <string name="parent_limit_login_pre_block_dialog_other_user">Other users can only set the value to zero</string>
+
+    <string name="parent_mode_key_title">Key</string>
+    <string name="parent_mode_key_id">Key ID: %s</string>
+    <string name="parent_mode_help_text">
+        You have chosen the parent key mode.
+        This allows you to use your device as parent key by
+        adding it at the parent user entry at the other device.
+        This does not allow a remote control.
+        In case you want to restrict this device,
+        reset/reinstall TimeLimit.
+    </string>
+
+    <string name="password_validator_too_short">The password must have at least <xliff:g example="5" id="number of chars">%d</xliff:g> characters</string>
+
+    <string name="rename_child_title">Rename child user</string>
+
+    <string name="duplicate_child_title">Duplicate user</string>
+    <string name="duplicate_child_message">Do you want to create a new user with the same settings?</string>
+    <string name="duplicate_child_done_toast">The user was duplicated</string>
+    <string name="duplicate_child_user_name">duplicated user</string>
+
+    <string name="reset_hidden_hints_title">Reset hidden hints</string>
+    <string name="reset_hidden_hints_description">You can chose to hide some messages. This allows to show these messages again.</string>
+    <string name="reset_hidden_hints_not_possible">You did not hide any hints</string>
+    <string name="reset_hidden_hints_btn">Show all hints again</string>
+
+    <string name="scan_key_missing_title">Missing Binary Eye</string>
+    <string name="scan_key_missing_text">The App Binary Eye is required to scan a barcode</string>
+    <string name="scan_key_missing_install">Install Binary Eye</string>
+
+    <string name="select_time_span_view_minutes">Minutes</string>
+    <string name="select_time_span_view_hours">Hours</string>
+    <string name="select_time_span_view_days">Days</string>
+
+    <string name="set_password_view_not_identical">The passwords are not equal</string>
+    <string name="set_password_view_label_password">New password</string>
+    <string name="set_password_view_label_password_repeat">Repeat new password</string>
+    <string name="set_password_view_checkbox_no_password">Disable password protection</string>
+
+    <string name="setup_device_permissions_text">
+        TimeLimit needs some permissions to work.
+        Only the usage stats access permission is absolutely necessary.
+        Starting Android 10, the permission \"Draw over other Apps\" or \"Accessibility service\"
+        is required to open the lockscreen.
+        The other permissions are required for some extra features.
+    </string>
+
+    <string name="setup_help_look_for_this_icon">Keep your eye open for this icon:</string>
+    <string name="setup_help_there_is_help_like_at_example">You can show
+        some additional info about something when ever you see it by touching it
+        like in the upper right of the following example
+    </string>
+    <string name="setup_help_info_about_support_and_documentation">Some questions are answered
+        at https://timelimit.io/en/ and it is a good idea to take a look at https://timelimit.io/en/configsuggestions/
+        because the default configuration is most likely not what you need.
+        This links are shown in the about screen, so there is no need to write them down.
+        If all that does not help you, then you can still ask the support.
+        Every proper support request results in a proper reply within a short time.
+    </string>
+
+    <string name="setup_local_mode_explaination">Select a password which allows you to change the settings. You can add more parents and passwords later.</string>
+
+    <string name="setup_select_mode_intro">Please select a mode</string>
+
+    <string name="setup_select_mode_child_title">(limited) device of a child</string>
+    <string name="setup_select_mode_child_text">
+        TimeLimit will be used to limit this device.
+    </string>
+
+    <string name="setup_select_mode_parent_title">(key) device of a parent</string>
+    <string name="setup_select_mode_parent_text">
+        TimeLimit will not limit this device. This device will be one possible key to
+        unlock the settings of TimeLimit at an other device (there is always
+        a password to unlock the settings).
+    </string>
+    <string name="setup_select_mode_parent_progress">Creating key</string>
+    <string name="setup_select_mode_parent_error_owner">TimeLimit is device owner and can not be configured as a key.</string>
+
+    <string name="setup_select_mode_uninstall_title">uninstall TimeLimit</string>
+    <string name="setup_select_mode_uninstall_text">
+        Not a setup option.
+        TimeLimit revokes all permissions which prevent an uninstallation (if any)
+        and starts the deletion of itself.
+    </string>
+
+    <string name="setup_category_allowed">Allowed Apps</string>
+    <string name="setup_category_games">Allowed games</string>
+    <string name="setup_username_child">Child 1</string>
+    <string name="setup_username_parent">Parent 1</string>
+
+    <string name="setup_terms_title">Welcome to TimeLimit</string>
+    <string name="about_terms_title">Legal</string>
+    <string name="terms_text" translatable="false">
+        Open TimeLimit Copyright &#169; 2019 - 2024 Jonas Lochmann and the TimeLimit contributors
+
+        \n\nThis program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation version 3 of the License.
+
+        \n\nThis program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        \n\nYou should have received a copy of the GNU General Public License
+        along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.
+    </string>
+    <string name="terms_btn_accept">Accept and continue</string>
+
+    <string name="uninstall_reset_title">Reset App</string>
+    <string name="uninstall_reset_text">
+        All settings of TimeLimit are deleted from this device.
+        After this, you can reconfigure TimeLimit or uninstall it.
+    </string>
+    <string name="uninstall_reset_check_conirm">I am sure that I want to remove TimeLimit from this device</string>
+
+    <string name="usage_history_title">Usage history</string>
+    <string name="usage_history_empty_title">There is no usage history</string>
+    <string name="usage_history_empty_text">
+        The usage is only saved
+        when there are time limits and
+        the limited Apps are used
+    </string>
+    <string name="usage_history_time_area">from %s until %s</string>
+    <string name="usage_history_item_session_duration_limit">Session duration limit of %s with %s break</string>
+    <string name="usage_history_item_last_usage">Last usage: %s</string>
+    <string name="usage_history_filter_all_categories">All Categories</string>
+
+    <string name="usage_stats_permission_required_and_missing_title">Usage stats access is required</string>
+    <string name="usage_stats_permission_required_and_missing_text">TimeLimit needs this permission to work correctly. Select \"permissions\" below to enable it.</string>
+    <string name="activity_launch_permission_required_and_missing_title">Draw over other Apps or Accessibility service is required</string>
+
+    <string name="util_join_and">and</string>
+
+    <plurals name="util_time_seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+
+    <plurals name="util_time_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+
+    <plurals name="util_time_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <plurals name="util_time_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <string name="util_time_blocked">Blocked</string>
+    <string name="util_time_less_minute">a few moments</string>
+    <string name="util_limit_hours_and_minutes"><xliff:g id="hours">%1$s</xliff:g> and <xliff:g>%2$s</xliff:g></string>
+    <string name="util_time_remaining"><xliff:g example="3 minutes" id="time">%1$s</xliff:g> remaining</string>
+    <string name="util_time_done">Time over</string>
+    <string name="util_time_pause_in">Break in %s</string>
+    <string name="util_time_pause_shortly">Break in a few moments</string>
+
+    <string name="util_time_unused">Unused</string>
+    <string name="util_time_used">Used <xliff:g example="4 minutes" id="used time">%1$s</xliff:g></string>
+
+    <string name="util_day_from_to">%s to %s</string>
+    <string name="util_day_no_day">at no days</string>
+
+    <string name="widget_msg_unconfigured">This Widget only works on limited devices</string>
+    <string name="widget_msg_no_child">This device is not used by a child right now</string>
+    <string name="widget_msg_no_category">This child does not have any categories</string>
+    <string name="widget_msg_no_filtered_category">For this child, no visible categories were chosen for this widget</string>
+    <string name="widget_config_mode_all">Show all Categories</string>
+    <string name="widget_config_mode_filter">Filter visible Categories</string>
+    <string name="widget_config_error_filter_empty">You must select at least one category</string>
+    <string name="widget_config_other_translucent">Enable translucency</string>
+
+    <string name="wiazrd_next">Next</string>
+
+    <string name="app_name" translatable="false">TimeLimit</string>
+
+    <string name="admin_description_direct">This allows TimeLimit to prevent it from being disabled.</string>
+
+    <string name="admin_disable_warning">Do you want to disable the device admin?</string>
+
+    <string name="admin_description" translatable="false">@string/admin_description_direct</string>
+
+    <string name="manage_child_tasks">Tasks</string>
+    <string name="manage_child_tasks_add">Add Task</string>
+    <string name="manage_child_tasks_edit">Edit Task</string>
+    <string name="manage_child_tasks_intro">Tasks are things which a child can do to get extra time.
+        A parent must confirm the completion before the extra time is granted.
+    </string>
+    <string name="manage_child_task_last_grant">Last confirmation: %s</string>
+    <string name="manage_child_tasks_select_category">Select a category</string>
+    <string name="manage_child_tasks_title_hint">Task title</string>
+    <string name="manage_child_tasks_toast_saved">Task saved</string>
+    <string name="manage_child_tasks_toast_removed">Task removed</string>
+
+    <string name="task_review_title">Task confirmation</string>
+    <string name="task_review_text">%1$s said that %2$s was finished. Is this correct?</string>
+    <string name="task_review_category">This will grant %1$s extra time for %2$s</string>
+    <string name="task_review_last_grant">This task was confirmed last time at %s</string>
+
+    <string name="dummy_app_unassigned_system_image_app">not assigned Apps from the system image</string>
+    <string name="dummy_app_feature_adb">Developer Options</string>
+    <string name="dummy_app_feature_dns">DNS Settings</string>
+    <string name="dummy_app_activity_audio">Background Audio Playback</string>
+
+    <string name="biometric_title">Biometric Authentication</string>
+    <string name="biometric_title_enable">Enable Biometric Authentication</string>
+    <string name="biometric_title_disable">Disable Biometric Authentication</string>
+    <string name="biometric_enable_prompt_title" translatable="false">@string/biometric_title_enable</string>
+    <string name="biometric_enable_prompt_description">Authenticate using your biometric credentials to allow them to be used to login as %s.</string>
+    <string name="biometric_login_prompt_title" translatable="false">@string/generic_login</string>
+    <string name="biometric_login_prompt_description">Authenticate using your biometric credentials to login as %s.</string>
+    <string name="biometric_login_button_description">Prompt for biometric credentials</string>
+    <string name="biometric_auth_failed">Failed to authenticate as %s using biometric credentials.</string>
+    <string name="biometric_auth_failed_reason">Reason: %s</string>
+    <string name="biometric_manage_title" translatable="false">@string/biometric_title</string>
+    <string name="biometric_manage_description_enabled">%s can login using the biometric credentials registered on the device.</string>
+    <string name="biometric_manage_description_disabled">%s has no biometric authentication enabled.</string>
+    <string name="biometric_manage_switch_text" translatable="false">@string/biometric_title_enable</string>
+    <string name="biometric_manage_info">Allows a (parent) user to login using the configured biometric credentials of this device, e.g. scanning a fingerprint instead of typing the password.</string>
+    <string name="biometric_manage_enable_dialog_title" translatable="false">@string/biometric_title_enable</string>
+    <string name="biometric_manage_enable_dialog_text">This enables ALL biometric credentials enrolled on this device to be accepted. Everyone who has biometric credentials registered could login as %s, even child account users or persons not managed by TimeLimit.</string>
+    <string name="biometric_manage_disable_password_required_dialog_title" translatable="false">@string/biometric_title_disable</string>
+    <string name="biometric_manage_disable_password_required_dialog_text">To avoid locking you out of your account please login using your password to allow disabling biometric authentication for this account.</string>
+    <string name="biometric_manage_not_owner_dialog_title" translatable="false">@string/biometric_title</string>
+    <string name="biometric_manage_not_owner_dialog_text">It is not permitted to change the biometric authentication settings of other users. Please login as %s to get access.</string>
+    <string name="biometric_manage_no_credentials_dialog_title" translatable="false">@string/biometric_title</string>
+    <string name="biometric_manage_no_credentials_dialog_text">No biometric credentials enrolled. First configure any biometric credentials for this device to use this feature.</string>
+    <string name="biometric_manage_no_credentials_dialog_action" translatable="false">@string/biometric_manage_no_credentials_dialog_action_default</string>
+    <string name="biometric_manage_no_credentials_dialog_action_default">Open Settings</string>
+    <string name="biometric_manage_no_credentials_dialog_action_v28">Enroll Credentials</string>
+    <string name="biometric_manage_error_no_hw">No biometric hardware detected.</string>
+    <string name="biometric_manage_error_hw_not_available">The biometric hardware is somehow not available at the moment.</string>
+
+    <string name="notify_permission_title">Notifications</string>
+    <string name="notify_permission_text">Apps including TimeLimit need your permission to
+        show notifications at some Android versions.
+        TimeLimit uses e.g. to show the remaining time and to
+        show a message when a notification was blocked.
+        It is highly recommend to allow showing notifications.
+    </string>
+    <string name="notify_permission_text_granted">Showing notifications was allowed</string>
+    <string name="notify_permission_btn_grant">Allow</string>
+    <string name="notify_permission_btn_later">Continue without enabling notifications</string>
+    <string name="notify_permission_rejected_toast">rejected; it could be that you can only change this using the system settings</string>
+
+    <string name="manage_parent_u2f_add_key">Add Token</string>
+    <string name="manage_parent_u2f_status_wait_key">Waiting for your key; Connect the key now; NFC is %s</string>
+    <string name="manage_parent_u2f_status_wait_key_nfc_enabled">enabled</string>
+    <string name="manage_parent_u2f_status_wait_key_nfc_disabled">disabled</string>
+    <string name="manage_parent_u2f_status_wait_key_nfc_unsupported">unsupported</string>
+    <string name="manage_parent_u2f_status_working">Linking in progress, do not disconnect yet</string>
+    <string name="manage_parent_u2f_status_interrupted">Connection was interrupted</string>
+    <string name="manage_parent_u2f_status_failed">The Request Failed</string>
+    <string name="manage_parent_u2f_status_already_linked">This device is already linked</string>
+    <string name="manage_parent_u2f_status_needs_user_interaction">Waiting for button press at the key</string>
+    <string name="manage_parent_u2f_status_done">The Device was linked</string>
+
+    <string name="manage_parent_u2f_remove_key_text">Would you like to remove this key?</string>
+    <string name="manage_parent_u2f_remove_key_requires_password">You can only remove keys after signing in without a key</string>
+
+    <string name="manage_parent_u2f_err_wrong_user">Only the user itself can manage its U2F Keys</string>
+
+    <string name="u2f_login_error_unknown">unknown key</string>
+    <string name="u2f_login_error_invalid">invalid key</string>
+
+    <string name="app_clicked_dialog_message">Tap the trash icon to remove the App from the category.
+        To move it to another category, hold the App item.
+    </string>
+</resources>

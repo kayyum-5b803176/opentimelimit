@@ -1,0 +1,138 @@
+<!--
+    Open TimeLimit Copyright <C> 2019 - 2020 Jonas Lochmann
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.timelimit.android.ui.manage.category.settings.CategorySettingsFragment">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        tools:ignore="UnusedAttribute"
+                        android:drawableTint="?colorOnSurface"
+                        android:background="?selectableItemBackground"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:id="@+id/extra_time_title"
+                        android:text="@string/category_settings_extra_time_title"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <io.timelimit.android.ui.view.SelectTimeSpanView
+                        android:id="@+id/extra_time_selection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Switch
+                        android:nextFocusDown="@id/extra_time_btn_ok"
+                        android:id="@+id/switch_limit_extra_time_to_today"
+                        android:text="@string/category_settings_extra_time_switch_limit_to_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.button.MaterialButton
+                        app:icon="@drawable/ic_check_black_24dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        android:layout_gravity="end"
+                        android:id="@+id/extra_time_btn_ok"
+                        android:text="@string/category_settings_extra_time_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <include android:id="@+id/battery_limit"
+                layout="@layout/category_battery_limit_view" />
+
+            <include android:id="@+id/time_warnings"
+                layout="@layout/category_time_warnings_view" />
+
+            <include android:id="@+id/category_for_unassigned_apps"
+                layout="@layout/manage_category_for_unassigned_apps" />
+
+            <include android:id="@+id/parent_category"
+                layout="@layout/manage_parent_category" />
+
+            <include android:id="@+id/notification_filter"
+                layout="@layout/category_notification_filter" />
+
+            <include android:id="@+id/networks"
+                layout="@layout/manage_category_networks_view" />
+
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:padding="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:text="@string/generic_manage_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        style="?materialButtonOutlinedStyle"
+                        android:id="@+id/add_used_time_btn"
+                        android:text="@string/add_used_time_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        style="?materialButtonOutlinedStyle"
+                        android:id="@+id/edit_category_title_go"
+                        android:text="@string/category_settings_rename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        style="?materialButtonOutlinedStyle"
+                        android:id="@+id/btn_delete_category"
+                        android:text="@string/category_settings_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
