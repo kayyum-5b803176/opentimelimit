@@ -167,12 +167,23 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
 
     private suspend fun backgroundServiceLoop() {
         while (true) {
-            val backgroundServiceInterval = when (slowMainLoop) {
+            val loopStartTime = appLogic.timeApi.getCurrentUptimeInMillis()
+
+            // Fall back to the slower interval whenever the accessibility service isn't
+            // available: without it, getForegroundApps() has to poll UsageStatsManager
+            // directly on every round (see HybridForegroundAppHelper), and doing that
+            // every 100ms floods logcat with "UsageStatsService: ... queryEvents ..."
+            // lines for no real benefit - blocking still works correctly with the
+            // coarser interval, just marginally less snappy.
+            val accessibilityServiceAvailable = AccessibilityService.instance != null
+            val useSlowInterval = slowMainLoop || !accessibilityServiceAvailable
+
+            val backgroundServiceInterval = when (useSlowInterval) {
                 true -> BACKGROUND_SERVICE_INTERVAL_LONG
                 false -> BACKGROUND_SERVICE_INTERVAL_SHORT
             }
 
-            val maxUsedTimeToAdd = when (slowMainLoop) {
+            val maxUsedTimeToAdd = when (useSlowInterval) {
                 true -> MAX_USED_TIME_PER_ROUND_LONG
                 false -> MAX_USED_TIME_PER_ROUND_SHORT
             }
@@ -266,6 +277,10 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                     if (deviceRelatedData.temporarilyAllowedApps.isNotEmpty()) {
                         resetTemporarilyAllowedApps()
                     }
+                }
+
+                if (BuildConfig.DEBUG) {
+                    Log.d(LOG_TAG, "requesting foreground apps now (accessibilityAvailable=$accessibilityServiceAvailable, interval=$backgroundServiceInterval)")
                 }
 
                 val foregroundAppsOrNullOnMissingPermission = try {
@@ -788,7 +803,14 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
             previousMainLogicExecutionTime = (endTime - previousMainLoopEndTime).toInt()
             previousMainLoopEndTime = endTime
 
-            val timeToWait = Math.max(10, backgroundServiceInterval - previousMainLogicExecutionTime)
+            // Use only this round's own execution time (loopStartTime -> endTime), not
+            // previousMainLogicExecutionTime (which spans the previous round's sleep too -
+            // feeding that back in here caused the actual sleep to oscillate between
+            // ~backgroundServiceInterval and ~10ms every other round instead of settling on
+            // backgroundServiceInterval, since the previous sleep was effectively counted
+            // twice).
+            val thisRoundExecutionTime = (endTime - loopStartTime).toInt()
+            val timeToWait = Math.max(10, backgroundServiceInterval - thisRoundExecutionTime)
             appLogic.timeApi.sleep(timeToWait)
         }
     }
