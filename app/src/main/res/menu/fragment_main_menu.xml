@@ -23,6 +23,13 @@
         android:id="@+id/menu_main_uninstall" />
 
     <item
+        app:showAsAction="never"
+        app:iconTint="?colorOnPrimarySurface"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/main_tab_backup"
+        android:id="@+id/menu_main_backup" />
+
+    <item
         app:showAsAction="always"
         app:iconTint="?colorOnPrimarySurface"
         android:icon="@drawable/ic_info_outline_black_24dp"

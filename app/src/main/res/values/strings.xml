@@ -605,6 +605,7 @@
     <string name="main_tab_overview">Overview</string>
     <string name="main_tab_uninstall">Uninstall</string>
     <string name="main_tab_about">About</string>
+    <string name="main_tab_backup">Backup</string>
 
     <string name="manage_category_for_unassigned_apps_title">Category for unassigned Apps</string>
     <string name="manage_category_for_unassigned_apps_intro">

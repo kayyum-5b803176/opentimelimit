@@ -102,6 +102,11 @@
             android:label="Low battery app blocker" />
 
         <activity
+            android:exported="false"
+            android:name=".ui.backup.BackupActivity"
+            android:label="Backup" />
+
+        <activity
             android:exported="true"
             tools:ignore="UnusedAttribute"
             android:enabled="false"

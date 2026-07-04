@@ -15,6 +15,7 @@
  */
 package io.timelimit.android.ui.overview.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -24,6 +25,7 @@ import androidx.lifecycle.LiveData
 import io.timelimit.android.R
 import io.timelimit.android.extensions.safeNavigate
 import io.timelimit.android.livedata.*
+import io.timelimit.android.ui.backup.BackupActivity
 import io.timelimit.android.ui.fragment.SingleFragmentWrapper
 import io.timelimit.android.ui.main.FragmentWithCustomTitle
 import io.timelimit.android.ui.overview.about.AboutFragmentParentHandlers
@@ -90,6 +92,11 @@ class MainFragment : SingleFragmentWrapper(), OverviewFragmentParentHandlers, Ab
                     MainFragmentDirections.actionOverviewFragmentToAboutFragmentWrapped(),
                     R.id.overviewFragment
             )
+
+            true
+        }
+        R.id.menu_main_backup -> {
+            startActivity(Intent(requireContext(), BackupActivity::class.java))
 
             true
         }
