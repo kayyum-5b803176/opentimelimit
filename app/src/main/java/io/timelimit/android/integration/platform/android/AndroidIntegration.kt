@@ -32,7 +32,6 @@ import android.media.session.MediaSessionManager
 import android.media.session.PlaybackState
 import android.net.Uri
 import android.os.Build
-import android.os.PowerManager
 import android.os.UserManager
 import android.provider.Settings
 import android.util.Log
@@ -86,7 +85,6 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
     private val context = context.applicationContext
     private val policyManager = this.context.getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
     private val foregroundAppHelper = ForegroundAppHelper.with(this.context)
-    private val powerManager = this.context.getSystemService(Context.POWER_SERVICE) as PowerManager
     private val activityManager = this.context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
     private val notificationManager = this.context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     private val deviceAdmin = ComponentName(context.applicationContext, AdminReceiver::class.java)
@@ -96,6 +94,23 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
     private val lowBatteryAppBlocker = LowBatteryAppBlocker(context, battery, lowBatteryBlockerSettings, overlay)
     private val connectedNetwork = ConnectedNetworkUtil(context)
     private val muteAudioMutex = Mutex()
+    private val screenState = ScreenStateUtil(context)
+    // isLowRamDevice is a static device property - cache it instead of doing an
+    // ActivityManager round-trip on every permission status query
+    private val isLowRamDevice: Boolean by lazy { activityManager.isLowRamDevice }
+
+    // battery optimization: push-based wake-ups for the background loop, so it can
+    // sleep long while nothing happens instead of polling quickly at all times
+    private val backgroundLoopWakeListeners = java.util.concurrent.CopyOnWriteArrayList<() -> Unit>()
+    private val mediaSessionChangeWatcher = MediaSessionChangeWatcher(context) { fireBackgroundLoopWake() }
+
+    private fun fireBackgroundLoopWake() {
+        backgroundLoopWakeListeners.forEach { it() }
+    }
+
+    override fun registerBackgroundLoopWakeListener(listener: () -> Unit) {
+        backgroundLoopWakeListeners.add(listener)
+    }
 
     init {
         AppsChangeListener.registerBroadcastReceiver(this.context, object : BroadcastReceiver() {
@@ -109,6 +124,26 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
                 systemClockChangeListener?.run()
             }
         }, IntentFilter(Intent.ACTION_TIME_CHANGED))
+
+        // the foreground app changed -> the background loop should re-evaluate
+        // blocking right away (this is what keeps blocking snappy although the
+        // loop itself ticks slowly)
+        AccessibilityService.addForegroundPackageListener { _, _ ->
+            fireBackgroundLoopWake()
+        }
+
+        // screen state changed -> wake the loop (on screen-off it resets the
+        // temporarily allowed apps promptly and then enters its idle mode; on
+        // screen-on it resumes blocking/measurement immediately); additionally
+        // resync the uptime-based timer queue which may have drifted during deep
+        // sleep
+        screenState.addListener { isScreenOn ->
+            if (isScreenOn) {
+                io.timelimit.android.integration.time.RealTimeApi.notifyTimersShouldBeCheckedNow()
+            }
+
+            fireBackgroundLoopWake()
+        }
     }
 
     override fun getLocalApps(): Collection<App> {
@@ -160,6 +195,10 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
     override fun getMusicPlaybackPackage(): String? {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (getNotificationAccessPermissionStatus() == NewPermissionStatus.Granted) {
+                // opportunistically (re)register the push-based playback change
+                // watcher; rate-limited internally, effectively free once registered
+                mediaSessionChangeWatcher.ensureRegistered()
+
                 val manager = context.getSystemService(Context.MEDIA_SESSION_SERVICE) as MediaSessionManager
                 val sessions = manager.getActiveSessions(ComponentName(context, NotificationListener::class.java))
 
@@ -178,7 +217,7 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
 
     override fun getNotificationAccessPermissionStatus(): NewPermissionStatus {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (activityManager.isLowRamDevice) {
+            if (isLowRamDevice) {
                 return NewPermissionStatus.NotSupported
             } else if (NotificationManagerCompat.getEnabledListenerPackages(context).contains(context.packageName)) {
                 return NewPermissionStatus.Granted
@@ -359,11 +398,9 @@ class AndroidIntegration(context: Context): PlatformIntegration(maximumProtectio
     }
 
     override fun isScreenOn(): Boolean {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            return powerManager.isInteractive
-        } else {
-            return powerManager.isScreenOn
-        }
+        // cached, broadcast-driven value - this is called by the background loop on
+        // every round, so it must not be a binder IPC into system_server each time
+        return screenState.isScreenOn()
     }
 
     override fun setShowNotificationToRevokeTemporarilyAllowedApps(show: Boolean) {

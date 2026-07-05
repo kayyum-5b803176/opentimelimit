@@ -27,6 +27,14 @@ import kotlinx.parcelize.Parcelize
 abstract class PlatformIntegration(
         val maximumProtectionLevel: ProtectionLevel
 ) {
+    // battery optimization hook: platform implementations invoke the registered
+    // listeners (possibly from any thread) whenever something happened that makes
+    // an immediate re-evaluation by the background loop worthwhile (foreground app
+    // changed, screen turned on/off, media playback state changed, ...); this
+    // allows the background loop to use long sleep intervals without losing
+    // reactivity; the default implementation never fires
+    open fun registerBackgroundLoopWakeListener(listener: () -> Unit) {}
+
     abstract fun getLocalApps(): Collection<App>
     abstract fun getLocalAppPackageNames(): List<String>
     abstract fun getLocalAppActivities(deviceId: String): Collection<AppActivity>

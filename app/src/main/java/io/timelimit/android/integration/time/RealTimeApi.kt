@@ -57,10 +57,34 @@ object RealTimeApi: TimeApi() {
             queue.peek()?.let { head ->
                 val delay = head.targetUptime - getCurrentUptimeInMillis()
 
-                // at most 5 seconds so that sleeps don't cause trouble
-                handler.postDelayed(queueProcessor, delay.coerceAtLeast(0).coerceAtMost(5 * 1000))
+                // The handler runs on uptimeMillis which pauses during deep sleep while
+                // this queue's targets are based on elapsedRealtime, so a plain
+                // postDelayed(delay) could fire (much) too late after the device slept.
+                // The original workaround was re-arming every <=5 seconds forever, which
+                // meant 12 pointless main thread wakeups per minute as long as anything
+                // was queued. The two clocks can only drift apart during deep sleep, and
+                // deep sleep implies the screen is off - so it's enough to re-check at a
+                // much lazier cadence and additionally resync immediately when the screen
+                // turns on (see notifyTimersShouldBeCheckedNow, wired up to the screen-on
+                // broadcast). While the device is awake the two clocks advance identically
+                // and the timing stays exact.
+                handler.postDelayed(queueProcessor, delay.coerceAtLeast(0).coerceAtMost(60 * 1000))
             }
         }
+    }
+
+    /**
+     * Processes any due queue items right now and re-arms the timer. Called when the
+     * screen turns on to compensate for uptimeMillis having paused during deep sleep.
+     * Cheap no-op when the queue is empty.
+     */
+    fun notifyTimersShouldBeCheckedNow() {
+        synchronized(queue) {
+            if (queue.isEmpty()) return
+        }
+
+        handler.removeCallbacks(queueProcessor)
+        handler.post(queueProcessor)
     }
 
     override fun getCurrentTimeInMillis(): Long {

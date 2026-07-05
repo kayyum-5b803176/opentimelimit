@@ -28,7 +28,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 33
         versionCode 217
-        versionName "7.3.1"
+        versionName "7.4.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         kapt {
             arguments {

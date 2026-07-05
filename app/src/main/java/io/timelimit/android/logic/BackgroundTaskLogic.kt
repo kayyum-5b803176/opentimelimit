@@ -45,6 +45,7 @@ import io.timelimit.android.sync.actions.apply.ApplyActionUtil
 import io.timelimit.android.ui.lock.LockActivity
 import io.timelimit.android.util.AndroidVersion
 import io.timelimit.android.util.TimeTextUtil
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -54,21 +55,51 @@ import java.util.*
 class BackgroundTaskLogic(val appLogic: AppLogic) {
     var pauseForegroundAppBackgroundLoop = false
     val lastLoopException = MutableLiveData<Exception?>().apply { value = null }
-    private var slowMainLoop = false
 
     companion object {
         private const val LOG_TAG = "BackgroundTaskLogic"
 
         private const val CHECK_PERMISSION_INTERVAL = 10 * 1000L        // all 10 seconds
+        // while the screen is off nobody can interactively change permissions, so a
+        // lazy safety cadence is enough there; a check additionally runs right when
+        // the screen turns on (see the wake handling in the main loop)
+        private const val CHECK_PERMISSION_INTERVAL_SCREEN_OFF = 5 * 60 * 1000L
 
-        private const val BACKGROUND_SERVICE_INTERVAL_SHORT = 100L      // all 100 ms
-        private const val MAX_USED_TIME_PER_ROUND_SHORT = 1000          // 1 second
-        private const val BACKGROUND_SERVICE_INTERVAL_LONG = 1000L      // every second
-        private const val MAX_USED_TIME_PER_ROUND_LONG = 2000           // 1 second
+        // Single base interval for the main loop. The old 100ms "fast" mode existed to
+        // make blocking snappy, but it is obsolete: whenever the accessibility service
+        // is available, a foreground app change *pushes* a wake signal to this loop
+        // (see loopWakeSignal below), which reacts faster than 100ms polling ever did -
+        // while doing 10x fewer loop rounds. Without the accessibility service this
+        // matches the previous fallback behavior exactly.
+        private const val BACKGROUND_SERVICE_INTERVAL = 1000L           // every second
+        private const val MAX_USED_TIME_PER_ROUND = 2000                // 2 seconds
+
+        // While the screen is off and no audio is playing there is nothing to block
+        // and nothing to measure - the loop only keeps a lazy safety poll (in case a
+        // wake event is ever missed, e.g. playback starting without a media session
+        // event coming through) and is otherwise woken instantly by screen-on/
+        // playback events.
+        private const val SCREEN_OFF_IDLE_INTERVAL = 15 * 1000L
+
+        // lower bound between two rounds so that event bursts can never turn the
+        // loop into a busy loop
+        private const val MIN_ROUND_GAP = 100L
+
         const val EXTEND_SESSION_TOLERANCE = 5 * 1000L                  // 5 seconds
     }
 
+    // Conflated wake signal: platform events (foreground app changed, screen state
+    // changed, media playback changed) poke this channel; the loop waits on it with
+    // its regular interval as timeout. This is what allows long sleep intervals
+    // without giving up any reactivity. Conflation means an event burst causes at
+    // most one extra round.
+    private val loopWakeSignal = Channel<Unit>(capacity = Channel.CONFLATED)
+
     init {
+        appLogic.platformIntegration.registerBackgroundLoopWakeListener {
+            loopWakeSignal.trySend(Unit)
+        }
+
         runAsyncExpectForever { backgroundServiceLoop() }
         runAsyncExpectForever { syncDeviceStatusLoop() }
         runAsyncExpectForever { backupDatabaseLoop() }
@@ -103,9 +134,9 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
             appLogic.platformIntegration.setForceNetworkTime(it)
         }
 
-        appLogic.database.config().isExperimentalFlagsSetAsync(ExperimentalFlags.HIGH_MAIN_LOOP_DELAY).observeForever {
-            slowMainLoop = it
-        }
+        // note: the HIGH_MAIN_LOOP_DELAY experimental flag became a no-op - the main
+        // loop always uses the slow interval now and gets its reactivity from push
+        // events instead of fast polling
     }
 
     private val usedTimeUpdateHelper = UsedTimeUpdateHelper(appLogic)
@@ -113,11 +144,44 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
     private var previousMainLoopEndTime = 0L
     private var previousAudioPlaybackBlock: Pair<Long, String>? = null
     private var previousMinuteOfWeek = -1
+    private var previousIsScreenOn: Boolean? = null
     private val dayChangeTracker = DayChangeTracker(
             timeApi = appLogic.timeApi,
             longDuration = 1000 * 60 * 10 /* 10 minutes */
     )
     private val undisturbedCategoryUsageCounter = UndisturbedCategoryUsageCounter()
+
+    /**
+     * Waits until the next round should run: at most [timeout], but returns early
+     * when a wake event (foreground app change, screen state change, media playback
+     * change) arrives. A minimum gap is always enforced so event bursts can not
+     * busy-loop. Events which arrive during a running round or during the minimum
+     * gap are not lost - the channel is conflated, so they are consumed here and
+     * trigger an immediate next round.
+     */
+    private suspend fun waitForNextRound(timeout: Long) {
+        appLogic.timeApi.sleep(MIN_ROUND_GAP)
+
+        val remaining = timeout - MIN_ROUND_GAP
+
+        if (remaining > 0) {
+            withTimeoutOrNull(remaining) { loopWakeSignal.receive() }
+        }
+    }
+
+    /**
+     * Handles the screen on/off transition bookkeeping of the main loop:
+     * when the screen just turned on, the permission/manipulation status is checked
+     * right away (the periodic check idles while the screen is off).
+     */
+    private fun reportScreenStateToLoop(isScreenOn: Boolean) {
+        val previous = previousIsScreenOn
+        previousIsScreenOn = isScreenOn
+
+        if (previous == false && isScreenOn) {
+            syncDeviceStatusAsync()
+        }
+    }
 
     private val appTitleCache = QueryAppTitleCache(appLogic.platformIntegration)
     private val categoryHandlingCache = CategoryHandlingCache()
@@ -169,24 +233,8 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
         while (true) {
             val loopStartTime = appLogic.timeApi.getCurrentUptimeInMillis()
 
-            // Fall back to the slower interval whenever the accessibility service isn't
-            // available: without it, getForegroundApps() has to poll UsageStatsManager
-            // directly on every round (see HybridForegroundAppHelper), and doing that
-            // every 100ms floods logcat with "UsageStatsService: ... queryEvents ..."
-            // lines for no real benefit - blocking still works correctly with the
-            // coarser interval, just marginally less snappy.
-            val accessibilityServiceAvailable = AccessibilityService.instance != null
-            val useSlowInterval = slowMainLoop || !accessibilityServiceAvailable
-
-            val backgroundServiceInterval = when (useSlowInterval) {
-                true -> BACKGROUND_SERVICE_INTERVAL_LONG
-                false -> BACKGROUND_SERVICE_INTERVAL_SHORT
-            }
-
-            val maxUsedTimeToAdd = when (useSlowInterval) {
-                true -> MAX_USED_TIME_PER_ROUND_LONG
-                false -> MAX_USED_TIME_PER_ROUND_SHORT
-            }
+            val backgroundServiceInterval = BACKGROUND_SERVICE_INTERVAL
+            val maxUsedTimeToAdd = MAX_USED_TIME_PER_ROUND
 
             // app must be enabled
             if (!appLogic.enable.waitForNonNullValue()) {
@@ -214,10 +262,13 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                 commitUsedTimeUpdaters()
                 undisturbedCategoryUsageCounter.reset()
 
+                val isScreenOnNow = appLogic.platformIntegration.isScreenOn()
+                reportScreenStateToLoop(isScreenOnNow)
+
                 val shouldDoAutomaticSignOut = deviceRelatedData != null && DefaultUserLogic.hasAutomaticSignOut(deviceRelatedData) && deviceRelatedData.canSwitchToDefaultUser
 
                 if (shouldDoAutomaticSignOut) {
-                    appLogic.defaultUserLogic.reportScreenOn(appLogic.platformIntegration.isScreenOn())
+                    appLogic.defaultUserLogic.reportScreenOn(isScreenOnNow)
 
                     appLogic.platformIntegration.setAppStatusMessage(
                             AppStatusMessage(
@@ -227,19 +278,23 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                             )
                     )
                     appLogic.platformIntegration.setShowBlockingOverlay(false)
-
-                    appLogic.timeApi.sleep(backgroundServiceInterval)
                 } else {
                     appLogic.platformIntegration.setAppStatusMessage(null)
                     appLogic.platformIntegration.setShowBlockingOverlay(false)
-
-                    appLogic.timeApi.sleep(backgroundServiceInterval)
                 }
+
+                // nothing to block/measure here; while the screen is off there is
+                // additionally no way the situation changes without an event which
+                // pokes the wake signal (screen on, user change through the database
+                // is caught at the latest by the safety interval)
+                waitForNextRound(if (isScreenOnNow) backgroundServiceInterval else SCREEN_OFF_IDLE_INTERVAL)
 
                 continue
             }
 
             // loop logic
+            var idleBecauseScreenOffAndSilent = false
+
             try {
                 // get the current time
                 val nowTimestamp = appLogic.timeApi.getCurrentTimeInMillis()
@@ -271,6 +326,7 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                 val isScreenOn = appLogic.platformIntegration.isScreenOn()
                 val batteryStatus = appLogic.platformIntegration.getBatteryStatus()
 
+                reportScreenStateToLoop(isScreenOn)
                 appLogic.defaultUserLogic.reportScreenOn(isScreenOn)
 
                 if (!isScreenOn) {
@@ -280,7 +336,7 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                 }
 
                 if (BuildConfig.DEBUG) {
-                    Log.d(LOG_TAG, "requesting foreground apps now (accessibilityAvailable=$accessibilityServiceAvailable, interval=$backgroundServiceInterval)")
+                    Log.d(LOG_TAG, "requesting foreground apps now (interval=$backgroundServiceInterval)")
                 }
 
                 val foregroundAppsOrNullOnMissingPermission = try {
@@ -295,6 +351,16 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                 }
                 val audioPlaybackPackageName = appLogic.platformIntegration.getMusicPlaybackPackage()
                 val activityLevelBlocking = appLogic.deviceEntry.value?.enableActivityLevelBlocking ?: false
+
+                // screen off + no audio playing = nothing that could be blocked and
+                // nothing whose usage time could count -> the loop may idle after
+                // this round until an event (screen on/audio playback) wakes it.
+                // Exception: while the foreground app permission is missing, the
+                // sanction logic counts usage time against all categories around the
+                // clock - idling would weaken that sanction, so keep looping then.
+                idleBecauseScreenOffAndSilent = (!isScreenOn) &&
+                        audioPlaybackPackageName == null &&
+                        foregroundAppsOrNullOnMissingPermission != null
 
                 val foregroundAppWithBaseHandlings = if (foregroundAppsOrNullOnMissingPermission != null) {
                     foregroundAppsOrNullOnMissingPermission.map { app ->
@@ -643,7 +709,11 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
                     } else 0
 
                     val totalPages = pagesForTheForegroundApps.coerceAtLeast(1) + pagesForTheBackgroundApp
-                    val currentPage = (nowTimestamp / 3000 % totalPages).toInt()
+                    // while the screen is off nobody can see the notification, so don't
+                    // rotate through the pages (each rotation would re-post the
+                    // notification); rotation resumes automatically with the screen on
+                    // because the page is derived from the current timestamp
+                    val currentPage = if (isScreenOn) (nowTimestamp / 3000 % totalPages).toInt() else 0
 
                     val suffix = if (totalPages == 1) "" else " (${currentPage + 1} / $totalPages)"
 
@@ -810,8 +880,25 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
             // backgroundServiceInterval, since the previous sleep was effectively counted
             // twice).
             val thisRoundExecutionTime = (endTime - loopStartTime).toInt()
-            val timeToWait = Math.max(10, backgroundServiceInterval - thisRoundExecutionTime)
-            appLogic.timeApi.sleep(timeToWait)
+
+            if (idleBecauseScreenOffAndSilent) {
+                // persist any partially counted time before idling so nothing is lost
+                // if the process is killed while the device rests
+                commitUsedTimeUpdaters()
+
+                // wait lazily; a screen-on or media playback event pokes the wake
+                // signal and ends this early
+                waitForNextRound(SCREEN_OFF_IDLE_INTERVAL)
+
+                // don't let the idle gap show up as usage time in the next rounds:
+                // pretend the previous round just ended. During the gap the screen was
+                // off and nothing played, so by definition no usage time passed.
+                previousMainLoopEndTime = appLogic.timeApi.getCurrentUptimeInMillis()
+                previousMainLogicExecutionTime = 0
+            } else {
+                val timeToWait = Math.max(MIN_ROUND_GAP, backgroundServiceInterval - thisRoundExecutionTime)
+                waitForNextRound(timeToWait)
+            }
         }
     }
 
@@ -842,9 +929,20 @@ class BackgroundTaskLogic(val appLogic: AppLogic) {
         while (true) {
             appLogic.deviceEntryIfEnabled.waitUntilValueMatches { it != null }
 
-            syncDeviceStatusSlow()
+            if (appLogic.platformIntegration.isScreenOn()) {
+                syncDeviceStatusSlow()
 
-            appLogic.timeApi.sleep(CHECK_PERMISSION_INTERVAL)
+                appLogic.timeApi.sleep(CHECK_PERMISSION_INTERVAL)
+            } else {
+                // Permissions and the accessibility/admin status can only be changed
+                // interactively, so checking them while the screen is off just burns
+                // battery. The main loop additionally triggers syncDeviceStatusAsync()
+                // right when the screen turns on (see reportScreenStateToLoop), so
+                // manipulation is still detected immediately when the device is used
+                // again - this lazy cadence is only a safety net (e.g. for changes
+                // made via adb while the screen stayed off).
+                appLogic.timeApi.sleep(CHECK_PERMISSION_INTERVAL_SCREEN_OFF)
+            }
         }
     }
 
