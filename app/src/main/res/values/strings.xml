@@ -1167,6 +1167,10 @@
     <string name="widget_msg_no_child">This device is not used by a child right now</string>
     <string name="widget_msg_no_category">This child does not have any categories</string>
     <string name="widget_msg_no_filtered_category">For this child, no visible categories were chosen for this widget</string>
+    <string name="widget_stats_title">Remaining time</string>
+    <string name="widget_single_label">TimeLimit (single category)</string>
+    <string name="widget_single_config_title">Choose category</string>
+    <string name="widget_single_config_hint">Choose the category whose remaining time this widget shows:</string>
     <string name="widget_config_mode_all">Show all Categories</string>
     <string name="widget_config_mode_filter">Filter visible Categories</string>
     <string name="widget_config_error_filter_empty">You must select at least one category</string>

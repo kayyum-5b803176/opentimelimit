@@ -79,6 +79,7 @@ class AppLogic(
         SyncInstalledAppsLogic(this)
         WatchdogLogic(this)
         TimesWidgetProvider.triggerUpdates(context)
+        io.timelimit.android.ui.widget.SingleTimeWidgetProvider.triggerUpdates(context)
     }
 
     val manipulationLogic = ManipulationLogic(this)

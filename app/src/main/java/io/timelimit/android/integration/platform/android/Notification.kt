@@ -154,6 +154,7 @@ object PendingIntentIds {
     const val OPEN_MAIN_APP_WITH_ERROR = 6
     const val ACCESSIBILITY_SERVICE_HEALTH_CHECK_ALARM = 7
     const val ACCESSIBILITY_SERVICE_HEALTH_CHECK_NOTIFICATION = 8
+    const val WIDGET_STATS = 9
 
     val PENDING_INTENT_FLAGS = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
