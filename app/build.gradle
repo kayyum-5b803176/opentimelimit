@@ -64,6 +64,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -76,6 +77,12 @@ android {
         jvmTarget = "1.8"
     }
     namespace 'io.timelimit.android'
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "srs-vault-v${variant.versionName}(${variant.versionCode})-${variant.buildType.name}.apk"
+        }
+    }
 }
 
 dependencies {
